@@ -1,4 +1,7 @@
+# 静的ルーティング設定
+
 OSバージョン ubuntu 16.04
+
 ```
 $ cat /etc/lsb-release
 DISTRIB_ID=Ubuntu
