@@ -20,4 +20,3 @@
 - [【git】マージしたけどやっぱりやめたい時のやり方3種類](https://qiita.com/chihiro/items/5dd671aa6f1c332986a7)
 - [GitHub Pages で Google Analytics を使うシンプルな設定](https://qiita.com/memakura/items/2cfc8133e07fdc72c45f)
 - [Docker, docker-composeことはじめ](https://qiita.com/L_e_k_o/items/986196a15b08bbb14384)
-- [Git | 一括で add する](
