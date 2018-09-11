@@ -1,0 +1,60 @@
+# Project information
+site_name: note
+#site_url: 
+
+# Repository
+repo_name: note
+repo_url: https://github.com/aiedoc/note
+
+# Configuration
+theme:
+  name: 'material'
+  palette:
+    primary: 'Teal'
+    accent: 'Deep Orange'
+  language: 'ja'
+  feature:
+    tabs: true
+
+extra_css:
+    - "//fonts.googleapis.com/earlyaccess/notosansjp.css"
+    - "//fonts.googleapis.com/css?family=Open+Sans:600,800"
+    # - 'stylesheets/extra.css'
+    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://https://bps-github.pstg.paas.cloud.global.fujitsu.com/squidfunk'
+
+markdown_extensions:
+    - markdown.extensions.admonition
+    - markdown.extensions.codehilite:
+        guess_lang: false
+    - markdown.extensions.def_list
+    - markdown.extensions.footnotes
+    - markdown.extensions.meta
+    - markdown.extensions.toc:
+        permalink: true
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+
+
+extra_javascript:
+  - 'javascripts/extra.js'
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
