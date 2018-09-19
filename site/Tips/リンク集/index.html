@@ -36,7 +36,7 @@
     
     
       
-        <title>SELinuxの設定 - note</title>
+        <title>リンク集 - note</title>
       
     
     
@@ -104,10 +104,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#selinux" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -130,7 +126,7 @@
                 note
               </span>
               <span class="md-header-nav__topic">
-                SELinuxの設定
+                リンク集
               </span>
             
           
@@ -236,7 +232,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../Tips/リンク集/" title="Tips" class="md-tabs__link">
+        <a href="./" title="Tips" class="md-tabs__link md-tabs__link--active">
           Tips
         </a>
       
@@ -262,7 +258,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="インフラ" class="md-tabs__link md-tabs__link--active">
+        <a href="../../インフラ/SELinux/" title="インフラ" class="md-tabs__link">
           インフラ
         </a>
       
@@ -393,10 +389,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tips
@@ -412,11 +410,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../Tips/リンク集/" title="リンク集" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="リンク集" class="md-nav__link md-nav__link--active">
       リンク集
     </a>
+    
   </li>
 
         
@@ -465,12 +470,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       インフラ
@@ -486,20 +489,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="SELinuxの設定" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../インフラ/SELinux/" title="SELinuxの設定" class="md-nav__link">
       SELinuxの設定
     </a>
-    
   </li>
 
         
@@ -509,7 +503,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../disk追加時メモ/" title="Disk追加時メモ" class="md-nav__link">
+    <a href="../../インフラ/disk追加時メモ/" title="Disk追加時メモ" class="md-nav__link">
       Disk追加時メモ
     </a>
   </li>
@@ -521,7 +515,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../redhatでyumを使うときの設定/" title="RHELについて、yumを利用する" class="md-nav__link">
+    <a href="../../インフラ/redhatでyumを使うときの設定/" title="RHELについて、yumを利用する" class="md-nav__link">
       RHELについて、yumを利用する
     </a>
   </li>
@@ -533,7 +527,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../静的ルーティング設定(ubuntu16.04)メモ/" title="静的ルーティング設定" class="md-nav__link">
+    <a href="../../インフラ/静的ルーティング設定(ubuntu16.04)メモ/" title="静的ルーティング設定" class="md-nav__link">
       静的ルーティング設定
     </a>
   </li>
@@ -623,57 +617,29 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/aiedoc/note/edit/master/docs/インフラ/SELinux.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/aiedoc/note/edit/master/docs/Tips/リンク集.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="selinux">SELinuxの設定<a class="headerlink" href="#selinux" title="Permanent link">&para;</a></h1>
-<ul>
-<li>SELinux 有効無効の確認
-<div class="codehilite"><pre><span></span>$ getenforce
-</pre></div>
-Enforcing → SELinux有効<br />
-Disabled → SELinux無効</li>
+                  <h1>リンク集</h1>
+                
+                <ul>
+<li><a href="http://www5e.biglobe.ne.jp/%257eaji/3min/">ネットワーク基礎知識</a></li>
+<li><a href="http://wa3.i-3-i.info/">IT用語辞典</a></li>
+<li><a href="http://www.infraexpert.com/study/tea3.htm">CIDRアドレス計算ツール</a></li>
+<li><a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/">絵文字一覧</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></li>
+<li><a href="http://www.atmarkit.co.jp/bbs/phpBB/viewtopic.php?topic=31292&amp;forum=10">EXT3-fs warningのメッセージについて</a></li>
+<li><a href="http://sessan.hatenablog.com/entry/2012/06/20/205036">gitのローカルbranchを作成し、リモートにpushする</a></li>
+<li><a href="https://hamachan.info/win8/excel/kashi1.html">見えるセルだけをコピーするには</a></li>
+<li><a href="https://www.excelspeedup.com/ifakaji/">if関数で色分け。文字・背景色を変更して「赤字」で表示させる方法</a></li>
+<li><a href="http://onesway.hatenablog.com/entry/html5-description">HTML5での最低限のお作法</a></li>
+<li><a href="https://mae.chab.in/archives/2799">GitHub Pagesの使い方や機能などをまとめてみた</a></li>
 </ul>
-<p>SELinux属性情報が間違っていて、ethの認識順を直せない時の対応
-被疑箇所確認-事前確認
-<div class="codehilite"><pre><span></span>ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
-ls -lZ /etc/sysconfig/network-scripts/ifcfg-eth*
-</pre></div>
-表示例)
--rw-r--r--. root root system_u    :object_r:file_t    :s0 ifcfg-eth0  ★修正対象は0側のtype箇所のみで、userの差異は影響無い想定
--rw-r--r--. root root unconfined_u:object_r:net_conf_t:s0 ifcfg-eth1</p>
-<p>typeの変更
-<div class="codehilite"><pre><span></span>chcon -t net_conf_t /etc/sysconfig/network-scripts/ifcfg-eth0
-</pre></div></p>
-<p>被疑箇所確認-事後確認
-<div class="codehilite"><pre><span></span>ls -lZ /etc/sysconfig/network-scripts/ifcfg-eth*
-</pre></div>
-表示例)
--rw-r--r--. root root system_u    :object_r:net_conf_t:s0 ifcfg-eth0
--rw-r--r--. root root unconfined_u:object_r:net_conf_t:s0 ifcfg-eth1</p>
-<p>ls -la /etc/sysconfig/network-scripts/ifcfg-eth*</p>
-<p>SELInuxが有効な状態で、fileの複製、追加時に、属性情報が間違っていると、
-直さないといけなくなる可能性有</p>
                 
                   
                 
@@ -694,7 +660,7 @@ ls -lZ /etc/sysconfig/network-scripts/ifcfg-eth*
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../mkdocs/mkdocsメモ/" title="mkdocs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../ITトレンド/リンク集/" title="リンク集" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -703,19 +669,19 @@ ls -lZ /etc/sysconfig/network-scripts/ifcfg-eth*
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                mkdocs
+                リンク集
               </span>
             </div>
           </a>
         
         
-          <a href="../disk追加時メモ/" title="Disk追加時メモ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../mkdocs/mkdocsメモ/" title="mkdocs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Disk追加時メモ
+                mkdocs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
