@@ -11,3 +11,10 @@ DISTRIB_DESCRIPTION="Ubuntu 16.04.2 LTS"
 ```
 
 https://jyn.jp/ubuntu-localip-static/
+
+反映
+
+```
+systemctl restart networking.service
+```
+
