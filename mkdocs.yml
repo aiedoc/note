@@ -1,6 +1,6 @@
 # Project information
 site_name: note
-#site_url: 
+#site_url:
 
 # Repository
 repo_name: note
@@ -58,3 +58,7 @@ markdown_extensions:
 extra_javascript:
   - 'javascripts/extra.js'
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
+
+google_analytics:
+  - 'UA-126129623-1'
+  - 'auto'
