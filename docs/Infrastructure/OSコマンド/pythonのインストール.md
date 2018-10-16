@@ -1,7 +1,5 @@
 # pythonインストールではまった点
 
-
-
 ## 1回目エラー
 
 ```
@@ -139,6 +137,7 @@ sudo apt-get install libssl-dev libbz2-dev libreadline-dev libsqlite3-dev
 
 
 ## まとめ
+
 pythonの必要性ライブラリは以下でまとめてインストールできる
 
 ```

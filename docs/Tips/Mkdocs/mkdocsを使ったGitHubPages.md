@@ -216,7 +216,7 @@ mkdocs gh-deploy
 
 https://github-user-001.github.io/test-pages/test2/helloworld2/
 
-![画像5](.\images\image5.png)
+![画像5](./images/image5.png)
 
 ## 5. mkdocsとGitHub pagesの関係について
 
