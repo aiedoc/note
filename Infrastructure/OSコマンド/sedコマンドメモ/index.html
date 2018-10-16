@@ -31,18 +31,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
     
     
       
-        <title>SELinuxの設定 - note</title>
+        <title>Sedコマンドメモ - note</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
@@ -60,7 +60,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
       <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css">
     
@@ -104,16 +104,12 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#selinux" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="note" class="md-header-nav__button md-logo">
+        <a href="../../.." title="note" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -130,7 +126,7 @@
                 note
               </span>
               <span class="md-header-nav__topic">
-                SELinuxの設定
+                Sedコマンドメモ
               </span>
             
           
@@ -211,7 +207,7 @@
         
   <li class="md-tabs__item">
     
-      <a href="../.." title="トップページ" class="md-tabs__link">
+      <a href="../../.." title="トップページ" class="md-tabs__link">
         トップページ
       </a>
     
@@ -223,7 +219,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../Info/リンク集/" title="Info" class="md-tabs__link">
+        <a href="../../../Info/リンク集/" title="Info" class="md-tabs__link">
           Info
         </a>
       
@@ -236,7 +232,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../DNS設定/" title="Infrastructure" class="md-tabs__link md-tabs__link--active">
+        <a href="../../crontabの書き方/" title="Infrastructure" class="md-tabs__link md-tabs__link--active">
           Infrastructure
         </a>
       
@@ -249,7 +245,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../Tips/リンク集/" title="Tips" class="md-tabs__link">
+        <a href="../../../Tips/git ignoreで特定ディレクトリを管理対象外にする/" title="Tips" class="md-tabs__link">
           Tips
         </a>
       
@@ -262,7 +258,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../働き方改善/リンク集/" title="働き方改善" class="md-tabs__link">
+        <a href="../../../働き方改善/リンク集/" title="働き方改善" class="md-tabs__link">
           働き方改善
         </a>
       
@@ -283,7 +279,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="note" class="md-nav__button md-logo">
+    <a href="../../.." title="note" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -321,7 +317,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="トップページ" class="md-nav__link">
+    <a href="../../.." title="トップページ" class="md-nav__link">
       トップページ
     </a>
   </li>
@@ -352,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Info/リンク集/" title="リンク集" class="md-nav__link">
+    <a href="../../../Info/リンク集/" title="リンク集" class="md-nav__link">
       リンク集
     </a>
   </li>
@@ -364,7 +360,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Info/気になったニュース/" title="気になったニュース" class="md-nav__link">
+    <a href="../../../Info/気になったニュース/" title="気になったニュース" class="md-nav__link">
       気になったニュース
     </a>
   </li>
@@ -376,7 +372,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Info/英語/" title="英語" class="md-nav__link">
+    <a href="../../../Info/英語/" title="英語" class="md-nav__link">
       英語
     </a>
   </li>
@@ -414,6 +410,39 @@
 
 
   <li class="md-nav__item">
+    <a href="../../crontabの書き方/" title="crontabの記法" class="md-nav__link">
+      crontabの記法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      OSコマンド
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        OSコマンド
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../DNS設定/" title="DNS設定(ubuntu)" class="md-nav__link">
       DNS設定(ubuntu)
     </a>
@@ -436,76 +465,23 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        SELinuxの設定
-      </label>
-    
-    <a href="./" title="SELinuxの設定" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../SELinux/" title="SELinuxの設定" class="md-nav__link">
       SELinuxの設定
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#selinux_1" title="SELinux 有効無効の確認" class="md-nav__link">
-    SELinux 有効無効の確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selinuxeth" title="SELinux属性情報が間違っていて、ethの認識順を直せない時の対応" class="md-nav__link">
-    SELinux属性情報が間違っていて、ethの認識順を直せない時の対応
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+  </li>
+
         
-          <li class="md-nav__item">
-  <a href="#-" title="被疑箇所確認-事前確認" class="md-nav__link">
-    被疑箇所確認-事前確認
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type" title="typeの変更" class="md-nav__link">
-    typeの変更
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../crontabの書き方/" title="crontabの記法" class="md-nav__link">
+      crontabの記法
+    </a>
   </li>
 
         
@@ -549,11 +525,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../sedコマンドメモ/" title="Sedコマンドメモ" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Sedコマンドメモ" class="md-nav__link md-nav__link--active">
       Sedコマンドメモ
     </a>
+    
   </li>
 
         
@@ -578,6 +561,11 @@
     <a href="../静的ルーティング設定(ubuntu16.04)メモ/" title="静的ルーティング設定" class="md-nav__link">
       静的ルーティング設定
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -611,7 +599,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tips/リンク集/" title="リンク集" class="md-nav__link">
+    <a href="../../../Tips/git ignoreで特定ディレクトリを管理対象外にする/" title="git ignoreで特定ディレクトリを管理対象外にする" class="md-nav__link">
+      git ignoreで特定ディレクトリを管理対象外にする
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Tips/リンク集/" title="リンク集" class="md-nav__link">
       リンク集
     </a>
   </li>
@@ -623,7 +623,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tips/便利なツール/" title="便利なツール" class="md-nav__link">
+    <a href="../../../Tips/便利ツール/" title="便利なツール" class="md-nav__link">
       便利なツール
     </a>
   </li>
@@ -636,13 +636,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
-    <label class="md-nav__link" for="nav-4-3">
+    <label class="md-nav__link" for="nav-4-4">
       Mkdocs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
+      <label class="md-nav__title" for="nav-4-4">
         Mkdocs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -654,7 +654,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tips/Mkdocs/mkdocsを使ったGitHubPages/" title="mkdocsを使ったGitHub Pagesの作成方法" class="md-nav__link">
+    <a href="../../../Tips/Mkdocs/mkdocsを使ったGitHubPages/" title="mkdocsを使ったGitHub Pagesの作成方法" class="md-nav__link">
       mkdocsを使ったGitHub Pagesの作成方法
     </a>
   </li>
@@ -666,7 +666,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tips/Mkdocs/mkdocsメモ/" title="mkdocs" class="md-nav__link">
+    <a href="../../../Tips/Mkdocs/mkdocsメモ/" title="mkdocs" class="md-nav__link">
       mkdocs
     </a>
   </li>
@@ -707,7 +707,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../働き方改善/リンク集/" title="リンク集" class="md-nav__link">
+    <a href="../../../働き方改善/リンク集/" title="リンク集" class="md-nav__link">
       リンク集
     </a>
   </li>
@@ -725,105 +725,20 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#selinux_1" title="SELinux 有効無効の確認" class="md-nav__link">
-    SELinux 有効無効の確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selinuxeth" title="SELinux属性情報が間違っていて、ethの認識順を直せない時の対応" class="md-nav__link">
-    SELinux属性情報が間違っていて、ethの認識順を直せない時の対応
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-" title="被疑箇所確認-事前確認" class="md-nav__link">
-    被疑箇所確認-事前確認
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type" title="typeの変更" class="md-nav__link">
-    typeの変更
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/aiedoc/note/edit/master/docs/Infrastructure/SELinux.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/aiedoc/note/edit/master/docs/Infrastructure/OSコマンド/sedコマンドメモ.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="selinux">SELinuxの設定<a class="headerlink" href="#selinux" title="Permanent link">&para;</a></h1>
-<h2 id="selinux_1">SELinux 有効無効の確認<a class="headerlink" href="#selinux_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>$ getenforce
-
-Enforcing → SELinux有効
-Disabled → SELinux無効
-</pre></div>
-
-<h2 id="selinuxeth">SELinux属性情報が間違っていて、ethの認識順を直せない時の対応<a class="headerlink" href="#selinuxeth" title="Permanent link">&para;</a></h2>
-<h3 id="-">被疑箇所確認-事前確認<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
-ls -lZ /etc/sysconfig/network-scripts/ifcfg-eth*
-
-表示例)
--rw-r--r--. root root system_u    :object_r:file_t    :s0 ifcfg-eth0  ★修正対象は0側のtype箇所のみで、userの差異は影響無い想定
--rw-r--r--. root root unconfined_u:object_r:net_conf_t:s0 ifcfg-eth1
-</pre></div>
-
-<h3 id="type">typeの変更<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>chcon -t net_conf_t /etc/sysconfig/network-scripts/ifcfg-eth0
-</pre></div>
-
-<p>被疑箇所確認-事後確認
-<div class="codehilite"><pre><span></span>ls -lZ /etc/sysconfig/network-scripts/ifcfg-eth*
-
-表示例)
--rw-r--r--. root root system_u    :object_r:net_conf_t:s0 ifcfg-eth0
--rw-r--r--. root root unconfined_u:object_r:net_conf_t:s0 ifcfg-eth1
-
-ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
-</pre></div></p>
-<p>SELInuxが有効な状態で、fileの複製、追加時に、属性情報が間違っていると、
-直さないといけなくなる可能性有</p>
+                  <h1>Sedコマンドメモ</h1>
+                
+                <p>&lt;追記する&gt;</p>
+<ul>
+<li><a href="https://open-groove.net/linux-command/sed-edit-files/">sedコマンドでファイルを上書き編集</a></li>
+</ul>
                 
                   
                 
@@ -844,7 +759,7 @@ ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../OSの確認/" title="OSの確認コマンド" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../redhatでyumを使うときの設定/" title="RHELについて、yumを利用する" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -853,19 +768,19 @@ ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                OSの確認コマンド
+                RHELについて、yumを利用する
               </span>
             </div>
           </a>
         
         
-          <a href="../disk追加時メモ/" title="Disk追加時メモ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../yumコマンドメモ/" title="yum コマンドメモ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Disk追加時メモ
+                yum コマンドメモ
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -889,7 +804,7 @@ ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
       
         
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
     
       <a href="https://https://bps-github.pstg.paas.cloud.global.fujitsu.com/squidfunk" class="md-footer-social__link fa fa-github"></a>
     
@@ -902,28 +817,28 @@ ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
       
     </div>
     
-      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../../assets/javascripts/application.583bbe55.js"></script>
       
         
         
           
-          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
               
               
-                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+                <script src="../../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
-        <script src="../../javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
