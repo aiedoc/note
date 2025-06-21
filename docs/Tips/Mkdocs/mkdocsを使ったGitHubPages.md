@@ -11,10 +11,11 @@
 
 ## 1. GitHub Pagesとは
 
-GitHub Pagesとはレンタルサーバなど用意しなくても、無料で簡単にウェブサイトを作成できるGitHub機能の１つです。実はmicrosoftやyahooなどの大手企業もGitHub Pagesを自身の企業ページとして活用しています。
+GitHub Pagesとはレンタルサーバなど用意しなくても、無料で簡単にウェブサイトを作成できるGitHub機能の１つです。実はMicrosoft、Netflix、Meta（Facebook）などの大手企業もGitHub Pagesをオープンソースプロジェクトや技術ドキュメントサイトとして活用しています。
 
-- https://opensource.microsoft.com/
-- http://yahoo.github.io/
+- https://opensource.microsoft.com/ (Microsoftオープンソースポータル)
+- https://netflix.github.io/ (Netflixオープンソースプロジェクト)
+- https://react.dev/ (React公式ドキュメント - Meta製)
 
 このようにGitHub Pagesは使い方次第ではプロジェクト管理、ドキュメント管理または個人ブログなどにも活用することが可能です。
 
