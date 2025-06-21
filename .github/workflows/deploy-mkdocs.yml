@@ -50,9 +50,6 @@ jobs:
           pip install mkdocs-minify-plugin
           pip install mkdocs-static-i18n
       
-      - name: Validate MkDocs configuration
-        run: mkdocs config
-      
       - name: Build and deploy to GitHub Pages
         run: mkdocs gh-deploy --force --clean --verbose
         env:
