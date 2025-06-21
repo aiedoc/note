@@ -1,212 +1,81 @@
-# RHELについて、パッケージマネージャーを利用する
+# RHEL Subscription Manager設定
 
-!!! info "バージョン別対応"
-    - **RHEL 7以下**: `yum`を使用
-    - **RHEL 8以降**: `dnf`を使用（yumは互換性のためのシンボリックリンク）
-
-## 1. Subscription Managerを登録する
-
-### 基本登録（プロキシなし環境）
+## 基本的なサブスクリプション登録
 
 ```bash
-# Red Hatカスタマーポータルに登録
+# システム登録
 subscription-manager register --auto-attach
 
-# アカウント名、パスワードを入力
 # 登録状況確認
 subscription-manager status
 subscription-manager list --installed
-```
 
-### プロキシ環境での登録
-
-```bash
-# プロキシ経由での登録
-subscription-manager register --proxy=<プロキシホスト>:<プロキシポート> --auto-attach
-
-# プロキシ認証が必要な場合
-subscription-manager register \
-  --proxy=<プロキシホスト>:<プロキシポート> \
-  --proxyuser=<プロキシユーザー> \
-  --proxypassword=<プロキシパスワード> \
-  --auto-attach
-```
-
-### サブスクリプション手動アタッチ
-
-```bash
-# 利用可能なサブスクリプション確認
+# サブスクリプション手動アタッチ
 subscription-manager list --available
-
-# 特定のプールをアタッチ
-subscription-manager attach --pool=<プールID>
-
-# すべての利用可能なサブスクリプションを自動アタッチ
-subscription-manager attach --auto
+subscription-manager attach --pool=プールID
 ```
 
-## 2. rhsmのProxy設定
+## プロキシ環境での設定
 
-`/etc/rhsm/rhsm.conf`にProxyの設定を行う。
+### Subscription Manager設定
 
-### 設定ファイル: /etc/rhsm/rhsm.conf
+設定ファイル: `/etc/rhsm/rhsm.conf`
 
 ```ini
 [server]
-# HTTPプロキシ設定
-proxy_hostname = <プロキシホスト>
-proxy_port = <プロキシポート>
-
-# HTTPSプロキシの場合
-proxy_scheme = https
-
-# プロキシ認証が必要な場合
-proxy_user = <プロキシユーザー>
-proxy_password = <プロキシパスワード>
-
-# 特定のホストをプロキシから除外
-no_proxy = localhost,127.0.0.1,.example.com
+# プロキシ設定
+proxy_hostname = プロキシホスト
+proxy_port = プロキシポート
+proxy_user = プロキシユーザー
+proxy_password = プロキシパスワード
 ```
 
-## 3. パッケージマネージャーのProxy設定
+### パッケージマネージャーのプロキシ設定
 
-### RHEL 8以降（dnf）の設定
-
-設定ファイル: `/etc/dnf/dnf.conf`
-
+RHEL 8以降（/etc/dnf/dnf.conf）:
 ```ini
 [main]
-# HTTPプロキシ設定
-proxy=http://<プロキシホスト>:<プロキシポート>/
-
-# プロキシ認証が必要な場合
-proxy_username=<プロキシユーザー>
-proxy_password=<プロキシパスワード>
-
-# HTTPSプロキシの場合
-proxy=https://<プロキシホスト>:<プロキシポート>/
+proxy=http://プロキシホスト:ポート/
+proxy_username=ユーザー名
+proxy_password=パスワード
 ```
 
-### RHEL 7以下（yum）の設定
-
-設定ファイル: `/etc/yum.conf`
-
+RHEL 7以下（/etc/yum.conf）:
 ```ini
 [main]
-# HTTPプロキシ設定
-proxy=http://<プロキシホスト>:<プロキシポート>/
-
-# プロキシ認証が必要な場合
-proxy_username=<プロキシユーザー>
-proxy_password=<プロキシパスワード>
+proxy=http://プロキシホスト:ポート/
+proxy_username=ユーザー名
+proxy_password=パスワード
 ```
 
-## 4. リポジトリの接続確認
-
-### RHEL 8以降（dnf）
+## 接続確認
 
 ```bash
-# リポジトリ一覧確認
-dnf repolist
-dnf repolist --enabled
+# リポジトリ確認
+dnf repolist          # RHEL 8以降
+yum repolist          # RHEL 7以下
 
 # パッケージ検索テスト
-dnf search vim
+dnf search vim        # RHEL 8以降
+yum search vim        # RHEL 7以下
 
 # メタデータ更新
-dnf makecache
+dnf makecache         # RHEL 8以降
+yum makecache         # RHEL 7以下
 ```
 
-### RHEL 7以下（yum）
+## トラブルシューティング
 
 ```bash
-# リポジトリ一覧確認
-yum repolist
-yum repolist enabled
+# キャッシュクリア
+dnf clean all         # RHEL 8以降
+yum clean all         # RHEL 7以下
 
-# パッケージ検索テスト
-yum search vim
-
-# メタデータ更新
-yum makecache
-```
-
-## 5. トラブルシューティング
-
-### よくあるエラーと対処法
-
-#### サブスクリプション関連エラー
-
-```bash
-# エラー: "This system is not registered to Red Hat Subscription Management"
-# 対処: システムを登録する
-subscription-manager register
-
-# エラー: "No subscriptions are attached to this system"
-# 対処: サブスクリプションをアタッチする
-subscription-manager attach --auto
-```
-
-#### プロキシ関連エラー
-
-```bash
 # 接続テスト
-curl -I --proxy <プロキシホスト>:<プロキシポート> https://cdn.redhat.com
+curl -I --proxy プロキシ:ポート https://cdn.redhat.com
 
-# プロキシ設定確認
-subscription-manager config --list
-```
-
-#### リポジトリ接続エラー
-
-```bash
-# RHEL 8以降
-dnf clean all
-dnf makecache
-
-# RHEL 7以下
-yum clean all
-yum makecache
-```
-
-### ログ確認
-
-```bash
-# サブスクリプション関連ログ
+# ログ確認
 tail -f /var/log/rhsm/rhsm.log
-
-# DNF/YUMログ
-tail -f /var/log/dnf.log    # RHEL 8以降
-tail -f /var/log/yum.log    # RHEL 7以下
+tail -f /var/log/dnf.log      # RHEL 8以降
+tail -f /var/log/yum.log      # RHEL 7以下
 ```
-
-## 6. セキュリティのベストプラクティス
-
-### プロキシ認証情報の保護
-
-```bash
-# ファイル権限を制限
-chmod 600 /etc/rhsm/rhsm.conf
-chmod 600 /etc/dnf/dnf.conf
-chmod 600 /etc/yum.conf
-
-# 所有者を確認
-chown root:root /etc/rhsm/rhsm.conf
-```
-
-### 環境変数での一時的な設定
-
-```bash
-# 一時的なプロキシ設定（セッション中のみ有効）
-export http_proxy=http://<プロキシホスト>:<プロキシポート>
-export https_proxy=https://<プロキシホスト>:<プロキシポート>
-
-# パッケージマネージャー実行
-dnf update
-```
-
-## 7. 参考情報
-
-- [Red Hat Subscription Management](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/)
-- [DNF Command Reference](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/package-management/DNF/)
-- [YUM Command Reference](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-yum)

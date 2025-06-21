@@ -1,44 +1,53 @@
-# SELinuxの設定
+# SELinux基本操作
 
-## SELinux 有効無効の確認
+## 状態確認
 
-```
-$ getenforce
+```bash
+# SELinuxの状態確認
+getenforce
+# Enforcing → SELinux有効
+# Permissive → 警告のみ
+# Disabled → SELinux無効
 
-Enforcing → SELinux有効
-Disabled → SELinux無効
-```
-
-## SELinux属性情報が間違っていて、ethの認識順を直せない時の対応
-
-### 被疑箇所確認-事前確認
-
-```
-ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
-ls -lZ /etc/sysconfig/network-scripts/ifcfg-eth*
-
-表示例)
--rw-r--r--. root root system_u    :object_r:file_t    :s0 ifcfg-eth0  ★修正対象は0側のtype箇所のみで、userの差異は影響無い想定
--rw-r--r--. root root unconfined_u:object_r:net_conf_t:s0 ifcfg-eth1
+# 詳細状態確認
+sestatus
 ```
 
-### typeの変更
+## SELinux設定変更
 
-```
-chcon -t net_conf_t /etc/sysconfig/network-scripts/ifcfg-eth0
+```bash
+# 一時的に無効化
+setenforce 0
 
-```
+# 一時的に有効化
+setenforce 1
 
-被疑箇所確認-事後確認
-```
-ls -lZ /etc/sysconfig/network-scripts/ifcfg-eth*
-
-表示例)
--rw-r--r--. root root system_u    :object_r:net_conf_t:s0 ifcfg-eth0
--rw-r--r--. root root unconfined_u:object_r:net_conf_t:s0 ifcfg-eth1
-
-ls -la /etc/sysconfig/network-scripts/ifcfg-eth*
+# 永続的に無効化（/etc/selinux/configを編集）
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
 ```
 
-SELInuxが有効な状態で、fileの複製、追加時に、属性情報が間違っていると、
-直さないといけなくなる可能性有
+## ファイルコンテキスト確認・修正
+
+```bash
+# ファイルのSELinuxコンテキスト確認
+ls -Z ファイル名
+
+# ファイルコンテキスト変更
+chcon -t httpd_exec_t /path/to/file
+
+# ファイルコンテキストを復元
+restorecon -v /path/to/file
+
+# ディレクトリ以下を再帰的に復元
+restorecon -Rv /path/to/directory
+```
+
+## ログ確認
+
+```bash
+# SELinuxの拒否ログ確認
+grep "denied" /var/log/audit/audit.log
+
+# 最新のSELinux拒否ログ
+sealert -a /var/log/audit/audit.log
+```

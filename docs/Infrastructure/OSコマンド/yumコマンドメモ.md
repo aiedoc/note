@@ -1,17 +1,69 @@
-# yum コマンドメモ
+# yum/dnfコマンド
 
-| コマンド              | 説明                                                         |
-| --------------------- | ------------------------------------------------------------ |
-| check-update          | アップデート対象のパッケージリストを表示する                 |
-| update パッケージ名   | 指定したパッケージをアップデートする                         |
-| install パッケージ名  | 指定したパッケージをインストールする                         |
-| remove パッケージ名   | 指定したパッケージをアンインストールする                     |
-| info パッケージ名     | 指定したパッケージの情報を表示する                           |
-| list                  | 全パッケージ情報をリスト表示する                             |
-| repolist              | リポジトリ一覧を表示する                                     |
-| search キーワード     | パッケージ情報をキーワードで検索する                         |
-| search all キーワード | パッケージをキーワードで検索する（パッケージ名及び説明文等すべて） |
-| grouplist             | パッケージグループをリスト表示する                           |
-| groupinstall グループ | 指定したグループのパッケージをインストールする               |
+## 基本操作
 
-[yumリポジトリ追加リスト 完全版](https://qiita.com/bezeklik/items/9766003c19f9664602fe)
+```bash
+# パッケージインストール
+yum install パッケージ名
+dnf install パッケージ名
+
+# パッケージアップデート
+yum update パッケージ名
+dnf update パッケージ名
+
+# システム全体アップデート
+yum update
+dnf update
+
+# パッケージ削除
+yum remove パッケージ名
+dnf remove パッケージ名
+```
+
+## 検索・情報確認
+
+```bash
+# パッケージ検索
+yum search キーワード
+dnf search キーワード
+
+# パッケージ情報表示
+yum info パッケージ名
+dnf info パッケージ名
+
+# インストール済みパッケージ一覧
+yum list installed
+dnf list installed
+
+# 利用可能なパッケージ一覧
+yum list available
+dnf list available
+```
+
+## リポジトリ管理
+
+```bash
+# リポジトリ一覧表示
+yum repolist
+dnf repolist
+
+# アップデート対象確認
+yum check-update
+dnf check-update
+
+# キャッシュクリア
+yum clean all
+dnf clean all
+```
+
+## グループ操作
+
+```bash
+# グループ一覧
+yum grouplist
+dnf grouplist
+
+# グループインストール
+yum groupinstall "Development Tools"
+dnf groupinstall "Development Tools"
+```
