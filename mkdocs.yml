@@ -24,8 +24,8 @@ extra_css:
 
 extra:
   social:
-    - type: 'github'
-      link: 'https://https://bps-github.pstg.paas.cloud.global.fujitsu.com/squidfunk'
+    - icon: fontawesome/brands/github
+      link: 'https://github.com/aiedoc/note'
 
 markdown_extensions:
     - markdown.extensions.admonition
