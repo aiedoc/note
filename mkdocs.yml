@@ -1,6 +1,9 @@
 # Project information
 site_name: note
-#site_url:
+site_url: https://aiedoc.github.io/note/
+site_description: "技術ノート・ドキュメント集 - MkDocs Material高度機能実装例"
+site_author: "aiedoc"
+copyright: "&copy; 2024 aiedoc"
 
 # Navigation
 nav:
@@ -90,11 +93,6 @@ theme:
 extra_css:
     - stylesheets/extra.css
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: 'https://github.com/aiedoc/note'
-
 markdown_extensions:
     - markdown.extensions.admonition
     - markdown.extensions.codehilite:
@@ -127,11 +125,41 @@ extra_javascript:
   - 'javascripts/extra.js'
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
 
-# Analytics
+# Analytics & Plugins
 plugins:
   - search:
       lang: ja
+      separator: '[\s\-\.]+' 
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Tokyo
+      locale: ja
+      fallback_to_build_date: true
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+        remove_empty_space: true
+      cache_safe: true
 
-google_analytics:
-  - 'UA-126129623-1'
-  - 'auto'
+# Modern Analytics (GA4)
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # 実際のGA4測定IDに置き換え
+    feedback:
+      title: この記事は役に立ちましたか？
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: 役に立った
+          data: 1
+          note: >
+            フィードバックありがとうございます！
+        - icon: material/emoticon-sad-outline
+          name: 改善が必要
+          data: 0
+          note: >
+            フィードバックありがとうございます。改善に努めます。
+  generator: false  # "Made with Material for MkDocs"を非表示
