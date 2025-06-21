@@ -105,39 +105,39 @@
   <div class="homepage-card quick-access">
     <h3>🔥 人気コンテンツ</h3>
     <ul>
-      <li><a href="./AI/claude-code-best-practices.md">Claude Code活用法</a></li>
-      <li><a href="./Tips/Mkdocs/mkdocsを使ったGitHubPages.md">GitHub Pages作成方法</a></li>
-      <li><a href="./AI/ai-development-tools.md">2025年AI開発ツール比較</a></li>
-      <li><a href="./Tips/Mkdocs/デザイン改善ガイド.md">サイトデザイン改善ガイド</a></li>
+      <li><a href="./AI/claude-code-best-practices/">Claude Code活用法</a></li>
+      <li><a href="./Tips/Mkdocs/mkdocsを使ったGitHubPages/">GitHub Pages作成方法</a></li>
+      <li><a href="./AI/ai-development-tools/">2025年AI開発ツール比較</a></li>
+      <li><a href="./Tips/Mkdocs/デザイン改善ガイド/">サイトデザイン改善ガイド</a></li>
     </ul>
   </div>
 
   <div class="homepage-card">
     <h3>📚 学習・情報収集</h3>
     <ul>
-      <li><a href="./Info/気になったニュース.md">📰 ニュース・トレンド</a></li>
-      <li><a href="./Info/英語.md">🌍 英語学習リソース</a></li>
-      <li><a href="./Info/リンク集.md">🔗 参考サイト集</a></li>
+      <li><a href="./Info/気になったニュース/">📰 ニュース・トレンド</a></li>
+      <li><a href="./Info/英語/">🌍 英語学習リソース</a></li>
+      <li><a href="./Info/リンク集/">🔗 参考サイト集</a></li>
     </ul>
   </div>
 
   <div class="homepage-card">
     <h3>🖥️ インフラ・運用</h3>
     <ul>
-      <li><a href="./Infrastructure/OSコマンド/OSの確認.md">OS環境確認</a></li>
-      <li><a href="./Infrastructure/OSコマンド/DNS設定.md">DNS設定</a></li>
-      <li><a href="./Infrastructure/OSコマンド/SELinux.md">SELinux設定</a></li>
-      <li><a href="./Infrastructure/OSコマンド/sedコマンドメモ.md">sedコマンド活用</a></li>
+      <li><a href="./Infrastructure/OSコマンド/OSの確認/">OS環境確認</a></li>
+      <li><a href="./Infrastructure/OSコマンド/DNS設定/">DNS設定</a></li>
+      <li><a href="./Infrastructure/OSコマンド/SELinux/">SELinux設定</a></li>
+      <li><a href="./Infrastructure/OSコマンド/sedコマンドメモ/">sedコマンド活用</a></li>
     </ul>
   </div>
 
   <div class="homepage-card">
     <h3>🤖 AI開発</h3>
     <ul>
-      <li><a href="./AI/claude-code-best-practices.md">Claude Code活用法</a></li>
-      <li><a href="./AI/ai-development-tools.md">2025年AI開発ツール比較</a></li>
-      <li><a href="./AI/llm-programming-guide.md">LLMプログラミング実践</a></li>
-      <li><a href="./AI/agentic-ai-development.md">エージェント型AI開発</a></li>
+      <li><a href="./AI/claude-code-best-practices/">Claude Code活用法</a></li>
+      <li><a href="./AI/ai-development-tools/">2025年AI開発ツール比較</a></li>
+      <li><a href="./AI/llm-programming-guide/">LLMプログラミング実践</a></li>
+      <li><a href="./AI/agentic-ai-development/">エージェント型AI開発</a></li>
     </ul>
   </div>
 
@@ -145,7 +145,7 @@
     <h3>💻 プログラミング</h3>
     <ul>
       <li><a href="./Programming/Bash/sample.sh">Bashスクリプトサンプル</a></li>
-      <li><a href="./Tips/git ignoreで特定ディレクトリを管理対象外にする.md">Git設定・運用</a></li>
+      <li><a href="./Tips/git ignoreで特定ディレクトリを管理対象外にする/">Git設定・運用</a></li>
     </ul>
     <p><em>この分野のコンテンツを拡充予定です</em></p>
   </div>
@@ -153,9 +153,9 @@
   <div class="homepage-card">
     <h3>🛠️ 開発ツール・Tips</h3>
     <ul>
-      <li><a href="./Tips/Mkdocs/mkdocsメモ.md">MkDocsの基本設定</a></li>
-      <li><a href="./Tips/Mkdocs/高度な設定.md">サイト高度機能設定</a></li>
-      <li><a href="./Tips/Mkdocs/アナリティクス設定.md">アクセス解析設定</a></li>
+      <li><a href="./Tips/Mkdocs/mkdocsメモ/">MkDocsの基本設定</a></li>
+      <li><a href="./Tips/Mkdocs/高度な設定/">サイト高度機能設定</a></li>
+      <li><a href="./Tips/Mkdocs/アナリティクス設定/">アクセス解析設定</a></li>
     </ul>
   </div>
 
