@@ -2,6 +2,21 @@
 site_name: note
 #site_url:
 
+# Navigation
+nav:
+  - ホーム: index.md
+  - Info: Info/
+  - Infrastructure: Infrastructure/
+  - Tips: 
+    - Tips/index.md
+    - MkDocs:
+      - MkDocsメモ: Tips/Mkdocs/mkdocsメモ.md
+      - GitHub Pages作成方法: Tips/Mkdocs/mkdocsを使ったGitHubPages.md
+      - デザイン改善ガイド: Tips/Mkdocs/デザイン改善ガイド.md
+      - アナリティクス設定: Tips/Mkdocs/アナリティクス設定.md
+      - 高度な設定: Tips/Mkdocs/高度な設定.md
+  - Programming: Programming/
+
 # Repository
 repo_name: note
 repo_url: https://github.com/aiedoc/note
