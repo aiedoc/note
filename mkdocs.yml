@@ -9,18 +9,48 @@ repo_url: https://github.com/aiedoc/note
 # Configuration
 theme:
   name: 'material'
-  palette:
-    primary: 'Teal'
-    accent: 'Deep Orange'
   language: 'ja'
-  feature:
-    tabs: true
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  features:
+    # Navigation
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    # Search
+    - search.highlight
+    - search.suggest
+    # Header
+    - header.autohide
+    # Content
+    - content.code.copy
+    - content.code.select
+    - content.tooltips
+  icon:
+    repo: fontawesome/brands/github
 
 extra_css:
-    - "//fonts.googleapis.com/earlyaccess/notosansjp.css"
-    - "//fonts.googleapis.com/css?family=Open+Sans:600,800"
-    # - 'stylesheets/extra.css'
-    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    - stylesheets/extra.css
 
 extra:
   social:
@@ -58,6 +88,11 @@ markdown_extensions:
 extra_javascript:
   - 'javascripts/extra.js'
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
+
+# Analytics
+plugins:
+  - search:
+      lang: ja
 
 google_analytics:
   - 'UA-126129623-1'
