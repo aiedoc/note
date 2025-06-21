@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="md-content" data-md-component="content">
+  <article class="md-content__inner md-typeset">
+    <h1>404 - ページが見つかりません</h1>
+    <p>申し訳ございません。お探しのページは見つかりませんでした。</p>
+    
+    <div style="margin: 2rem 0;">
+      <a href="{{ config.site_url }}" class="md-button md-button--primary">
+        ホームページに戻る
+      </a>
+    </div>
+    
+    <h2>よく見られているページ</h2>
+    <ul>
+      <li><a href="{{ config.site_url }}Tips/Mkdocs/mkdocsを使ったGitHubPages/">MkDocsを使ったGitHub Pages作成方法</a></li>
+      <li><a href="{{ config.site_url }}Tips/Mkdocs/高度な設定/">高度な設定ガイド</a></li>
+      <li><a href="{{ config.site_url }}Tips/Mkdocs/デザイン改善ガイド/">デザイン改善ガイド</a></li>
+    </ul>
+  </article>
+</div>
+{% endblock %}

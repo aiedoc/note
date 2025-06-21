@@ -18,6 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 5. ユーザーエクスペリエンス向上
     improveUX();
+    
+    // 6. コードブロックのコピーボタン
+    addCopyButtons();
+    
+    // 7. スムーズスクロール
+    enableSmoothScroll();
+    
+    // 8. キーボードショートカット
+    setupKeyboardShortcuts();
 });
 
 // 外部リンクトラッキング
@@ -171,6 +180,9 @@ function improveUX() {
     // 目次の改善
     enhanceTableOfContents();
     
+    // プログレスバーの追加
+    addProgressBar();
+    
     console.log('✨ UX改善機能を適用しました');
 }
 
@@ -233,6 +245,200 @@ function enhanceTableOfContents() {
     });
 }
 
+// コードブロックのコピーボタン追加
+function addCopyButtons() {
+    const codeBlocks = document.querySelectorAll('pre > code');
+    
+    codeBlocks.forEach(code => {
+        const pre = code.parentElement;
+        if (pre.querySelector('.copy-button')) return; // 既にボタンがある場合はスキップ
+        
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '📋 コピー';
+        button.style.cssText = `
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: var(--md-primary-fg-color);
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+        `;
+        
+        pre.style.position = 'relative';
+        pre.appendChild(button);
+        
+        // ホバー時にボタンを表示
+        pre.addEventListener('mouseenter', () => {
+            button.style.opacity = '1';
+        });
+        
+        pre.addEventListener('mouseleave', () => {
+            button.style.opacity = '0';
+        });
+        
+        // コピー機能
+        button.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(code.textContent);
+                button.innerHTML = '✅ コピー完了!';
+                setTimeout(() => {
+                    button.innerHTML = '📋 コピー';
+                }, 2000);
+            } catch (err) {
+                console.error('コピーに失敗しました:', err);
+                button.innerHTML = '❌ 失敗';
+            }
+        });
+    });
+    
+    console.log(`📋 ${codeBlocks.length}個のコードブロックにコピーボタンを追加`);
+}
+
+// スムーズスクロール
+function enableSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const headerOffset = 80; // ヘッダーの高さ分オフセット
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    console.log('🔄 スムーズスクロールを有効化');
+}
+
+// キーボードショートカット
+function setupKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+        // Ctrl/Cmd + K で検索
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const searchInput = document.querySelector('[data-md-component="search-query"]');
+            if (searchInput) {
+                searchInput.focus();
+            }
+        }
+        
+        // Ctrl/Cmd + / でショートカット一覧表示
+        if ((e.ctrlKey || e.metaKey) && e.key === '/') {
+            e.preventDefault();
+            showShortcutHelp();
+        }
+        
+        // ESCで検索を閉じる
+        if (e.key === 'Escape') {
+            const searchReset = document.querySelector('[data-md-component="search-reset"]');
+            if (searchReset) {
+                searchReset.click();
+            }
+        }
+    });
+    
+    console.log('⌨️ キーボードショートカットを設定');
+}
+
+// ショートカット一覧の表示
+function showShortcutHelp() {
+    const existingHelp = document.getElementById('shortcut-help');
+    if (existingHelp) {
+        existingHelp.remove();
+        return;
+    }
+    
+    const helpModal = document.createElement('div');
+    helpModal.id = 'shortcut-help';
+    helpModal.innerHTML = `
+        <div style="
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--md-default-bg-color);
+            border: 2px solid var(--md-primary-fg-color);
+            border-radius: 8px;
+            padding: 2rem;
+            z-index: 1000;
+            max-width: 400px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        ">
+            <h3 style="margin-top: 0;">⌨️ キーボードショートカット</h3>
+            <table style="width: 100%; margin: 1rem 0;">
+                <tr><td><kbd>Ctrl</kbd> + <kbd>K</kbd></td><td>検索を開く</td></tr>
+                <tr><td><kbd>Ctrl</kbd> + <kbd>/</kbd></td><td>この一覧を表示</td></tr>
+                <tr><td><kbd>ESC</kbd></td><td>検索を閉じる</td></tr>
+                <tr><td><kbd>G</kbd> <kbd>H</kbd></td><td>ホームに移動</td></tr>
+            </table>
+            <button onclick="this.parentElement.parentElement.remove()" style="
+                background: var(--md-primary-fg-color);
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                cursor: pointer;
+            ">閉じる</button>
+        </div>
+        <div style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        " onclick="document.getElementById('shortcut-help').remove()"></div>
+    `;
+    
+    document.body.appendChild(helpModal);
+}
+
+// 読み込み進行状況バー
+function addProgressBar() {
+    const progressBar = document.createElement('div');
+    progressBar.id = 'reading-progress';
+    progressBar.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--md-accent-fg-color);
+        transition: width 0.2s ease;
+        z-index: 1000;
+    `;
+    document.body.appendChild(progressBar);
+    
+    function updateProgress() {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        const scrolled = window.scrollY;
+        const progress = (scrolled / documentHeight) * 100;
+        progressBar.style.width = progress + '%';
+    }
+    
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+    
+    console.log('📊 読み込み進行状況バーを追加');
+}
+
 // デバッグ情報（開発時のみ）
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     console.log('🔧 開発モード: 追加のデバッグ情報を表示');
@@ -252,4 +458,8 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
     console.log('- ✅ 読了時間表示');
     console.log('- ✅ スクロール位置復元');
     console.log('- ✅ 目次ハイライト');
+    console.log('- ✅ コピーボタン');
+    console.log('- ✅ スムーズスクロール');
+    console.log('- ✅ キーボードショートカット');
+    console.log('- ✅ 読み込み進行状況バー');
 }

@@ -3,7 +3,7 @@ site_name: note
 site_url: https://aiedoc.github.io/note/
 site_description: "技術ノート・ドキュメント集 - MkDocs Material高度機能実装例"
 site_author: "aiedoc"
-copyright: "&copy; 2024 aiedoc"
+copyright: "&copy; 2024-2025 aiedoc. All rights reserved."
 
 # Navigation
 nav:
@@ -89,11 +89,14 @@ theme:
     - content.tooltips
   icon:
     repo: fontawesome/brands/github
+  custom_dir: custom_theme/
 
 extra_css:
     - stylesheets/extra.css
 
 markdown_extensions:
+    - attr_list
+    - md_in_html
     - markdown.extensions.admonition
     - markdown.extensions.codehilite:
         guess_lang: false
@@ -163,3 +166,13 @@ extra:
           note: >
             フィードバックありがとうございます。改善に努めます。
   generator: false  # "Made with Material for MkDocs"を非表示
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aiedoc
+      name: GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/aiedoc
+      name: Twitter
+    - icon: fontawesome/solid/rss
+      link: /feed.xml
+      name: RSS Feed

@@ -87,60 +87,36 @@
   --md-default-fg-color: #e1e5e9;
 }
 
-/* 3列グリッドレイアウト（高度な設定の実装例） */
-.md-content ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
+/* 3列グリッドレイアウト - より強力なセレクタ */
+.md-typeset ul {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1rem !important;
+  list-style: none !important;
+  padding: 0 !important;
 }
 
-/* パフォーマンス最適化のためのGPU加速 */
-.md-content ul li {
-  will-change: transform;
-  transform: translateZ(0);
+.md-typeset ul li {
+  background: var(--md-default-bg-color) !important;
+  border: 1px solid var(--md-default-fg-color--lighter) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
 }
 
-.md-content ul li {
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lighter);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  min-height: 3rem;
-  display: flex;
-  align-items: center;
-}
-
-.md-content ul li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  border-color: var(--md-accent-fg-color);
-}
-
-.md-content ul li a {
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--md-typeset-a-color);
-  width: 100%;
-}
-
-.md-content ul li a:hover {
-  color: var(--md-accent-fg-color);
+.md-typeset ul li:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
 }
 
 /* レスポンシブ対応 */
-@media screen and (max-width: 76.1875em) {
-  .md-content ul {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .md-typeset ul {
+    grid-template-columns: 1fr !important;
   }
 }
 
-@media screen and (max-width: 44.9375em) {
-  .md-content ul {
-    grid-template-columns: 1fr;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .md-typeset ul {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }

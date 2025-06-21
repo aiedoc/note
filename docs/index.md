@@ -1,12 +1,26 @@
 # トップページ
 
 <style>
-.md-content ul {
-  display: flex;
-  flex-wrap: wrap;
+.md-typeset ul {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1rem !important;
+  list-style: none !important;
+  padding: 0 !important;
 }
-.md-content ul li {
-  width: 200px;
+
+.md-typeset ul li {
+  background: var(--md-default-bg-color) !important;
+  border: 1px solid #ddd !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+@media (max-width: 768px) {
+  .md-typeset ul {
+    grid-template-columns: 1fr !important;
+  }
 }
 </style>
 
@@ -18,7 +32,7 @@
 
 ## Infrastructure
 
-- [OSコマンド](./../OSコマンド/)
+- [OSコマンド](./Infrastructure/OSコマンド/)
 - test
 - test
 
