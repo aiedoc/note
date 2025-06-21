@@ -87,8 +87,8 @@
   --md-default-fg-color: #e1e5e9;
 }
 
-/* 3列グリッドレイアウト（高度な設定の実装例） */
-.md-content ul {
+/* 3列グリッドレイアウト（高度な設定の実装例） - ホームページ専用*/
+.md-content h2 + ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -97,13 +97,10 @@
   margin: 1rem 0;
 }
 
-/* パフォーマンス最適化のためのGPU加速 */
-.md-content ul li {
+/* パフォーマンス最適化のためのGPU加速 - ホームページ専用 */
+.md-content h2 + ul li {
   will-change: transform;
   transform: translateZ(0);
-}
-
-.md-content ul li {
   background: var(--md-default-bg-color);
   border: 1px solid var(--md-default-fg-color--lighter);
   border-radius: 0.5rem;
@@ -115,32 +112,32 @@
   align-items: center;
 }
 
-.md-content ul li:hover {
+.md-content h2 + ul li:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   border-color: var(--md-accent-fg-color);
 }
 
-.md-content ul li a {
+.md-content h2 + ul li a {
   text-decoration: none;
   font-weight: 500;
   color: var(--md-typeset-a-color);
   width: 100%;
 }
 
-.md-content ul li a:hover {
+.md-content h2 + ul li a:hover {
   color: var(--md-accent-fg-color);
 }
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 76.1875em) {
-  .md-content ul {
+  .md-content h2 + ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 44.9375em) {
-  .md-content ul {
+  .md-content h2 + ul {
     grid-template-columns: 1fr;
   }
 }
