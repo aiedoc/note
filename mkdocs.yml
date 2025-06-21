@@ -57,6 +57,7 @@ nav:
     - サイト構築・運用:
       - MkDocsメモ: Tips/Mkdocs/mkdocsメモ.md
       - GitHub Pages作成方法: Tips/Mkdocs/mkdocsを使ったGitHubPages.md
+      - サイト運用ガイド: Tips/Mkdocs/サイト運用ガイド.md
       - GitHub Actions自動デプロイ: Tips/Mkdocs/GitHub Actions自動デプロイ設定.md
       - デザイン改善ガイド: Tips/Mkdocs/デザイン改善ガイド.md
       - アナリティクス設定: Tips/Mkdocs/アナリティクス設定.md
@@ -215,6 +216,7 @@ plugins:
           サイト構築・運用: Site Building & Operations
           MkDocsメモ: MkDocs Notes
           GitHub Pages作成方法: Creating GitHub Pages
+          サイト運用ガイド: Site Operations Guide
           GitHub Actions自動デプロイ: GitHub Actions Automated Deployment
           デザイン改善ガイド: Design Improvement Guide
           アナリティクス設定: Analytics Setup
