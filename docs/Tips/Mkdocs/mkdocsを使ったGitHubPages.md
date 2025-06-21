@@ -119,10 +119,10 @@ cd リポジトリ名
 
 実行結果例：
 ```bash
-$ git clone https://github.com/username/my-docs.git
-Cloning into 'my-docs'...
+$ git clone https://github.com/github-user-001/test-pages.git
+Cloning into 'test-pages'...
 warning: You appear to have cloned an empty repository.
-$ cd my-docs
+$ cd test-pages
 ```
 
 ### ③MkDocsプロジェクトの作成
@@ -215,13 +215,13 @@ mkdocs gh-deploy
 ```bash
 $ mkdocs gh-deploy
 INFO    -  Cleaning site directory
-INFO    -  Building documentation to directory: /path/to/your-repo/site
-INFO    -  Copying '/path/to/your-repo/site' to 'gh-pages' branch and pushing to GitHub.
-INFO    -  Your documentation should shortly be available at: https://ユーザー名.github.io/リポジトリ名/
+INFO    -  Building documentation to directory: /path/to/test-pages/site
+INFO    -  Copying '/path/to/test-pages/site' to 'gh-pages' branch and pushing to GitHub.
+INFO    -  Your documentation should shortly be available at: https://github-user-001.github.io/test-pages/
 ```
 
 !!! success "デプロイ完了"
-    数分後に https://ユーザー名.github.io/リポジトリ名/ でサイトにアクセスできるようになります。
+    数分後に https://github-user-001.github.io/test-pages/ でサイトにアクセスできるようになります。
 
 ## 4. コンテンツの更新と管理
 
@@ -364,9 +364,9 @@ mkdocs gh-deploy
 
 これで以下のようなURL構造でアクセスできるようになります：
 
-- https://ユーザー名.github.io/リポジトリ名/ （ホーム）
-- https://ユーザー名.github.io/リポジトリ名/guide/getting-started/ （ガイド）  
-- https://ユーザー名.github.io/リポジトリ名/reference/api/ （リファレンス）
+- https://github-user-001.github.io/test-pages/ （ホーム）
+- https://github-user-001.github.io/test-pages/guide/getting-started/ （ガイド）  
+- https://github-user-001.github.io/test-pages/reference/api/ （リファレンス）
 
 ![画像5](./images/image5.png)
 
