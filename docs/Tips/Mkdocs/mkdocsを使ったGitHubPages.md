@@ -1,8 +1,11 @@
 # mkdocsを使ったGitHub Pagesの作成方法
 
+!!! tip "関連記事"
+    - [MkDocsデザイン改善ガイド](./デザイン改善ガイド.md) - UI/UX最適化手順
+    - [Google Analytics設定](./アナリティクス設定.md) - アクセス解析の導入
+    - [MkDocs高度な設定](./高度な設定.md) - カスタマイズとプラグイン
 
-
-##1. GitHub Pagesとは
+## 1. GitHub Pagesとは
 
 GitHub Pagesとはレンタルサーバなど用意しなくても、無料で簡単にウェブサイトを作成できるGitHub機能の１つです。実はmicrosoftやyahooなどの大手企業もGitHub Pagesを自身の企業ページとして活用しています。
 
