@@ -45,30 +45,41 @@ Mkdocsとは一言でいうと、markdownで書いたドキュメントを自動
 
 ### 事前準備
 
-- pythonのインストール(2.7 or 3.4 ～ 3.7)
-- GitHubアカウントの作成(無料)
+- **Python 3.8以上**のインストール（推奨：Python 3.9以上）
+- GitHubアカウントの作成（無料）
+- Gitがインストールされていること
 
-事前準備として作業端末にpythonのインストール(2.7 or 3.4 ～ 3.7)と、GitHubアカウントを作成しておいてください。
+!!! warning "Python バージョンについて"
+    Python 2.7は2020年にサポート終了しました。現在はPython 3.8以上が必要です。
+
+事前準備として作業端末にPython 3.8以上のインストールと、GitHubアカウントを作成しておいてください。
 
 ### ①Mkdocsのインストール
 
 最初に以下のコマンドを実施し、作業端末へMkdocsをインストールします。
 
-```
-$ pip install mkdocs
+```bash
+# 推奨：MkDocs MaterialテーマとMkDocs本体を同時インストール
+pip install mkdocs-material
+
+# または、MkDocs本体のみ
+pip install mkdocs
 ```
 
-※もしpipにmkdocsが入っていない場合は以下のコマンドを実施し、pipをアップグレードしてください
+!!! tip "推奨インストール方法"
+    `mkdocs-material`をインストールすると、MkDocs本体と人気のMaterialテーマが同時にインストールされます。
 
-```
-$ pip install --upgrade pip
+※pipが古い場合は以下のコマンドでアップグレードしてください
+
+```bash
+pip install --upgrade pip
 ```
 
 インストールが終わると以下のコマンドを実行し、mkdocsがインストールされていることを確認します
 
-```
-$  mkdocs --version
-mkdocs, version 1.0.4 from /home/ubuntu/.pyenv/versions/3.6.6/lib/python3.6/site-packages/mkdocs (Python 3.6)
+```bash
+mkdocs --version
+# 出力例: mkdocs, version 1.6.0 from /usr/local/lib/python3.11/site-packages/mkdocs (Python 3.11)
 ```
 
 詳しいインストール方法について公式サイトを参考してください。
@@ -77,50 +88,84 @@ Mkdocsの公式サイト→https://www.mkdocs.org/
 
 ※ちなみにこのサイトもMkdocsを使ったGitHub Pagesで作られています。
 
-### ②GitHubリポジトリの作成し、クローンする
+### ②GitHubリポジトリの作成とクローン
 
 次に**GitHub Pages専用**のリポジトリを作成します。
 
-※このリポジトリ名がサイト名(URL名)に使われることになるため注意してください。
+!!! note "リポジトリ名について"
+    このリポジトリ名がサイトのURL（https://ユーザー名.github.io/リポジトリ名/）に使われるため、分かりやすい名前にしてください。
 
-今回は test-pagesという名前でリポジトリ名を作成してみます。
+#### リポジトリ作成手順
 
-![画像2](.\images\image2.png)
+1. [GitHub](https://github.com)にログイン
+2. 右上の「+」→「New repository」をクリック
+3. Repository name に任意の名前を入力（例：`my-docs`）
+4. 「Public」を選択（GitHub Pages無料版はPublicのみ）
+5. 「Add a README file」のチェックは**外す**
+6. 「Create repository」をクリック
 
-![画像3](.\images\image3.png)
+![画像2](./images/1537438678422.png)
 
-リポジトリを作成したら、そのリポジトリをローカル環境へにgit cloneします。
+![画像3](./images/1537442804475.png)
 
+#### ローカル環境にクローン
+
+リポジトリを作成したら、ローカル環境にgit cloneします。
+
+```bash
+git clone https://github.com/ユーザー名/リポジトリ名.git
+cd リポジトリ名
 ```
-git clone https://github.com/github-user-001/test-pages.git
-<実行結果例>
-Cloning into 'test-pages'...
+
+実行結果例：
+```bash
+$ git clone https://github.com/username/my-docs.git
+Cloning into 'my-docs'...
 warning: You appear to have cloned an empty repository.
-Checking connectivity... done.
+$ cd my-docs
 ```
 
-### ③mkdocsでGitHub Pagesを作成する
+### ③MkDocsプロジェクトの作成
 
-次に以下のコマンドを実行し、mkdocsプロジェクトを作成します。
+クローンしたリポジトリディレクトリ内で、MkDocsプロジェクトを作成します。
 
-```
-mkdocs new test-pages/
-<実行結果例>
-INFO    -  Writing config file: test-pages/mkdocs.yml
-INFO    -  Writing initial docs: test-pages/docs\index.md
+```bash
+# 現在のディレクトリにMkDocsプロジェクトを作成
+mkdocs new .
 ```
 
-リポジトリへ移動します。
-
+実行結果例：
+```bash
+$ mkdocs new .
+INFO    -  Writing config file: ./mkdocs.yml
+INFO    -  Writing initial docs: ./docs/index.md
 ```
-cd test-pages/
+
+作成されたファイル構造を確認します。
+
+```bash
+ls -la
 ```
 
-test-pages配下にdocsディレクトリが作成され、その配下にindex.mdが作成されているので中身を確認してみましょう。
-
+以下のような構造が作成されます：
 ```
-cat docs/index.md 
-<実行結果例>
+.
+├── docs/
+│   └── index.md      # ホームページ
+├── mkdocs.yml        # 設定ファイル
+└── .git/             # Gitディレクトリ
+```
+
+#### 初期設定ファイルの確認
+
+`docs/index.md`の内容を確認してみましょう。
+
+```bash
+cat docs/index.md
+```
+
+実行結果例：
+```markdown
 # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
@@ -140,111 +185,289 @@ For full documentation visit [mkdocs.org](https://mkdocs.org).
         ...       # Other markdown pages, images and other files.
 ```
 
-このindex.mdはmkdocs で生成されるデフォルトページになります。
+#### ローカルでの確認
 
-このデフォルトページでGitHub Pagesを作成してみます。
+まず、ローカルでサイトが正常に動作することを確認します。
 
-以下をコマンドを実施し、GitHub Pagesを作成します。
-
+```bash
+mkdocs serve
 ```
+
+ブラウザで http://127.0.0.1:8000 にアクセスして確認してください。
+
+#### .gitignoreファイルの作成
+
+ビルド成果物をGitで管理しないように`.gitignore`を作成します。
+
+```bash
+echo "site/" > .gitignore
+```
+
+#### GitHub Pagesへのデプロイ
+
+以下のコマンドでGitHub Pagesに一発デプロイできます。
+
+```bash
 mkdocs gh-deploy
-<実行結果例>
+```
+
+実行結果例：
+```bash
+$ mkdocs gh-deploy
 INFO    -  Cleaning site directory
-INFO    -  Building documentation to directory: C:\git\test-pages\site
-WARNING -  Version check skipped: No version specificed in previous deployment.
-INFO    -  Copying 'C:\git\test-pages\site' to 'gh-pages' branch and pushing to GitHub.
-INFO    -  Your documentation should be available shortly.
+INFO    -  Building documentation to directory: /path/to/your-repo/site
+INFO    -  Copying '/path/to/your-repo/site' to 'gh-pages' branch and pushing to GitHub.
+INFO    -  Your documentation should shortly be available at: https://ユーザー名.github.io/リポジトリ名/
 ```
 
-なんとたったこれだけ！これだけでGitHub Pagesが作成されました。
+!!! success "デプロイ完了"
+    数分後に https://ユーザー名.github.io/リポジトリ名/ でサイトにアクセスできるようになります。
 
-URLは https://【ユーザー名】.github.io/【リポジトリ名】/ となります。
+## 4. コンテンツの更新と管理
 
-以下が今回作成したGitHub PagesのURLになります。
+### ①ホームページの更新
 
-https://github-user-001.github.io/test-pages/
+デフォルトページである `docs/index.md` を編集してホームページをカスタマイズできます。
 
-## 4. GitHub Pagesの内容を更新する
+試しに`index.md`の内容を以下のように変更してみましょう。
 
-### ①Home画面の更新
-
-デフォルトページである index.mdを編集することでHome画面を好きな内容に変更することができます。
-
-試しにindex.mdの最初の行を以下のように変更し、保存します。
-
-```
-vi docs/index.md
+```bash
+# エディタで編集（VS Code、vim、nanoなど）
+code docs/index.md  # VS Codeの場合
+# または
+vi docs/index.md    # vimの場合
 ```
 
-```
+編集例：
+```markdown
 # Welcome to MkDocs
-↓
-# Welcome to GitHub Pages
+↓ 変更
+# Welcome to My Documentation Site
+
+このサイトでは、○○についての情報を提供しています。
+
+## 主なコンテンツ
+
+- [はじめに](./getting-started/)
+- [チュートリアル](./tutorial/)
+- [リファレンス](./reference/)
+
+## 最新情報
+
+最終更新日: 2024年3月
 ```
 
-保存し終わったら再びgh-deployコマンドを実行します。
+#### ローカルで確認
 
+変更内容をローカルで確認します。
+
+```bash
+mkdocs serve
 ```
+
+http://127.0.0.1:8000 にアクセスして変更を確認してください。
+
+#### GitHub Pagesに反映
+
+内容に満足したら、GitHub Pagesに反映します。
+
+```bash
+# 変更をGitにコミット（推奨）
+git add .
+git commit -m "Update homepage content"
+git push origin main
+
+# GitHub Pagesにデプロイ
 mkdocs gh-deploy
 ```
 
-先程のURLを更新して、画面を確認してみましょう
+!!! tip "ベストプラクティス"
+    ソースコードの変更は必ずGitでバージョン管理することを推奨します。
 
-※反映には少し時間がかかることがあります
+数分後にサイトで変更が反映されます。
 
-![画像4](.\images\image4.png)
+![画像4](./images/1537442833904.png)
 
-### ② 別ページの作成
+### ②新しいページの作成
 
-次はHome画面以外に別ページを作成してみます。
+ホームページ以外にも複数のページを作成してサイトを充実させましょう。
 
-**docs配下に新しいディレクトリを作成し、その配下にmarkdownのテキスト格納する**ことで別ページを作成することができます。
+#### ページ作成の基本
 
-今回はtest1というディレクトリ配下にhelloworld1.mdファイルを、test2というディレクトリ配下にhelloworld2.mdファイルを作成してみます。
+**`docs/`配下にMarkdownファイルを作成**することで新しいページができます。
 
+```bash
+# ディレクトリを作成
+mkdir docs/guide
+mkdir docs/reference
+
+# ページファイルを作成
+echo "# はじめに
+
+このページでは、基本的な使い方を説明します。
+
+## 概要
+
+- 手順1
+- 手順2  
+- 手順3" > docs/guide/getting-started.md
+
+echo "# リファレンス
+
+各機能の詳細説明です。
+
+## API一覧
+
+- function1()
+- function2()
+- function3()" > docs/reference/api.md
 ```
-mkdir docs/test1/
-echo "# Hello world 1" > docs/test1/helloworld1.md
-mkdir docs/test2/
-echo "# Hello world 2" > docs/test2/helloworld2.md
+
+#### ナビゲーションの設定
+
+`mkdocs.yml`を編集してナビゲーションメニューを設定します。
+
+```yaml
+# mkdocs.yml
+site_name: My Documentation Site
+
+nav:
+  - ホーム: index.md
+  - ガイド:
+    - はじめに: guide/getting-started.md
+  - リファレンス:
+    - API: reference/api.md
+
+theme:
+  name: material  # 推奨テーマ
 ```
 
-ファイルを作成したら再びgh-deployコマンドを実行します。
+#### ローカルで確認
 
+```bash
+mkdocs serve
 ```
+
+ナビゲーションメニューに新しいページが表示されることを確認してください。
+
+#### デプロイ
+
+```bash
+# ソースコードをコミット
+git add .
+git commit -m "Add guide and reference pages"
+git push origin main
+
+# GitHub Pagesに反映
 mkdocs gh-deploy
 ```
 
-これでtest1というタブにhelloworld1、test2というタブにhelloworld2というページが追加されていると思います。
+これで以下のようなURL構造でアクセスできるようになります：
 
-https://github-user-001.github.io/test-pages/test2/helloworld2/
+- https://ユーザー名.github.io/リポジトリ名/ （ホーム）
+- https://ユーザー名.github.io/リポジトリ名/guide/getting-started/ （ガイド）  
+- https://ユーザー名.github.io/リポジトリ名/reference/api/ （リファレンス）
 
 ![画像5](./images/image5.png)
 
-## 5. mkdocsとGitHub pagesの関係について
+## 5. MkDocsとGitHub Pagesの仕組み
 
-いかがでしたか？mkdocsを使えば、markdownのテキストをあっという間にGitHub Pagesとして公開することができることが分かったと思います。
+MkDocsを使えば、Markdownファイルから美しいWebサイトを簡単に作成・公開できることが分かったと思います。
 
-mkdocs gh-deploy は mkdocsプロジェクト(今回だとtest-pages)をGitHub Pagesへ一発でデプロイしてくれるコマンドです。
+### デプロイの仕組み
 
-test-pagesに置かれているmarkdown資産をHTML形式へ変換し、変換された資産がgh-pagesブランチへPushされます。
+`mkdocs gh-deploy`コマンドは以下の処理を自動で行います：
 
-https://github.com/github-user-001/test-pages/tree/gh-pages
+1. **ビルド**: Markdownファイル → HTMLファイルに変換
+2. **ブランチ作成**: `gh-pages`ブランチを作成/更新
+3. **プッシュ**: 生成されたHTMLを`gh-pages`ブランチにプッシュ
+4. **公開**: GitHub Pagesが`gh-pages`ブランチから自動配信
 
-GitHub Pagesはそのgh-pagesブランチの資産を表示しています。
+### ブランチ構造
 
-GitHub Pagesの設定はGitHub の setingsから確認できます。
+```bash
+main ブランチ:     ソースコード（Markdownファイル、設定ファイル）
+     ├── docs/
+     ├── mkdocs.yml
+     └── .gitignore
 
-![画像6](.\images\image6.png)
+gh-pages ブランチ: 生成されたWebサイト（HTMLファイル）
+     ├── index.html
+     ├── assets/
+     └── sitemap.xml
+```
+
+### GitHub Pages設定の確認
+
+GitHub Pagesの設定は以下で確認できます：
+
+1. GitHubリポジトリページを開く
+2. 「Settings」タブをクリック
+3. 左メニューの「Pages」をクリック
+4. Source が「Deploy from a branch: gh-pages」になっていることを確認
+
+![画像6](./images/1537442833904.png)
+
+!!! note "デプロイ後の確認"
+    `mkdocs gh-deploy`実行後、GitHubの「Actions」タブで自動デプロイの進行状況を確認できます。
+
+## 6. 次のステップ
+
+基本的なMkDocsサイトの作成方法を学びました。さらにサイトを改善したい場合は、以下の応用編をご覧ください。
+
+### 高度なカスタマイズ
+
+!!! tip "関連記事"
+    - **[デザイン改善ガイド](./デザイン改善ガイド.md)** - モダンなUI・ダークモード対応
+    - **[アナリティクス設定](./アナリティクス設定.md)** - Google Analytics導入
+    - **[高度な設定](./高度な設定.md)** - プラグイン・CI/CD・多言語対応
+
+### よくある活用例
+
+#### 📝 技術ドキュメント
+- API仕様書
+- 開発ガイド
+- プロジェクト資料
+
+#### 📚 ナレッジベース
+- 技術メモ
+- トラブルシューティング
+- 学習記録
+
+#### 🌐 ポートフォリオサイト
+- 作品紹介
+- 経歴・スキル
+- ブログ
+
+### GitHub Pagesの利点
+
+- **無料**: パブリックリポジトリなら完全無料
+- **高速**: CDN配信で世界中から高速アクセス
+- **信頼性**: GitHubのインフラで安定運用
+- **バージョン管理**: Gitで履歴管理
+- **独自ドメイン**: カスタムドメイン設定可能
+
+### 推奨ワークフロー
+
+```bash
+# 1. ローカルで編集・確認
+mkdocs serve
+
+# 2. 変更をコミット
+git add .
+git commit -m "Update documentation"
+git push origin main
+
+# 3. 本番環境にデプロイ
+mkdocs gh-deploy
+```
 
 ## 終わりに
 
-今回はmkdocs を使ったGitHub Pagesの作成方法ついて紹介しました。
+MkDocsとGitHub Pagesを組み合わせることで、**Markdownで書いた文書を美しいWebサイトとして簡単に公開**できます。
 
-ページ作成から更新までの簡単な紹介でしたが、mkdocsにはまだまだ色々な設定を行うことができ、自分の好きなウェブページにカスタマイズすることができます。そのあたりは応用編として紹介できたらなと思っています。
+初期設定は少し手間ですが、一度構築すれば継続的なメンテナンスが非常に楽になります。技術者にとって馴染みのあるMarkdown記法とGitワークフローで、効率的にドキュメントサイトを運用できます。
 
-GitHub Pagesは時間やコストをかけず簡単にウェブページを作成できるとても便利な機能です。私は過去に調べた技術メモやTips、勉強会での議事メモなどをGitHub Pagesで管理してます。
+独自ドメインを取得してブログサイトとして運用したり、チームの技術ドキュメント共有プラットフォームとして活用することも可能です。
 
-独自ドメインを取得してブログサイトとして運用したり、Mkdocsの公式サイトのように手順書やドキュメントの公開サイトして活用することも可能です。
-
-もしこの記事を読んでGitHub Pagesのついて気になった方がいましたら、色々調べて活用してみてください！
+ぜひ、あなたのプロジェクトでもMkDocsとGitHub Pagesを活用してみてください！
