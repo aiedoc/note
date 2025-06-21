@@ -20,7 +20,7 @@
     
     
       
-        <title>RHELについて、yumを利用する - note</title>
+        <title>RHELについて、パッケージマネージャーを利用する - note</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rhelyum" class="md-skip">
+        <a href="#rhel" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RHELについて、yumを利用する
+              RHELについて、パッケージマネージャーを利用する
             
           </span>
         </div>
@@ -784,7 +784,7 @@
   
   
   <span class="md-ellipsis">
-    RHELについて、yumを利用する
+    RHELについて、パッケージマネージャーを利用する
     
   </span>
   
@@ -797,7 +797,7 @@
   
   
   <span class="md-ellipsis">
-    RHELについて、yumを利用する
+    RHELについて、パッケージマネージャーを利用する
     
   </span>
   
@@ -826,6 +826,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1. Subscription Managerを登録する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本登録（プロキシなし環境）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロキシ環境での登録
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      サブスクリプション手動アタッチ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -835,21 +868,192 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-yumproxy" class="md-nav__link">
+    <nav class="md-nav" aria-label="2. rhsmのProxy設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etcrhsmrhsmconf" class="md-nav__link">
     <span class="md-ellipsis">
-      3. yumのProxy設定
+      設定ファイル: /etc/rhsm/rhsm.conf
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#4-rhel" class="md-nav__link">
+  <a href="#3-proxy" class="md-nav__link">
     <span class="md-ellipsis">
-      4. RHELリポジトリの接続確認
+      3. パッケージマネージャーのProxy設定
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. パッケージマネージャーのProxy設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rhel-8dnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      RHEL 8以降（dnf）の設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhel-7yum" class="md-nav__link">
+    <span class="md-ellipsis">
+      RHEL 7以下（yum）の設定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. リポジトリの接続確認
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. リポジトリの接続確認">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rhel-8dnf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      RHEL 8以降（dnf）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhel-7yum_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      RHEL 7以下（yum）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. トラブルシューティング
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. トラブルシューティング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      よくあるエラーと対処法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="よくあるエラーと対処法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      サブスクリプション関連エラー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロキシ関連エラー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      リポジトリ接続エラー
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ログ確認
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. セキュリティのベストプラクティス
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. セキュリティのベストプラクティス">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロキシ認証情報の保護
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境変数での一時的な設定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 参考情報
     </span>
   </a>
   
@@ -1276,6 +1480,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1. Subscription Managerを登録する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本登録（プロキシなし環境）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロキシ環境での登録
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      サブスクリプション手動アタッチ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1285,21 +1522,192 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-yumproxy" class="md-nav__link">
+    <nav class="md-nav" aria-label="2. rhsmのProxy設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etcrhsmrhsmconf" class="md-nav__link">
     <span class="md-ellipsis">
-      3. yumのProxy設定
+      設定ファイル: /etc/rhsm/rhsm.conf
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#4-rhel" class="md-nav__link">
+  <a href="#3-proxy" class="md-nav__link">
     <span class="md-ellipsis">
-      4. RHELリポジトリの接続確認
+      3. パッケージマネージャーのProxy設定
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. パッケージマネージャーのProxy設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rhel-8dnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      RHEL 8以降（dnf）の設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhel-7yum" class="md-nav__link">
+    <span class="md-ellipsis">
+      RHEL 7以下（yum）の設定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. リポジトリの接続確認
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. リポジトリの接続確認">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rhel-8dnf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      RHEL 8以降（dnf）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhel-7yum_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      RHEL 7以下（yum）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. トラブルシューティング
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. トラブルシューティング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      よくあるエラーと対処法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="よくあるエラーと対処法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      サブスクリプション関連エラー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロキシ関連エラー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      リポジトリ接続エラー
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ログ確認
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. セキュリティのベストプラクティス
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. セキュリティのベストプラクティス">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロキシ認証情報の保護
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境変数での一時的な設定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 参考情報
     </span>
   </a>
   
@@ -1324,35 +1732,169 @@
   
 
 
-<h1 id="rhelyum">RHELについて、yumを利用する<a class="headerlink" href="#rhelyum" title="Permanent link">&para;</a></h1>
+<h1 id="rhel">RHELについて、パッケージマネージャーを利用する<a class="headerlink" href="#rhel" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">バージョン別対応</p>
+<ul>
+<li><strong>RHEL 7以下</strong>: <code>yum</code>を使用</li>
+<li><strong>RHEL 8以降</strong>: <code>dnf</code>を使用（yumは互換性のためのシンボリックリンク）</li>
+</ul>
+</div>
 <h2 id="1-subscription-manager">1. Subscription Managerを登録する<a class="headerlink" href="#1-subscription-manager" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>subscription-manager register --proxy=&lt;プロキシホスト&gt;:&lt;プロキシポート&gt; --autosubscribe
+<h3 id="_1">基本登録（プロキシなし環境）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Red Hatカスタマーポータルに登録</span>
+subscription-manager<span class="w"> </span>register<span class="w"> </span>--auto-attach
+
+<span class="c1"># アカウント名、パスワードを入力</span>
+<span class="c1"># 登録状況確認</span>
+subscription-manager<span class="w"> </span>status
+subscription-manager<span class="w"> </span>list<span class="w"> </span>--installed
 </code></pre></div>
-<p>アカウント名、パスワードを入力する</p>
-<div class="highlight"><pre><span></span><code>subscription-manager list
+<h3 id="_2">プロキシ環境での登録<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># プロキシ経由での登録</span>
+subscription-manager<span class="w"> </span>register<span class="w"> </span>--proxy<span class="o">=</span>&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;<span class="w"> </span>--auto-attach
+
+<span class="c1"># プロキシ認証が必要な場合</span>
+subscription-manager<span class="w"> </span>register<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--proxy<span class="o">=</span>&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--proxyuser<span class="o">=</span>&lt;プロキシユーザー&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--proxypassword<span class="o">=</span>&lt;プロキシパスワード&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--auto-attach
+</code></pre></div>
+<h3 id="_3">サブスクリプション手動アタッチ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 利用可能なサブスクリプション確認</span>
+subscription-manager<span class="w"> </span>list<span class="w"> </span>--available
+
+<span class="c1"># 特定のプールをアタッチ</span>
+subscription-manager<span class="w"> </span>attach<span class="w"> </span>--pool<span class="o">=</span>&lt;プールID&gt;
+
+<span class="c1"># すべての利用可能なサブスクリプションを自動アタッチ</span>
+subscription-manager<span class="w"> </span>attach<span class="w"> </span>--auto
 </code></pre></div>
 <h2 id="2-rhsmproxy">2. rhsmのProxy設定<a class="headerlink" href="#2-rhsmproxy" title="Permanent link">&para;</a></h2>
-<p>/etc/rhsm/rhsm.confにProxyの設定を行う。</p>
-<ul>
-<li>設定ファイル：/etc/rhsm/rhsm.conf</li>
-</ul>
-<div class="highlight"><pre><span></span><code># an http proxy server to use
-proxy_hostname = &lt;プロキシホスト&gt;
+<p><code>/etc/rhsm/rhsm.conf</code>にProxyの設定を行う。</p>
+<h3 id="etcrhsmrhsmconf">設定ファイル: /etc/rhsm/rhsm.conf<a class="headerlink" href="#etcrhsmrhsmconf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">[server]</span>
+<span class="c1"># HTTPプロキシ設定</span>
+<span class="na">proxy_hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&lt;プロキシホスト&gt;</span>
+<span class="na">proxy_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&lt;プロキシポート&gt;</span>
 
-# port for http proxy server
-proxy_port = &lt;プロキシポート&gt;
+<span class="c1"># HTTPSプロキシの場合</span>
+<span class="na">proxy_scheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https</span>
+
+<span class="c1"># プロキシ認証が必要な場合</span>
+<span class="na">proxy_user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&lt;プロキシユーザー&gt;</span>
+<span class="na">proxy_password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&lt;プロキシパスワード&gt;</span>
+
+<span class="c1"># 特定のホストをプロキシから除外</span>
+<span class="na">no_proxy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost,127.0.0.1,.example.com</span>
 </code></pre></div>
-<h2 id="3-yumproxy">3. yumのProxy設定<a class="headerlink" href="#3-yumproxy" title="Permanent link">&para;</a></h2>
-<p>/etc/yum.confにProxyの設定を行う。</p>
+<h2 id="3-proxy">3. パッケージマネージャーのProxy設定<a class="headerlink" href="#3-proxy" title="Permanent link">&para;</a></h2>
+<h3 id="rhel-8dnf">RHEL 8以降（dnf）の設定<a class="headerlink" href="#rhel-8dnf" title="Permanent link">&para;</a></h3>
+<p>設定ファイル: <code>/etc/dnf/dnf.conf</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">[main]</span>
+<span class="c1"># HTTPプロキシ設定</span>
+<span class="na">proxy</span><span class="o">=</span><span class="s">http://&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;/</span>
+
+<span class="c1"># プロキシ認証が必要な場合</span>
+<span class="na">proxy_username</span><span class="o">=</span><span class="s">&lt;プロキシユーザー&gt;</span>
+<span class="na">proxy_password</span><span class="o">=</span><span class="s">&lt;プロキシパスワード&gt;</span>
+
+<span class="c1"># HTTPSプロキシの場合</span>
+<span class="na">proxy</span><span class="o">=</span><span class="s">https://&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;/</span>
+</code></pre></div>
+<h3 id="rhel-7yum">RHEL 7以下（yum）の設定<a class="headerlink" href="#rhel-7yum" title="Permanent link">&para;</a></h3>
+<p>設定ファイル: <code>/etc/yum.conf</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">[main]</span>
+<span class="c1"># HTTPプロキシ設定</span>
+<span class="na">proxy</span><span class="o">=</span><span class="s">http://&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;/</span>
+
+<span class="c1"># プロキシ認証が必要な場合</span>
+<span class="na">proxy_username</span><span class="o">=</span><span class="s">&lt;プロキシユーザー&gt;</span>
+<span class="na">proxy_password</span><span class="o">=</span><span class="s">&lt;プロキシパスワード&gt;</span>
+</code></pre></div>
+<h2 id="4">4. リポジトリの接続確認<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="rhel-8dnf_1">RHEL 8以降（dnf）<a class="headerlink" href="#rhel-8dnf_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># リポジトリ一覧確認</span>
+dnf<span class="w"> </span>repolist
+dnf<span class="w"> </span>repolist<span class="w"> </span>--enabled
+
+<span class="c1"># パッケージ検索テスト</span>
+dnf<span class="w"> </span>search<span class="w"> </span>vim
+
+<span class="c1"># メタデータ更新</span>
+dnf<span class="w"> </span>makecache
+</code></pre></div>
+<h3 id="rhel-7yum_1">RHEL 7以下（yum）<a class="headerlink" href="#rhel-7yum_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># リポジトリ一覧確認</span>
+yum<span class="w"> </span>repolist
+yum<span class="w"> </span>repolist<span class="w"> </span>enabled
+
+<span class="c1"># パッケージ検索テスト</span>
+yum<span class="w"> </span>search<span class="w"> </span>vim
+
+<span class="c1"># メタデータ更新</span>
+yum<span class="w"> </span>makecache
+</code></pre></div>
+<h2 id="5">5. トラブルシューティング<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="_4">よくあるエラーと対処法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">サブスクリプション関連エラー<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># エラー: &quot;This system is not registered to Red Hat Subscription Management&quot;</span>
+<span class="c1"># 対処: システムを登録する</span>
+subscription-manager<span class="w"> </span>register
+
+<span class="c1"># エラー: &quot;No subscriptions are attached to this system&quot;</span>
+<span class="c1"># 対処: サブスクリプションをアタッチする</span>
+subscription-manager<span class="w"> </span>attach<span class="w"> </span>--auto
+</code></pre></div>
+<h4 id="_6">プロキシ関連エラー<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># 接続テスト</span>
+curl<span class="w"> </span>-I<span class="w"> </span>--proxy<span class="w"> </span>&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;<span class="w"> </span>https://cdn.redhat.com
+
+<span class="c1"># プロキシ設定確認</span>
+subscription-manager<span class="w"> </span>config<span class="w"> </span>--list
+</code></pre></div>
+<h4 id="_7">リポジトリ接続エラー<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># RHEL 8以降</span>
+dnf<span class="w"> </span>clean<span class="w"> </span>all
+dnf<span class="w"> </span>makecache
+
+<span class="c1"># RHEL 7以下</span>
+yum<span class="w"> </span>clean<span class="w"> </span>all
+yum<span class="w"> </span>makecache
+</code></pre></div>
+<h3 id="_8">ログ確認<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># サブスクリプション関連ログ</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/rhsm/rhsm.log
+
+<span class="c1"># DNF/YUMログ</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/dnf.log<span class="w">    </span><span class="c1"># RHEL 8以降</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/yum.log<span class="w">    </span><span class="c1"># RHEL 7以下</span>
+</code></pre></div>
+<h2 id="6">6. セキュリティのベストプラクティス<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="_9">プロキシ認証情報の保護<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ファイル権限を制限</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>/etc/rhsm/rhsm.conf
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>/etc/dnf/dnf.conf
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>/etc/yum.conf
+
+<span class="c1"># 所有者を確認</span>
+chown<span class="w"> </span>root:root<span class="w"> </span>/etc/rhsm/rhsm.conf
+</code></pre></div>
+<h3 id="_10">環境変数での一時的な設定<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 一時的なプロキシ設定（セッション中のみ有効）</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">http_proxy</span><span class="o">=</span>http://&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;
+<span class="nb">export</span><span class="w"> </span><span class="nv">https_proxy</span><span class="o">=</span>https://&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;
+
+<span class="c1"># パッケージマネージャー実行</span>
+dnf<span class="w"> </span>update
+</code></pre></div>
+<h2 id="7">7. 参考情報<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <ul>
-<li>設定ファイル：/etc/yum.conf</li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_subscription_management/">Red Hat Subscription Management</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/package-management/DNF/">DNF Command Reference</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-yum">YUM Command Reference</a></li>
 </ul>
-<div class="highlight"><pre><span></span><code>#記載内容
-proxy=http://&lt;プロキシホスト&gt;:&lt;プロキシポート&gt;/
-</code></pre></div>
-<h2 id="4-rhel">4. RHELリポジトリの接続確認<a class="headerlink" href="#4-rhel" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>yum repolist
-</code></pre></div>
 
 
 
