@@ -52,16 +52,16 @@
 .quick-access {
   background: linear-gradient(135deg, var(--md-primary-fg-color--light), var(--md-accent-fg-color--transparent)) !important;
   border: none !important;
-  color: white !important;
+  color: var(--md-default-fg-color) !important;
 }
 
 .quick-access h3 {
-  color: white !important;
-  border-bottom-color: rgba(255,255,255,0.3) !important;
+  color: var(--md-default-fg-color) !important;
+  border-bottom-color: var(--md-default-fg-color--light) !important;
 }
 
 .quick-access a {
-  color: white !important;
+  color: var(--md-default-fg-color) !important;
   text-decoration: underline !important;
 }
 
@@ -105,10 +105,10 @@
   <div class="homepage-card quick-access">
     <h3>🔥 人気コンテンツ</h3>
     <ul>
+      <li><a href="./AI/claude-code-best-practices.md">Claude Code活用法</a></li>
       <li><a href="./Tips/Mkdocs/mkdocsを使ったGitHubPages.md">GitHub Pages作成方法</a></li>
-      <li><a href="./Infrastructure/OSコマンド/crontabの書き方.md">crontabの書き方</a></li>
+      <li><a href="./AI/ai-development-tools.md">2025年AI開発ツール比較</a></li>
       <li><a href="./Tips/Mkdocs/デザイン改善ガイド.md">サイトデザイン改善ガイド</a></li>
-      <li><a href="./Tips/便利ツール.md">開発に役立つ便利ツール</a></li>
     </ul>
   </div>
 
@@ -128,6 +128,16 @@
       <li><a href="./Infrastructure/OSコマンド/DNS設定.md">DNS設定</a></li>
       <li><a href="./Infrastructure/OSコマンド/SELinux.md">SELinux設定</a></li>
       <li><a href="./Infrastructure/OSコマンド/sedコマンドメモ.md">sedコマンド活用</a></li>
+    </ul>
+  </div>
+
+  <div class="homepage-card">
+    <h3>🤖 AI開発</h3>
+    <ul>
+      <li><a href="./AI/claude-code-best-practices.md">Claude Code活用法</a></li>
+      <li><a href="./AI/ai-development-tools.md">2025年AI開発ツール比較</a></li>
+      <li><a href="./AI/llm-programming-guide.md">LLMプログラミング実践</a></li>
+      <li><a href="./AI/agentic-ai-development.md">エージェント型AI開発</a></li>
     </ul>
   </div>
 

@@ -5,6 +5,48 @@
     - [Google Analytics設定](./アナリティクス設定.md) - アクセス解析の導入
     - [MkDocs高度な設定](./高度な設定.md) - カスタマイズとプラグイン
 
+## 実現できること
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-solid-globe:{ .lg .middle } __完全無料のプロサイト__
+
+    ---
+
+    企業レベルの美しいサイトが無料で作成可能
+
+-   :fontawesome-solid-file-code:{ .lg .middle } __HTMLなしで構築__
+
+    ---
+
+    Markdownだけでプロフェッショナルサイトが完成
+
+-   :fontawesome-brands-git-alt:{ .lg .middle } __Git完全統合__
+
+    ---
+
+    コードとドキュメントを統一管理・レビュー
+
+-   :fontawesome-solid-rocket:{ .lg .middle } __ワンコマンドデプロイ__
+
+    ---
+
+    `mkdocs gh-deploy`で即座に本番公開
+
+-   :fontawesome-solid-palette:{ .lg .middle } __無限カスタマイズ__
+
+    ---
+
+    Material Designベースで自由自在にデザイン
+
+-   :fontawesome-solid-search:{ .lg .middle } __高速検索・SEO対応__
+
+    ---
+
+    爆速表示と検索エンジン最適化を標準装備
+
+</div>
+
 ## 1. GitHub Pagesとは
 
 GitHub Pagesとはレンタルサーバなど用意しなくても、無料で簡単にウェブサイトを作成できるGitHub機能の１つです。実はmicrosoftやyahooなどの大手企業もGitHub Pagesを自身の企業ページとして活用しています。
