@@ -35,6 +35,16 @@ nav:
     - コマンド・ツール:
       - sedコマンドメモ: Infrastructure/OSコマンド/sedコマンドメモ.md
   
+  # AI・機械学習
+  - 🤖 AI開発:
+    - AI/index.md
+    - 基本知識・トレンド:
+      - Claude Code活用法: AI/claude-code-best-practices.md
+      - AI開発ツール比較: AI/ai-development-tools.md
+    - 実践ガイド:
+      - LLMプログラミング: AI/llm-programming-guide.md
+      - エージェント型AI開発: AI/agentic-ai-development.md
+  
   # プログラミング・開発
   - 💻 プログラミング:
     - Programming/index.md
@@ -157,10 +167,7 @@ plugins:
   - search:
       lang: ja
       separator: '[\s\-\.\u3000\u3001\u3002]+' # 日本語文字区切りを追加
-      min_search_length: 2
-      prebuild_index: true
-  - tags:
-      tags_file: tags.md
+  - tags
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Tokyo
