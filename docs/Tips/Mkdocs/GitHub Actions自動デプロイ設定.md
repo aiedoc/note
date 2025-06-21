@@ -18,25 +18,25 @@ GitHub ActionsによるMkDocsの自動デプロイを実装するための完全
 
     ローカル環境不要で統一された品質
 
--   :fontawesome-solid-shield-alt:{ .lg .middle } __セキュリティ強化__
+-   :fontawesome-solid-shield:{ .lg .middle } __セキュリティ強化__
 
     ---
 
     適切な権限管理とトークン制御
 
--   :fontawesome-solid-tachometer-alt:{ .lg .middle } __高速ビルド__
+-   :fontawesome-solid-bolt:{ .lg .middle } __高速ビルド__
 
     ---
 
     依存関係キャッシュで短時間デプロイ
 
--   :fontawesome-solid-check-circle:{ .lg .middle } __品質保証__
+-   :fontawesome-solid-check:{ .lg .middle } __品質保証__
 
     ---
 
     ビルドエラー時の自動停止機能
 
--   :fontawesome-solid-history:{ .lg .middle } __デプロイ履歴管理__
+-   :fontawesome-solid-clock:{ .lg .middle } __デプロイ履歴管理__
 
     ---
 
