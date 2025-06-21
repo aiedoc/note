@@ -5,8 +5,25 @@ site_name: note
 # Navigation
 nav:
   - ホーム: index.md
-  - Info: Info/
-  - Infrastructure: Infrastructure/
+  - Info: 
+    - Info/index.md
+    - リンク集: Info/リンク集.md
+    - 気になったニュース: Info/気になったニュース.md
+    - 英語: Info/英語.md
+  - Infrastructure: 
+    - Infrastructure/index.md
+    - OSコマンド:
+      - DNS設定: Infrastructure/OSコマンド/DNS設定.md
+      - OSの確認: Infrastructure/OSコマンド/OSの確認.md
+      - SELinux: Infrastructure/OSコマンド/SELinux.md
+      - crontabの書き方: Infrastructure/OSコマンド/crontabの書き方.md
+      - disk追加時メモ: Infrastructure/OSコマンド/disk追加時メモ.md
+      - pythonのインストール: Infrastructure/OSコマンド/pythonのインストール.md
+      - redhatでyumを使うときの設定: Infrastructure/OSコマンド/redhatでyumを使うときの設定.md
+      - sedコマンドメモ: Infrastructure/OSコマンド/sedコマンドメモ.md
+      - yumコマンドメモ: Infrastructure/OSコマンド/yumコマンドメモ.md
+      - 静的ルーティング設定(ubuntu16.04)メモ: Infrastructure/OSコマンド/静的ルーティング設定(ubuntu16.04)メモ.md
+    - crontabの書き方: Infrastructure/crontabの書き方.md
   - Tips: 
     - Tips/index.md
     - MkDocs:
@@ -15,7 +32,13 @@ nav:
       - デザイン改善ガイド: Tips/Mkdocs/デザイン改善ガイド.md
       - アナリティクス設定: Tips/Mkdocs/アナリティクス設定.md
       - 高度な設定: Tips/Mkdocs/高度な設定.md
-  - Programming: Programming/
+    - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
+    - リンク集: Tips/リンク集.md
+    - 便利ツール: Tips/便利ツール.md
+  - Programming:
+    - Programming/index.md
+    - Bash:
+      - sample.sh: Programming/Bash/sample.sh
 
 # Repository
 repo_name: note

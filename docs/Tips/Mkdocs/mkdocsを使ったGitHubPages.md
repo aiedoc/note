@@ -31,7 +31,7 @@ Mkdocsとは一言でいうと、markdownで書いたドキュメントを自動
 
 またmkdocsには様々な"theme"が存在し、そのthemeを選択することで自分好みのウェブサイトを作成することが可能です。またそのthemeをさらにカスタマイズし、オリジナルなるのページを作成することも可能です。
 
-![画像1](.\images\image1.png)
+![MkDocs Material テーマのUI例](./images/1537438503367.png)
 
 ## 3. mkdocsでGitHub Pagesを作成する
 
@@ -104,9 +104,7 @@ Mkdocsの公式サイト→https://www.mkdocs.org/
 5. 「Add a README file」のチェックは**外す**
 6. 「Create repository」をクリック
 
-![画像2](./images/1537438678422.png)
-
-![画像3](./images/1537442804475.png)
+![GitHubリポジトリ作成画面](./images/1537438678422.png)
 
 #### ローカル環境にクローン
 
@@ -286,7 +284,7 @@ mkdocs gh-deploy
 
 数分後にサイトで変更が反映されます。
 
-![画像4](./images/1537442833904.png)
+![MkDocs初回デプロイ完了](./images/1537442833904.png)
 
 ### ②新しいページの作成
 
@@ -368,8 +366,6 @@ mkdocs gh-deploy
 - https://github-user-001.github.io/test-pages/guide/getting-started/ （ガイド）  
 - https://github-user-001.github.io/test-pages/reference/api/ （リファレンス）
 
-![画像5](./images/image5.png)
-
 ## 5. MkDocsとGitHub Pagesの仕組み
 
 MkDocsを使えば、Markdownファイルから美しいWebサイトを簡単に作成・公開できることが分かったと思います。
@@ -406,7 +402,7 @@ GitHub Pagesの設定は以下で確認できます：
 3. 左メニューの「Pages」をクリック
 4. Source が「Deploy from a branch: gh-pages」になっていることを確認
 
-![画像6](./images/1537442833904.png)
+![GitHub Pages設定画面（ブランチ設定）](./images/1537442804475.png)
 
 !!! note "デプロイ後の確認"
     `mkdocs gh-deploy`実行後、GitHubの「Actions」タブで自動デプロイの進行状況を確認できます。
@@ -424,20 +420,22 @@ GitHub Pagesの設定は以下で確認できます：
 
 ### よくある活用例
 
+実際にこのサイトでも以下のような活用をしています：
+
 #### 📝 技術ドキュメント
-- API仕様書
-- 開発ガイド
-- プロジェクト資料
+- **チュートリアル**: [MkDocs作成ガイド](https://aiedoc.github.io/note/Tips/Mkdocs/mkdocsを使ったGitHubPages/) - 4,000語超の包括的な手順書
+- **コマンドリファレンス**: [crontabの書き方](https://aiedoc.github.io/note/Infrastructure/OSコマンド/crontabの書き方/) - 実用的なコード例集
+- **設定ガイド**: [デザイン改善ガイド](https://aiedoc.github.io/note/Tips/Mkdocs/デザイン改善ガイド/) - カスタマイズの実装例
 
 #### 📚 ナレッジベース
-- 技術メモ
-- トラブルシューティング
-- 学習記録
+- **リンク集**: [開発ツール](https://aiedoc.github.io/note/Info/リンク集/) - 分野別に整理された外部リソース
+- **技術メモ**: [便利ツール](https://aiedoc.github.io/note/Tips/便利ツール/) - 実際に使っているツールの紹介
+- **システム管理**: [インフラ情報](https://aiedoc.github.io/note/Infrastructure/) - DNS、crontab、SELinux等
 
-#### 🌐 ポートフォリオサイト
-- 作品紹介
-- 経歴・スキル
-- ブログ
+#### 🎨 高度なカスタマイズ例
+- **アナリティクス**: [Google Analytics設定](https://aiedoc.github.io/note/Tips/Mkdocs/アナリティクス設定/) - GA4導入とプライバシー対応
+- **UI/UX**: 3列グリッドレイアウト、ダークモード、検索機能を実装済み
+- **日本語最適化**: フォント設定、検索の日本語対応
 
 ### GitHub Pagesの利点
 
