@@ -8,40 +8,53 @@ copyright: "&copy; 2024-2025 aiedoc. All rights reserved."
 # Navigation
 nav:
   - ホーム: index.md
-  - Info: 
+  
+  # 基本情報・学習リソース
+  - 📚 学習・情報:
     - Info/index.md
-    - リンク集: Info/リンク集.md
-    - 気になったニュース: Info/気になったニュース.md
-    - 英語: Info/英語.md
-  - Infrastructure: 
+    - 📰 ニュース・トレンド: Info/気になったニュース.md
+    - 🌍 英語学習: Info/英語.md
+    - 🔗 リンク集: Info/リンク集.md
+  
+  # インフラ・システム運用
+  - 🖥️ インフラ・運用:
     - Infrastructure/index.md
-    - OSコマンド:
-      - DNS設定: Infrastructure/OSコマンド/DNS設定.md
+    - システム基礎:
       - OSの確認: Infrastructure/OSコマンド/OSの確認.md
+      - DNS設定: Infrastructure/OSコマンド/DNS設定.md
       - SELinux: Infrastructure/OSコマンド/SELinux.md
+    - 自動化・スケジューリング:
       - crontabの書き方: Infrastructure/OSコマンド/crontabの書き方.md
+    - ディスク・ストレージ:
       - disk追加時メモ: Infrastructure/OSコマンド/disk追加時メモ.md
+      - 静的ルーティング設定(ubuntu16.04)メモ: Infrastructure/OSコマンド/静的ルーティング設定(ubuntu16.04)メモ.md
+    - パッケージ管理:
       - pythonのインストール: Infrastructure/OSコマンド/pythonのインストール.md
       - redhatでyumを使うときの設定: Infrastructure/OSコマンド/redhatでyumを使うときの設定.md
-      - sedコマンドメモ: Infrastructure/OSコマンド/sedコマンドメモ.md
       - yumコマンドメモ: Infrastructure/OSコマンド/yumコマンドメモ.md
-      - 静的ルーティング設定(ubuntu16.04)メモ: Infrastructure/OSコマンド/静的ルーティング設定(ubuntu16.04)メモ.md
-    - crontabの書き方: Infrastructure/crontabの書き方.md
-  - Tips: 
+    - コマンド・ツール:
+      - sedコマンドメモ: Infrastructure/OSコマンド/sedコマンドメモ.md
+  
+  # プログラミング・開発
+  - 💻 プログラミング:
+    - Programming/index.md
+    - シェルスクリプト:
+      - Bashサンプル: Programming/Bash/sample.sh
+  
+  # ツール・効率化
+  - 🛠️ ツール・Tips:
     - Tips/index.md
-    - MkDocs:
+    - サイト構築・運用:
       - MkDocsメモ: Tips/Mkdocs/mkdocsメモ.md
       - GitHub Pages作成方法: Tips/Mkdocs/mkdocsを使ったGitHubPages.md
       - デザイン改善ガイド: Tips/Mkdocs/デザイン改善ガイド.md
       - アナリティクス設定: Tips/Mkdocs/アナリティクス設定.md
       - 高度な設定: Tips/Mkdocs/高度な設定.md
-    - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
-    - リンク集: Tips/リンク集.md
-    - 便利ツール: Tips/便利ツール.md
-  - Programming:
-    - Programming/index.md
-    - Bash:
-      - sample.sh: Programming/Bash/sample.sh
+    - 開発効率化:
+      - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
+      - 便利ツール: Tips/便利ツール.md
+    - 参考資料:
+      - リンク集: Tips/リンク集.md
 
 # Repository
 repo_name: note
@@ -132,7 +145,11 @@ extra_javascript:
 plugins:
   - search:
       lang: ja
-      separator: '[\s\-\.]+' 
+      separator: '[\s\-\.\u3000\u3001\u3002]+' # 日本語文字区切りを追加
+      min_search_length: 2
+      prebuild_index: true
+  - tags:
+      tags_file: tags.md
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Tokyo

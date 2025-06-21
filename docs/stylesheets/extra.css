@@ -80,6 +80,61 @@
   border-radius: 2rem;
 }
 
+.md-search__form {
+  border-radius: 2rem;
+}
+
+/* 検索結果のハイライト改善 */
+.md-search-result__meta {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.md-search-result__teaser {
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+/* パンくずナビゲーション風のスタイル */
+.md-nav__title--site {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+}
+
+/* カードホバー効果の統一 */
+.md-typeset .grid.cards > .card,
+.homepage-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.md-typeset .grid.cards > .card:hover,
+.homepage-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* フィードバックボタンのスタイル改善 */
+.md-footer-meta__inner .md-feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.5rem;
+}
+
+/* 目次の改善 */
+.md-nav--secondary {
+  border-left: 2px solid var(--md-primary-fg-color--light);
+}
+
+.md-nav--secondary .md-nav__link--active {
+  border-left: 2px solid var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color);
+  font-weight: 500;
+}
+
 /* ダークモード用の調整 */
 [data-md-color-scheme="slate"] {
   --md-hue: 210;
