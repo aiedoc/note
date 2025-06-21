@@ -87,36 +87,36 @@
   --md-default-fg-color: #e1e5e9;
 }
 
-/* シンプルな3列グリッドレイアウト */
-.md-content ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
+/* 3列グリッドレイアウト - より強力なセレクタ */
+.md-typeset ul {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1rem !important;
+  list-style: none !important;
+  padding: 0 !important;
 }
 
-.md-content ul li {
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lighter);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.md-typeset ul li {
+  background: var(--md-default-bg-color) !important;
+  border: 1px solid var(--md-default-fg-color--lighter) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
 }
 
-.md-content ul li:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+.md-typeset ul li:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
 }
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-  .md-content ul {
-    grid-template-columns: 1fr;
+  .md-typeset ul {
+    grid-template-columns: 1fr !important;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .md-content ul {
-    grid-template-columns: repeat(2, 1fr);
+  .md-typeset ul {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
