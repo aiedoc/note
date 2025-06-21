@@ -87,4 +87,36 @@
   --md-default-fg-color: #e1e5e9;
 }
 
-/* カスタムグリッドのCSSは不要 - Material for MkDocsの標準グリッド機能を使用 */
+/* シンプルな3列グリッドレイアウト */
+.md-content ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.md-content ul li {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.md-content ul li:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .md-content ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .md-content ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
