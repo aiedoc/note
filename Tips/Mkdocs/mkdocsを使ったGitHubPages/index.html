@@ -2129,10 +2129,10 @@ pip<span class="w"> </span>install<span class="w"> </span>mkdocs
 <span class="nb">cd</span><span class="w"> </span>リポジトリ名
 </code></pre></div>
 <p>実行結果例：
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/my-docs.git
-Cloning<span class="w"> </span>into<span class="w"> </span><span class="s1">&#39;my-docs&#39;</span>...
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/github-user-001/test-pages.git
+Cloning<span class="w"> </span>into<span class="w"> </span><span class="s1">&#39;test-pages&#39;</span>...
 warning:<span class="w"> </span>You<span class="w"> </span>appear<span class="w"> </span>to<span class="w"> </span>have<span class="w"> </span>cloned<span class="w"> </span>an<span class="w"> </span>empty<span class="w"> </span>repository.
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my-docs
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>test-pages
 </code></pre></div></p>
 <h3 id="3mkdocs">③MkDocsプロジェクトの作成<a class="headerlink" href="#3mkdocs" title="Permanent link">&para;</a></h3>
 <p>クローンしたリポジトリディレクトリ内で、MkDocsプロジェクトを作成します。</p>
@@ -2193,13 +2193,13 @@ For full documentation visit [<span class="nt">mkdocs.org</span>](<span class="n
 <p>実行結果例：
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
 INFO<span class="w">    </span>-<span class="w">  </span>Cleaning<span class="w"> </span>site<span class="w"> </span>directory
-INFO<span class="w">    </span>-<span class="w">  </span>Building<span class="w"> </span>documentation<span class="w"> </span>to<span class="w"> </span>directory:<span class="w"> </span>/path/to/your-repo/site
-INFO<span class="w">    </span>-<span class="w">  </span>Copying<span class="w"> </span><span class="s1">&#39;/path/to/your-repo/site&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;gh-pages&#39;</span><span class="w"> </span>branch<span class="w"> </span>and<span class="w"> </span>pushing<span class="w"> </span>to<span class="w"> </span>GitHub.
-INFO<span class="w">    </span>-<span class="w">  </span>Your<span class="w"> </span>documentation<span class="w"> </span>should<span class="w"> </span>shortly<span class="w"> </span>be<span class="w"> </span>available<span class="w"> </span>at:<span class="w"> </span>https://ユーザー名.github.io/リポジトリ名/
+INFO<span class="w">    </span>-<span class="w">  </span>Building<span class="w"> </span>documentation<span class="w"> </span>to<span class="w"> </span>directory:<span class="w"> </span>/path/to/test-pages/site
+INFO<span class="w">    </span>-<span class="w">  </span>Copying<span class="w"> </span><span class="s1">&#39;/path/to/test-pages/site&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;gh-pages&#39;</span><span class="w"> </span>branch<span class="w"> </span>and<span class="w"> </span>pushing<span class="w"> </span>to<span class="w"> </span>GitHub.
+INFO<span class="w">    </span>-<span class="w">  </span>Your<span class="w"> </span>documentation<span class="w"> </span>should<span class="w"> </span>shortly<span class="w"> </span>be<span class="w"> </span>available<span class="w"> </span>at:<span class="w"> </span>https://github-user-001.github.io/test-pages/
 </code></pre></div></p>
 <div class="admonition success">
 <p class="admonition-title">デプロイ完了</p>
-<p>数分後に <a href="https://ユーザー名.github.io/リポジトリ名/">https://ユーザー名.github.io/リポジトリ名/</a> でサイトにアクセスできるようになります。</p>
+<p>数分後に <a href="https://github-user-001.github.io/test-pages/">https://github-user-001.github.io/test-pages/</a> でサイトにアクセスできるようになります。</p>
 </div>
 <h2 id="4">4. コンテンツの更新と管理<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <h3 id="1">①ホームページの更新<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
@@ -2307,9 +2307,9 @@ mkdocs<span class="w"> </span>gh-deploy
 </code></pre></div>
 <p>これで以下のようなURL構造でアクセスできるようになります：</p>
 <ul>
-<li><a href="https://ユーザー名.github.io/リポジトリ名/">https://ユーザー名.github.io/リポジトリ名/</a> （ホーム）</li>
-<li><a href="https://ユーザー名.github.io/リポジトリ名/guide/getting-started/">https://ユーザー名.github.io/リポジトリ名/guide/getting-started/</a> （ガイド）  </li>
-<li><a href="https://ユーザー名.github.io/リポジトリ名/reference/api/">https://ユーザー名.github.io/リポジトリ名/reference/api/</a> （リファレンス）</li>
+<li><a href="https://github-user-001.github.io/test-pages/">https://github-user-001.github.io/test-pages/</a> （ホーム）</li>
+<li><a href="https://github-user-001.github.io/test-pages/guide/getting-started/">https://github-user-001.github.io/test-pages/guide/getting-started/</a> （ガイド）  </li>
+<li><a href="https://github-user-001.github.io/test-pages/reference/api/">https://github-user-001.github.io/test-pages/reference/api/</a> （リファレンス）</li>
 </ul>
 <p><img alt="画像5" src="./images/image5.png" /></p>
 <h2 id="5-mkdocsgithub-pages">5. MkDocsとGitHub Pagesの仕組み<a class="headerlink" href="#5-mkdocsgithub-pages" title="Permanent link">&para;</a></h2>
