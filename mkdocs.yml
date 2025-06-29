@@ -1,6 +1,6 @@
 # Project information
 site_name: note
-site_url: https://aiedoc.github.io/note/
+site_url: https://aiedoc.github.io/
 site_description: "技術ノート・ドキュメント集 - MkDocs Material高度機能実装例"
 site_author: "aiedoc"
 copyright: "&copy; 2024-2025 aiedoc. All rights reserved."
@@ -57,6 +57,7 @@ nav:
     - サイト構築・運用:
       - MkDocsメモ: Tips/Mkdocs/mkdocsメモ.md
       - GitHub Pages作成方法: Tips/Mkdocs/mkdocsを使ったGitHubPages.md
+      - GitHub Pagesリポジトリ設定: Tips/Mkdocs/GitHub Pagesリポジトリ設定.md
       - サイト運用ガイド: Tips/Mkdocs/サイト運用ガイド.md
       - GitHub Actions自動デプロイ: Tips/Mkdocs/GitHub Actions自動デプロイ設定.md
       - デザイン改善ガイド: Tips/Mkdocs/デザイン改善ガイド.md
@@ -170,69 +171,6 @@ extra_javascript:
 plugins:
   - search
   - tags
-  - i18n:
-      default_language: ja
-      languages:
-        - locale: ja
-          name: 日本語
-          build: true
-          default: true
-        - locale: en
-          name: English
-          build: true
-      nav_translations:
-        en:
-          ホーム: Home
-          学習・情報: Learning & Information
-          ニュース・トレンド: News & Trends
-          英語学習: English Learning
-          リンク集: Links
-          インフラ・運用: Infrastructure & Operations
-          システム基礎: System Basics
-          OSの確認: Check OS
-          DNS設定: DNS Settings
-          自動化・スケジューリング: Automation & Scheduling
-          crontabの書き方: How to Write Crontab
-          ディスク・ストレージ: Disk & Storage
-          disk追加時メモ: Disk Addition Notes
-          静的ルーティング設定(ubuntu16.04)メモ: Static Routing (Ubuntu 16.04) Notes
-          パッケージ管理: Package Management
-          pythonのインストール: Python Installation
-          redhatでyumを使うときの設定: RedHat Yum Configuration
-          yumコマンドメモ: Yum Command Notes
-          コマンド・ツール: Commands & Tools
-          sedコマンドメモ: Sed Command Notes
-          AI開発: AI Development
-          基本知識・トレンド: Basics & Trends
-          Claude Code活用法: Claude Code Best Practices
-          AI開発ツール比較: AI Development Tools Comparison
-          実践ガイド: Practical Guide
-          LLMプログラミング: LLM Programming
-          エージェント型AI開発: Agentic AI Development
-          プログラミング: Programming
-          シェルスクリプト: Shell Scripts
-          Bashサンプル: Bash Samples
-          ツール・Tips: Tools & Tips
-          サイト構築・運用: Site Building & Operations
-          MkDocsメモ: MkDocs Notes
-          GitHub Pages作成方法: Creating GitHub Pages
-          サイト運用ガイド: Site Operations Guide
-          GitHub Actions自動デプロイ: GitHub Actions Automated Deployment
-          デザイン改善ガイド: Design Improvement Guide
-          アナリティクス設定: Analytics Setup
-          高度な設定: Advanced Settings
-          多言語対応設定: Multilingual Configuration
-          開発効率化: Development Efficiency
-          git ignoreで特定ディレクトリを管理対象外にする: Git Ignore Specific Directories
-          便利ツール: Useful Tools
-          参考資料: References
-          SEO実践ガイド: SEO Practical Guide
-          基本戦略: Basic Strategy
-          内部リンク戦略: Internal Link Strategy
-          ナビゲーション改善: Navigation Improvement
-          コンテンツ最適化: Content Optimization
-          実装・測定: Implementation & Measurement
-          実践例: Practical Examples
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Tokyo
@@ -249,14 +187,6 @@ plugins:
 
 # Modern Analytics (GA4)
 extra:
-  # 言語切り替えメニューの設定
-  alternate:
-    - name: 日本語
-      link: /
-      lang: ja
-    - name: English
-      link: /en/
-      lang: en
   analytics:
     provider: google
     property: G-XXXXXXXXXX  # 実際のGA4測定IDに置き換え

@@ -28,7 +28,7 @@ MkDocsとGitHub Pagesを使った静的サイト構築に関する情報をま�
 
 ## 🌟 このサイトの特徴
 
-このサイト（https://aiedoc.github.io/note/）自体がMkDocsの活用例となっています：
+このサイト（https://aiedoc.github.io/）自体がMkDocsの活用例となっています：
 
 ### 実装済み機能
 - **ダークモード**: システム設定に応じた自動切り替え
