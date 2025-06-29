@@ -8,7 +8,7 @@ Disallow: /private/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://aiedoc.github.io/note/sitemap.xml
+Sitemap: https://aiedoc.github.io/sitemap.xml
 
 # Block bad bots
 User-agent: AhrefsBot
