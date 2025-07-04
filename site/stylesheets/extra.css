@@ -1,0 +1,177 @@
+/* モダンなスタイル追加 */
+
+/* 日本語フォントの設定 */
+:root {
+  --md-text-font: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo UI", sans-serif;
+  --md-code-font: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+}
+
+/* Google Fontsから日本語フォントを読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+/* カスタムカラー変数 */
+:root {
+  --md-accent-fg-color: #ff6f00;
+  --md-accent-fg-color--transparent: #ff6f001a;
+}
+
+/* カードスタイルの改善 */
+.md-typeset .md-content__inner {
+  padding-top: 1.5rem;
+}
+
+/* ナビゲーションの改善 */
+.md-nav__title {
+  font-weight: 600;
+}
+
+.md-nav__link {
+  border-radius: 0.1rem;
+  transition: background-color 125ms;
+}
+
+.md-nav__link:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* コードブロックの改善 */
+.md-typeset pre > code {
+  border-radius: 0.5rem;
+}
+
+/* テーブルの改善 */
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+/* ボタンスタイル */
+.md-button {
+  border-radius: 2rem;
+  padding: 0.625rem 2rem;
+  transition: all 250ms;
+}
+
+.md-button:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* アニメーション追加 */
+.md-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* レスポンシブ改善 */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+  }
+}
+
+/* 検索の改善 */
+.md-search__input {
+  border-radius: 2rem;
+}
+
+.md-search__form {
+  border-radius: 2rem;
+}
+
+/* 検索結果のハイライト改善 */
+.md-search-result__meta {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.md-search-result__teaser {
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+/* パンくずナビゲーション風のスタイル */
+.md-nav__title--site {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+}
+
+/* カードホバー効果の統一 */
+.md-typeset .grid.cards > .card,
+.homepage-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.md-typeset .grid.cards > .card:hover,
+.homepage-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* フィードバックボタンのスタイル改善 */
+.md-footer-meta__inner .md-feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.5rem;
+}
+
+/* 目次の改善 */
+.md-nav--secondary {
+  border-left: 2px solid var(--md-primary-fg-color--light);
+}
+
+.md-nav--secondary .md-nav__link--active {
+  border-left: 2px solid var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color);
+  font-weight: 500;
+}
+
+/* ダークモード用の調整 */
+[data-md-color-scheme="slate"] {
+  --md-hue: 210;
+  --md-default-bg-color: #1a1a1a;
+  --md-default-fg-color: #e1e5e9;
+}
+
+/* 3列グリッドレイアウト - より強力なセレクタ */
+.md-typeset ul {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1rem !important;
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+.md-typeset ul li {
+  background: var(--md-default-bg-color) !important;
+  border: 1px solid var(--md-default-fg-color--lighter) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.md-typeset ul li:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .md-typeset ul {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .md-typeset ul {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
