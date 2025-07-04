@@ -120,7 +120,32 @@ mkdocs serve
 
 http://127.0.0.1:8000 にアクセスして確認してください。
 
-### ④GitHub Pagesにデプロイ
+### ④.gitignoreファイルの作成（重要）
+
+```bash
+# .gitignoreファイルを作成
+cat << 'EOF' > .gitignore
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+EOF
+```
+
+!!! tip "なぜ.gitignoreが必要？"
+    - MkDocsのビルド出力（site/ディレクトリ）は大量のファイルになります
+    - これらをGitで管理すると、リポジトリが重くなります
+    - GitHub Pagesでは自動生成されるため、ソースコードのみ管理すればOKです
+
+### ⑤GitHub Pagesにデプロイ
 
 ```bash
 mkdocs gh-deploy

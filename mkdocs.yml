@@ -23,6 +23,10 @@ nav:
       - OSの確認: Infrastructure/OSコマンド/OSの確認.md
       - DNS設定: Infrastructure/OSコマンド/DNS設定.md
       - SELinux: Infrastructure/OSコマンド/SELinux.md
+    - ファイアウォール・セキュリティ:
+      - firewalld設定: Infrastructure/OSコマンド/firewalld設定.md
+      - iptables設定: Infrastructure/OSコマンド/iptables設定.md
+      - ファイアウォール比較: Infrastructure/OSコマンド/ファイアウォール比較.md
     - 自動化・スケジューリング:
       - crontabの書き方: Infrastructure/OSコマンド/crontabの書き方.md
     - ディスク・ストレージ:
@@ -191,6 +195,10 @@ plugins:
           システム基礎: System Basics
           OSの確認: Check OS
           DNS設定: DNS Settings
+          ファイアウォール・セキュリティ: Firewall & Security
+          firewalld設定: firewalld Configuration
+          iptables設定: iptables Configuration
+          ファイアウォール比較: Firewall Comparison
           自動化・スケジューリング: Automation & Scheduling
           crontabの書き方: How to Write Crontab
           ディスク・ストレージ: Disk & Storage

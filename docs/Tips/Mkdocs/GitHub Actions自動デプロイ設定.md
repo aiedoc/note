@@ -142,7 +142,7 @@ jobs:
 
 ```gitignore
 # MkDocs build output
-/site/
+site/
 
 # Python
 __pycache__/
@@ -177,6 +177,13 @@ coverage.xml
 ehthumbs.db
 Thumbs.db
 ```
+
+!!! warning "重要: .gitignoreの正しい書き方"
+    - `site/` が正しい書き方です
+    - `×` `/site/` - これはルートディレクトリ直下のsite/のみを無視
+    - `○` `site/` - どの階層にあるsite/ディレクトリも無視
+    
+    MkDocsのビルド出力は大量のファイルになるため、masterブランチにコミットすべきではありません。GitHub Actionsが自動的にgh-pagesブランチにデプロイします。
 
 ### 4. コミット・プッシュ
 
