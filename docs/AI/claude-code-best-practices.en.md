@@ -237,6 +237,129 @@ def process_large_dataset(data):
     pass
 ```
 
+## Controlling Over-Autonomous Claude Code and Rule Compliance
+
+As Claude Code becomes more sophisticated, issues may arise where it operates beyond specified scope or ignores established rules. Here are strategies to address these problems.
+
+### 1. Clear Boundary Setting
+
+#### Effective Constraint Specification
+```
+【Clear Work Scope】
+- Target for changes: authentication.py file only
+- Forbidden changes: Never touch database.py, config.py
+- Existing tests: Must not break
+- New features: Not to be added this time
+
+【Specific Constraint Examples】
+❌ "Improve the code"
+✅ "Add error handling to the login_user function in authentication.py only. Do not modify any other files or functions."
+```
+
+### 2. Enforcing Rule Compliance
+
+#### Staged Confirmation Process
+```
+【Staged Approach】
+Step 1: Propose changes only (before implementation)
+Step 2: Review and approve proposed changes
+Step 3: Implement only approved changes
+
+【Verification Points】
+- Are there changes to files other than specified?
+- Is existing functionality being broken?
+- Are only requested features implemented?
+```
+
+### 3. Scope Limitation Techniques
+
+#### Specific Limitation Methods
+```python
+# Example of scope limitation
+"""
+Please strictly adhere to the following constraints:
+
+【Allowable Changes】
+- File: user_service.py only
+- Functions: create_user, update_user only
+- Additions allowed: New helper functions (within user_service.py only)
+
+【Prohibited Changes】
+❌ Database schema changes
+❌ Changes to other service classes
+❌ Configuration file changes
+❌ Test file changes
+
+【Requested Features Only】
+✅ Add validation functionality
+✅ Improve error handling
+"""
+```
+
+### 4. Preventing Over-optimization
+
+#### Appropriate Constraint Setting
+```
+【Optimization Limitation Specification】
+"Performance improvements are not requested. Focus only on readability and maintainability."
+
+【Instructions to Avoid】
+❌ "Optimize the code"
+❌ "Make the code better"
+
+【Recommended Instructions】
+✅ "Make variable names clearer (do not change logic)"
+✅ "Add comments (do not change functionality)"
+```
+
+### 5. Staged Work Management
+
+#### Requests in Small Units
+```
+【Request Too Large】
+❌ "Refactor the entire authentication system"
+
+【Appropriate Division】
+✅ Stage 1: "Add error handling to login function"
+✅ Stage 2: "Improve session management in logout function"  
+✅ Stage 3: "Separate password validation logic"
+
+【Verification at Each Stage】
+- Functional verification
+- Code review completion
+- Explicit permission for next stage
+```
+
+### 6. Output Format Control
+
+#### Specific Output Specification
+```
+【Output Format Specification】
+"Please respond in the following format:
+1. Summary of changes (within 3 lines)
+2. List of files to be changed
+3. Changed code only (no explanations needed)
+4. Test method (one command only)
+
+Additional suggestions or improvements are not needed this time."
+```
+
+### 7. Emergency Stop Methods
+
+#### Work Interruption Instructions
+```
+【Interruption Instruction Example】
+"STOP: Please interrupt current work.
+Reason: More changes than expected are occurring
+Request: Please provide steps to revert changes made so far"
+
+【Enhanced Constraints on Restart】
+"When restarting, strictly follow:
+- Change one file at a time
+- Verify functionality after each change
+- Proceed to next step only with my explicit permission"
+```
+
 ## Common Pitfalls and Solutions
 
 ### 1. Unclear Requirements
