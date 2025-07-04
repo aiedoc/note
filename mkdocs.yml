@@ -267,7 +267,7 @@ extra:
       lang: en
   analytics:
     provider: google
-    property: G-XXXXXXXXXX  # 実際のGA4測定IDに置き換え
+    property: G-XJMK21G4NW  # 実際のGA4測定IDに置き換え
     feedback:
       title: この記事は役に立ちましたか？
       ratings:
