@@ -1,5 +1,4 @@
-// Live2D猫キャラクター初期化スクリプト - 安定版
-// stevenjoezhang/live2d-widget-v4を使用
+// Live2D猫キャラクター初期化スクリプト - メッセージ表示修正版
 
 // 既存のすべてのLive2D要素を強制削除
 function clearAllLive2DElements() {
@@ -51,12 +50,13 @@ function initializeTororoCat() {
                     "log": false
                 });
                 
+                console.log('Tororo cat model initialized successfully!');
+                
                 // メッセージ表示機能を追加
                 setTimeout(() => {
-                    addCatMessages();
-                }, 2000);
+                    setupCatMessages();
+                }, 3000);
                 
-                console.log('Tororo cat model initialized successfully!');
             } catch (error) {
                 console.error('L2Dwidget initialization failed:', error);
             }
@@ -66,8 +66,10 @@ function initializeTororoCat() {
     }, 1000);
 }
 
-// 猫のメッセージ機能を追加
-function addCatMessages() {
+// 改良されたメッセージシステム
+function setupCatMessages() {
+    console.log('Setting up cat messages...');
+    
     const messages = [
         "にゃーん！このサイトへようこそ！",
         "技術ドキュメントを見に来てくれてありがとう！",
@@ -77,92 +79,124 @@ function addCatMessages() {
         "どこから見始めようかな？"
     ];
     
-    // キャラクターがクリックされたときのメッセージ
+    // メッセージ表示用のCSSを確実に追加
+    ensureMessageStyles();
+    
+    // キャラクターエリアのクリックイベント
     document.addEventListener('click', function(e) {
-        if (e.target.tagName === 'CANVAS') {
+        console.log('Click detected:', e.target);
+        // キャンバス、または左側エリアをクリックした時
+        if (e.target.tagName === 'CANVAS' || 
+            (e.clientX < 200 && e.clientY > window.innerHeight - 250)) {
             const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            showMessage(randomMessage);
+            showCatMessage(randomMessage);
         }
     });
     
     // コピー機能のメッセージ
     document.addEventListener('copy', function() {
-        showMessage("コピーしたにゃ〜");
+        showCatMessage("コピーしたにゃ〜");
     });
     
     // 開発者ツールを開いたときのメッセージ
-    let devtools = {
-        open: false,
-        orientation: null
-    };
-    
+    let devtools = { open: false };
     setInterval(() => {
         if (window.outerHeight - window.innerHeight > 160) {
             if (!devtools.open) {
                 devtools.open = true;
-                showMessage("にゃーん、開発者ツールを開いてるにゃ〜");
+                showCatMessage("にゃーん、開発者ツールを開いてるにゃ〜");
             }
         } else {
             devtools.open = false;
         }
-    }, 500);
+    }, 1000);
     
-    // 初回メッセージ
+    // 初回挨拶メッセージ
     setTimeout(() => {
-        showMessage("にゃーん！このサイトへようこそ！");
-    }, 3000);
+        showCatMessage("にゃーん！このサイトへようこそ！");
+        console.log('Welcome message should be displayed');
+    }, 2000);
 }
 
-// メッセージを表示する関数
-function showMessage(text) {
-    // 既存のメッセージを削除
-    const existingMessage = document.querySelector('.cat-message');
-    if (existingMessage) {
-        existingMessage.remove();
+// メッセージ表示用CSS確実追加
+function ensureMessageStyles() {
+    if (!document.querySelector('#cat-message-styles')) {
+        const style = document.createElement('style');
+        style.id = 'cat-message-styles';
+        style.textContent = `
+            .cat-message {
+                position: fixed !important;
+                left: 20px !important;
+                bottom: 220px !important;
+                background: #333 !important;
+                color: #fff !important;
+                padding: 12px 16px !important;
+                border-radius: 12px !important;
+                font-size: 14px !important;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+                z-index: 999999 !important;
+                max-width: 200px !important;
+                word-wrap: break-word !important;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+                border: 2px solid #4CAF50 !important;
+                animation: catMessageAnimation 4s ease-in-out forwards !important;
+                pointer-events: none !important;
+            }
+            
+            @keyframes catMessageAnimation {
+                0% { 
+                    opacity: 0; 
+                    transform: translateY(20px) scale(0.8); 
+                }
+                15% { 
+                    opacity: 1; 
+                    transform: translateY(0) scale(1); 
+                }
+                85% { 
+                    opacity: 1; 
+                    transform: translateY(0) scale(1); 
+                }
+                100% { 
+                    opacity: 0; 
+                    transform: translateY(-10px) scale(0.9); 
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        console.log('Cat message styles added');
     }
+}
+
+// 改良されたメッセージ表示関数
+function showCatMessage(text) {
+    console.log('Showing cat message:', text);
+    
+    // 既存のメッセージを削除
+    const existingMessages = document.querySelectorAll('.cat-message');
+    existingMessages.forEach(msg => msg.remove());
     
     // 新しいメッセージを作成
     const messageDiv = document.createElement('div');
     messageDiv.className = 'cat-message';
     messageDiv.textContent = text;
-    messageDiv.style.cssText = `
-        position: fixed;
-        left: 20px;
-        bottom: 220px;
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 10px 15px;
-        border-radius: 10px;
-        font-size: 14px;
-        z-index: 9999;
-        max-width: 200px;
-        word-wrap: break-word;
-        animation: fadeInOut 3s ease-in-out;
-    `;
     
-    // アニメーション用のCSSを追加
-    if (!document.querySelector('#cat-message-style')) {
-        const style = document.createElement('style');
-        style.id = 'cat-message-style';
-        style.textContent = `
-            @keyframes fadeInOut {
-                0% { opacity: 0; transform: translateY(10px); }
-                20% { opacity: 1; transform: translateY(0); }
-                80% { opacity: 1; transform: translateY(0); }
-                100% { opacity: 0; transform: translateY(-10px); }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-    
+    // body に直接追加
     document.body.appendChild(messageDiv);
+    console.log('Message element added to body');
     
-    // 3秒後に削除
+    // 4秒後に削除
     setTimeout(() => {
-        if (messageDiv.parentNode) {
+        if (messageDiv && messageDiv.parentNode) {
             messageDiv.remove();
+            console.log('Message removed');
         }
-    }, 3000);
+    }, 4000);
+    
+    // 強制的に表示確認
+    setTimeout(() => {
+        const rect = messageDiv.getBoundingClientRect();
+        console.log('Message position:', rect);
+    }, 100);
 }
 
 // スマートフォンチェック
@@ -170,15 +204,29 @@ function isMobile() {
     return window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
+// デバッグ用のテスト関数
+function testCatMessage() {
+    showCatMessage("テストメッセージだにゃ〜");
+}
+
 // 初期化実行
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded, initializing...');
         if (!isMobile()) {
             initializeTororoCat();
+        } else {
+            console.log('Mobile device detected, skipping Live2D');
         }
     });
 } else {
+    console.log('DOM already loaded, initializing...');
     if (!isMobile()) {
         initializeTororoCat();
+    } else {
+        console.log('Mobile device detected, skipping Live2D');
     }
 }
+
+// グローバルアクセス用
+window.testCatMessage = testCatMessage;
