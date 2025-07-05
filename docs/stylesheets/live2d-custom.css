@@ -1,0 +1,190 @@
+/* Live2D Widget Custom Styles */
+
+/* ウィジェット全体のスタイル調整 */
+#waifu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* キャラクター本体のスタイル */
+#live2d {
+    position: relative;
+    cursor: grab;
+}
+
+#live2d:active {
+    cursor: grabbing;
+}
+
+/* ツールバーのスタイル */
+#waifu-tool {
+    position: absolute;
+    top: -60px;
+    right: 6px;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+
+#waifu:hover #waifu-tool {
+    opacity: 1;
+}
+
+#waifu-tool span {
+    display: block;
+    cursor: pointer;
+    color: #7b8c9d;
+    margin: 2px 0;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+#waifu-tool span:hover {
+    color: #0ea5e9;
+    background-color: rgba(14, 165, 233, 0.1);
+}
+
+/* 吹き出しメッセージのスタイル */
+#waifu-tips {
+    position: absolute;
+    top: -60px;
+    left: 6px;
+    color: #fff;
+    background-color: rgba(51, 51, 51, 0.9);
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    padding: 8px 12px;
+    max-width: 250px;
+    min-height: 70px;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8) translateY(10px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#waifu-tips.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+}
+
+/* 吹き出しの矢印 */
+#waifu-tips:before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(51, 51, 51, 0.9);
+}
+
+/* ダークモード対応 */
+[data-md-color-scheme="slate"] #waifu-tips {
+    background-color: rgba(45, 55, 72, 0.95);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] #waifu-tips:before {
+    border-top-color: rgba(45, 55, 72, 0.95);
+}
+
+/* スマートフォンでは非表示 */
+@media screen and (max-width: 767px) {
+    #waifu {
+        display: none !important;
+    }
+}
+
+/* タブレットでサイズ調整 */
+@media screen and (max-width: 1024px) {
+    #waifu {
+        transform: scale(0.8);
+        transform-origin: bottom left;
+    }
+    
+    #waifu-tips {
+        max-width: 200px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+}
+
+/* アニメーション効果 */
+@keyframes waifuBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.waifu-bounce {
+    animation: waifuBounce 1s ease-in-out;
+}
+
+/* ローディング時のスタイル */
+#waifu.loading {
+    opacity: 0.5;
+}
+
+#waifu.loading #live2d {
+    pointer-events: none;
+}
+
+/* ホバー時のエフェクト */
+#waifu:hover {
+    filter: brightness(1.1);
+}
+
+/* フォーカス時のアクセシビリティ対応 */
+#waifu-tool span:focus {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+}
+
+/* カスタムカラーテーマ */
+.waifu-theme-tech #waifu-tips {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+}
+
+.waifu-theme-tech #waifu-tips:before {
+    border-top-color: #667eea;
+}
+
+/* アニメーション無効化対応 */
+@media (prefers-reduced-motion: reduce) {
+    #waifu,
+    #waifu-tips,
+    #waifu-tool span {
+        transition: none;
+        animation: none;
+    }
+    
+    .waifu-bounce {
+        animation: none;
+    }
+}

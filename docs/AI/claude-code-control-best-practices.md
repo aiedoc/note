@@ -227,9 +227,119 @@ npm run build
 - [ ] 型チェックが通る
 ```
 
-## 実践的な制御テクニック
+## 3. Claude Code Hooksによる高度な制御
 
-### 1. 段階的な承認システム
+### Hooksとは
+Claude Code Hooksは、Claude Codeのライフサイクルの特定の時点でシェルコマンドを実行できる機能です。これにより、ツールの使用を制御し、ワークフローをカスタマイズできます。
+
+### 利用可能なHookイベント
+1. **PreToolUse**: ツール実行前に起動
+2. **PostToolUse**: ツール完了後に起動
+3. **Notification**: 通知時に起動
+4. **Stop**: メインエージェント終了時に起動
+5. **SubagentStop**: サブエージェント完了時に起動
+
+### Hooks設定例
+
+#### 基本的な設定構造
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "log-bash-command.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+#### 実用的なHooksの例
+
+**1. コード変更の自動フォーマット**
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "prettier --write {file_path} || true"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**2. 危険なコマンドのブロック**
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "check-dangerous-commands.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**3. 変更の自動ログ記録**
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[{timestamp}] Modified: {file_path}' >> claude-code.log"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### Hooksのベストプラクティス
+
+1. **セキュリティを最優先に**
+   - Hooksはフルユーザー権限で実行されるため、慎重に設計する
+   - 不明なコマンドや外部スクリプトは実行しない
+
+2. **エラーハンドリング**
+   - `|| true`を使用してエラーでも継続できるようにする
+   - 重要な処理は別途ログを出力する
+
+3. **パフォーマンスへの配慮**
+   - 重い処理は避ける
+   - 非同期処理を活用する
+
+4. **段階的な導入**
+   - まず通知やログから始める
+   - 徐々に制御を強化していく
+
+## 4. 実践的な制御テクニック
+
+### 段階的な承認システム
 
 ```markdown
 # CLAUDE.md内の段階的承認設定
@@ -258,7 +368,7 @@ npm run build
 - 本番環境への影響がある変更
 ```
 
-### 2. チェックポイントの設定
+### チェックポイントの設定
 
 ```bash
 # .claude/checkpoints.md
@@ -282,7 +392,7 @@ npm run build
 4. コミットメッセージの確認
 ```
 
-### 3. 自動承認モードの制御
+### 自動承認モードの制御
 
 ```javascript
 // claude-config.js（設定例）

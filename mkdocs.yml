@@ -45,6 +45,7 @@ nav:
     - 基本知識・トレンド:
       - Claude Code活用法: AI/claude-code-best-practices.md
       - Claude Code制御方法: AI/claude-code-control-best-practices.md
+      - Claude Code Hooks完全ガイド: AI/claude-code-hooks-guide.md
       - AI開発ツール比較: AI/ai-development-tools.md
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md
@@ -65,9 +66,12 @@ nav:
       - サイト運用ガイド: Tips/Mkdocs/サイト運用ガイド.md
       - GitHub Actions自動デプロイ: Tips/Mkdocs/GitHub Actions自動デプロイ設定.md
       - デザイン改善ガイド: Tips/Mkdocs/デザイン改善ガイド.md
+      - Live2Dキャラクター実装: Tips/Mkdocs/live2d-character-integration.md
       - アナリティクス設定: Tips/Mkdocs/アナリティクス設定.md
       - 高度な設定: Tips/Mkdocs/高度な設定.md
       - 多言語対応設定: Tips/Mkdocs/多言語対応設定.md
+    - Live2D実装:
+      - Live2Dウィジェット完全ガイド: Tips/Live2D/live2d-widget-implementation-guide.md
     - 開発効率化:
       - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
       - 便利ツール: Tips/便利ツール.md
@@ -137,6 +141,7 @@ theme:
 
 extra_css:
     - stylesheets/extra.css
+    - stylesheets/live2d-custom.css
 
 markdown_extensions:
     - attr_list
@@ -171,7 +176,9 @@ markdown_extensions:
 
 extra_javascript:
   - 'javascripts/extra.js'
+  - 'javascripts/live2d-config.js'
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
+  - https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js
 
 # Analytics & Plugins
 plugins:
@@ -217,6 +224,7 @@ plugins:
           基本知識・トレンド: Basics & Trends
           Claude Code活用法: Claude Code Best Practices
           Claude Code制御方法: Claude Code Control Methods
+          Claude Code Hooks完全ガイド: Claude Code Hooks Complete Guide
           AI開発ツール比較: AI Development Tools Comparison
           実践ガイド: Practical Guide
           LLMプログラミング: LLM Programming
@@ -231,6 +239,7 @@ plugins:
           サイト運用ガイド: Site Operations Guide
           GitHub Actions自動デプロイ: GitHub Actions Automated Deployment
           デザイン改善ガイド: Design Improvement Guide
+          Live2Dキャラクター実装: Live2D Character Integration
           アナリティクス設定: Analytics Setup
           高度な設定: Advanced Settings
           多言語対応設定: Multilingual Configuration

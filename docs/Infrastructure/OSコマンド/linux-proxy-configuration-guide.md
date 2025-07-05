@@ -23,8 +23,8 @@ export https_proxy="http://proxy.company.com:8080"
 export ftp_proxy="http://proxy.company.com:8080"
 
 # 認証が必要な場合
-export http_proxy="http://username:password@proxy.company.com:8080"
-export https_proxy="http://username:password@proxy.company.com:8080"
+export http_proxy="http://USER:PASS@proxy.company.com:8080"
+export https_proxy="http://USER:PASS@proxy.company.com:8080"
 
 # プロキシを使わないホスト（カンマ区切り）
 export no_proxy="localhost,127.0.0.1,*.company.com,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
@@ -68,7 +68,7 @@ curl --proxy http://proxy.company.com:8080 https://example.com
 curl -x proxy.company.com:8080 https://example.com
 
 # 認証付きプロキシ
-curl --proxy-user username:password --proxy http://proxy.company.com:8080 https://example.com
+curl --proxy-user USER:PASS --proxy http://proxy.company.com:8080 https://example.com
 
 # プロキシを使わない
 curl --noproxy "*.company.com,localhost" https://internal.company.com
@@ -183,7 +183,7 @@ Acquire::https::Proxy "http://proxy.company.com:8080/";
 Acquire::ftp::Proxy "http://proxy.company.com:8080/";
 
 # 認証が必要な場合
-Acquire::http::Proxy "http://username:password@proxy.company.com:8080/";
+Acquire::http::Proxy "http://USER:PASS@proxy.company.com:8080/";
 
 # 特定のホストでプロキシを使わない
 Acquire::http::Proxy::ppa.launchpad.net "DIRECT";
@@ -532,7 +532,7 @@ ss -tuln | grep :8080
 ```bash
 # 認証情報を環境変数から分離
 # ~/.proxy_auth ファイルに保存（権限 600）
-echo "username:password" > ~/.proxy_auth
+echo "USER:PASS" > ~/.proxy_auth
 chmod 600 ~/.proxy_auth
 
 # プロキシ設定で参照
