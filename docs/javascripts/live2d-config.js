@@ -17,12 +17,10 @@ window.live2d_settings = {
     "waifuDraggable": "axis-x", // ドラッグ可能設定
     "waifuDraggableRevert": true, // ドラッグ後の復帰
     
-    // モデル設定 - CDN提供の猫モデルに変更
-    "waifuJsonPath": "https://unpkg.com/live2d-widget-model-tororo/assets/",
-    "waifuDefaultTool": false,
-    "modelTexturesID": 0,  // テクスチャID
-    "modelStorage": true,  // モデル記憶
-    "modelRandMode": "switch", // ランダムモード
+    // モデル設定 - 猫モデル直接指定
+    "modelAPI": "https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json",
+    "modelStorage": false,  // キャッシュ無効化で確実に変更
+    "modelRandMode": "disabled",
     
     // メッセージ設定 - 猫キャラクター用にカスタマイズ
     "waifuWelcomeMessage": {
@@ -120,5 +118,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    console.log('Live2D Widget loading...');
+    // ブラウザキャッシュクリア強制
+    if ('caches' in window) {
+        caches.keys().then(function(names) {
+            names.forEach(function(name) {
+                caches.delete(name);
+            });
+        });
+    }
+    
+    // LocalStorage内のLive2Dデータをクリア
+    Object.keys(localStorage).forEach(function(key) {
+        if (key.includes('live2d') || key.includes('waifu')) {
+            localStorage.removeItem(key);
+        }
+    });
+    
+    console.log('Live2D Widget loading with cache cleared...');
 });
