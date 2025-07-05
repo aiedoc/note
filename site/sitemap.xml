@@ -302,6 +302,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/GitHub/github-pages-multiple-pages/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/Tips/Live2D/live2d-widget-implementation-guide/</loc>
+        <lastmod>2025-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Live2D/live2d-widget-implementation-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Live2D/live2d-widget-implementation-guide/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/Tips/Mkdocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/</loc>
         <lastmod>2025-07-05</lastmod>
         <changefreq>daily</changefreq>
@@ -671,6 +678,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/GitHub/github-pages-multiple-pages/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/GitHub/github-pages-multiple-pages/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/Tips/Live2D/live2d-widget-implementation-guide/</loc>
+        <lastmod>2025-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Live2D/live2d-widget-implementation-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Live2D/live2d-widget-implementation-guide/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/Tips/Mkdocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/</loc>

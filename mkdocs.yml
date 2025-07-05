@@ -176,9 +176,9 @@ markdown_extensions:
 
 extra_javascript:
   - 'javascripts/extra.js'
-  - 'javascripts/live2d-config.js'
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
-  - https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js
+  - https://unpkg.com/live2d-widget@3.x/lib/L2Dwidget.min.js
+  - 'javascripts/live2d-init.js'
 
 # Analytics & Plugins
 plugins:
