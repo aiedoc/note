@@ -1,4 +1,4 @@
-// Live2D猫キャラクター初期化スクリプト - メッセージ表示修正版
+// Live2D猫キャラクター初期化スクリプト - マウスホバー機能付き
 
 // 既存のすべてのLive2D要素を強制削除
 function clearAllLive2DElements() {
@@ -55,6 +55,7 @@ function initializeTororoCat() {
                 // メッセージ表示機能を追加
                 setTimeout(() => {
                     setupCatMessages();
+                    setupMouseHover(); // マウスホバー機能を追加
                 }, 3000);
                 
             } catch (error) {
@@ -64,6 +65,163 @@ function initializeTororoCat() {
             console.error('L2Dwidget library not loaded');
         }
     }, 1000);
+}
+
+// マウスホバー機能設定
+function setupMouseHover() {
+    console.log('Setting up mouse hover for cat...');
+    
+    // ホバー位置に応じたメッセージ
+    const hoverMessages = {
+        head: [
+            "頭を撫でてくれるの？にゃ〜",
+            "気持ちいいにゃん♪",
+            "もっと撫でて〜",
+            "頭のマッサージ、好きなの！"
+        ],
+        face: [
+            "お顔を見つめてくれてるにゃ〜",
+            "こんにちは！にゃん",
+            "何か話しかけたいことある？",
+            "目が合っちゃった♪"
+        ],
+        body: [
+            "お腹を触ろうとしてる？",
+            "くすぐったいにゃ〜",
+            "そこは敏感なところ！",
+            "お腹は急所だから優しくね"
+        ],
+        tail: [
+            "しっぽに興味あるの？",
+            "しっぽは猫の大事な部分にゃ",
+            "しっぽでバランス取ってるのよ",
+            "触らないで〜！"
+        ],
+        paws: [
+            "肉球を見てるの？",
+            "足先はくすぐったいにゃ〜",
+            "この足で色んなところを歩いてるの",
+            "肉球、プニプニでしょ？"
+        ]
+    };
+    
+    let hoverTimer;
+    let isHovering = false;
+    
+    // キャンバス要素の監視（Live2D読み込み後に設定）
+    function setupCanvasHover() {
+        const canvas = document.querySelector('canvas');
+        if (!canvas) {
+            setTimeout(setupCanvasHover, 500);
+            return;
+        }
+        
+        console.log('Canvas found, setting up hover events');
+        
+        canvas.addEventListener('mouseenter', function(e) {
+            isHovering = true;
+            console.log('Mouse entered cat area');
+        });
+        
+        canvas.addEventListener('mouseleave', function(e) {
+            isHovering = false;
+            clearTimeout(hoverTimer);
+            hideHoverMessage();
+            console.log('Mouse left cat area');
+        });
+        
+        canvas.addEventListener('mousemove', function(e) {
+            if (!isHovering) return;
+            
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(() => {
+                const rect = canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const bodyPart = detectBodyPart(x, y, rect.width, rect.height);
+                const messages = hoverMessages[bodyPart];
+                const message = messages[Math.floor(Math.random() * messages.length)];
+                
+                showHoverMessage(message, e.clientX, e.clientY);
+                console.log(`Hovering over ${bodyPart}: ${message}`);
+            }, 800); // 0.8秒ホバーでメッセージ表示
+        });
+    }
+    
+    setupCanvasHover();
+}
+
+// キャラクターの身体部位を検出
+function detectBodyPart(x, y, width, height) {
+    const relativeX = x / width;
+    const relativeY = y / height;
+    
+    console.log(`Hover position: ${relativeX.toFixed(2)}, ${relativeY.toFixed(2)}`);
+    
+    // 大まかな身体部位の判定（Tororoキャラクターの形状に基づく）
+    if (relativeY < 0.3) {
+        // 上部 - 頭・顔エリア
+        if (relativeX > 0.3 && relativeX < 0.7) {
+            return 'face'; // 顔
+        } else {
+            return 'head'; // 頭・耳
+        }
+    } else if (relativeY < 0.7) {
+        // 中部 - 胴体エリア
+        return 'body';
+    } else {
+        // 下部 - 足・しっぽエリア
+        if (relativeX < 0.3 || relativeX > 0.8) {
+            return 'tail'; // しっぽ
+        } else {
+            return 'paws'; // 足・肉球
+        }
+    }
+}
+
+// ホバーメッセージ表示
+function showHoverMessage(text, mouseX, mouseY) {
+    // 既存のホバーメッセージを削除
+    hideHoverMessage();
+    
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'cat-hover-message';
+    messageDiv.textContent = text;
+    
+    // マウス位置に表示（画面外に出ないよう調整）
+    const left = Math.min(mouseX + 10, window.innerWidth - 200);
+    const top = Math.max(mouseY - 40, 10);
+    
+    messageDiv.style.cssText = `
+        position: fixed !important;
+        left: ${left}px !important;
+        top: ${top}px !important;
+        background: linear-gradient(135deg, #ff6b6b, #feca57) !important;
+        color: #fff !important;
+        padding: 8px 12px !important;
+        border-radius: 20px !important;
+        font-size: 12px !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+        z-index: 999999 !important;
+        max-width: 180px !important;
+        word-wrap: break-word !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        animation: hoverMessageFadeIn 0.3s ease-out !important;
+        pointer-events: none !important;
+        white-space: nowrap !important;
+    `;
+    
+    document.body.appendChild(messageDiv);
+}
+
+// ホバーメッセージ非表示
+function hideHoverMessage() {
+    const existingHoverMessage = document.querySelector('.cat-hover-message');
+    if (existingHoverMessage) {
+        existingHoverMessage.remove();
+    }
 }
 
 // 改良されたメッセージシステム
@@ -90,6 +248,8 @@ function setupCatMessages() {
             (e.clientX < 200 && e.clientY > window.innerHeight - 250)) {
             const randomMessage = messages[Math.floor(Math.random() * messages.length)];
             showCatMessage(randomMessage);
+            // クリック時はホバーメッセージを隠す
+            hideHoverMessage();
         }
     });
     
@@ -161,6 +321,17 @@ function ensureMessageStyles() {
                     transform: translateY(-10px) scale(0.9); 
                 }
             }
+            
+            @keyframes hoverMessageFadeIn {
+                from { 
+                    opacity: 0; 
+                    transform: scale(0.8); 
+                }
+                to { 
+                    opacity: 1; 
+                    transform: scale(1); 
+                }
+            }
         `;
         document.head.appendChild(style);
         console.log('Cat message styles added');
@@ -174,6 +345,9 @@ function showCatMessage(text) {
     // 既存のメッセージを削除
     const existingMessages = document.querySelectorAll('.cat-message');
     existingMessages.forEach(msg => msg.remove());
+    
+    // ホバーメッセージも隠す
+    hideHoverMessage();
     
     // 新しいメッセージを作成
     const messageDiv = document.createElement('div');
