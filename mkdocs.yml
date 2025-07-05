@@ -1,6 +1,6 @@
 # Project information
 site_name: note
-site_url: https://aiedoc.github.io/note/
+site_url: https://smartscope.blog/
 site_description: "技術ノート・ドキュメント集 - MkDocs Material高度機能実装例"
 site_author: "aiedoc"
 copyright: "&copy; 2024-2025 aiedoc. All rights reserved."
@@ -34,7 +34,7 @@ nav:
       - 静的ルーティング設定(ubuntu16.04)メモ: Infrastructure/OSコマンド/静的ルーティング設定(ubuntu16.04)メモ.md
     - パッケージ管理:
       - pythonのインストール: Infrastructure/OSコマンド/pythonのインストール.md
-      - redhatでyumを使うときの設定: Infrastructure/OSコマンド/redhatでyumを使うときの設定.md
+      - Linux プロキシ設定完全ガイド: Infrastructure/OSコマンド/linux-proxy-configuration-guide.md
       - yumコマンドメモ: Infrastructure/OSコマンド/yumコマンドメモ.md
     - コマンド・ツール:
       - sedコマンドメモ: Infrastructure/OSコマンド/sedコマンドメモ.md
@@ -44,6 +44,7 @@ nav:
     - AI/index.md
     - 基本知識・トレンド:
       - Claude Code活用法: AI/claude-code-best-practices.md
+      - Claude Code制御方法: AI/claude-code-control-best-practices.md
       - AI開発ツール比較: AI/ai-development-tools.md
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md
@@ -70,6 +71,8 @@ nav:
     - 開発効率化:
       - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
       - 便利ツール: Tips/便利ツール.md
+    - GitHub活用:
+      - GitHub Pages複数ページ作成: Tips/GitHub/github-pages-multiple-pages.md
     - 参考資料:
       - リンク集: Tips/リンク集.md
   
@@ -206,13 +209,14 @@ plugins:
           静的ルーティング設定(ubuntu16.04)メモ: Static Routing (Ubuntu 16.04) Notes
           パッケージ管理: Package Management
           pythonのインストール: Python Installation
-          redhatでyumを使うときの設定: RedHat Yum Configuration
+          Linux プロキシ設定完全ガイド: Linux Proxy Configuration Complete Guide
           yumコマンドメモ: Yum Command Notes
           コマンド・ツール: Commands & Tools
           sedコマンドメモ: Sed Command Notes
           AI開発: AI Development
           基本知識・トレンド: Basics & Trends
           Claude Code活用法: Claude Code Best Practices
+          Claude Code制御方法: Claude Code Control Methods
           AI開発ツール比較: AI Development Tools Comparison
           実践ガイド: Practical Guide
           LLMプログラミング: LLM Programming
@@ -233,6 +237,8 @@ plugins:
           開発効率化: Development Efficiency
           git ignoreで特定ディレクトリを管理対象外にする: Git Ignore Specific Directories
           便利ツール: Useful Tools
+          GitHub活用: GitHub Usage
+          GitHub Pages複数ページ作成: Creating Multi-Page GitHub Pages
           参考資料: References
           SEO実践ガイド: SEO Practical Guide
           基本戦略: Basic Strategy

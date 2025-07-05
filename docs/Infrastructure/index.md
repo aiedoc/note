@@ -68,7 +68,7 @@
 ソフトウェアのインストールと管理
 
 - [pythonのインストール](OSコマンド/pythonのインストール.md) - Python環境構築
-- [redhatでyumを使うときの設定](OSコマンド/redhatでyumを使うときの設定.md) - RedHat系パッケージ管理
+- [Linux プロキシ設定完全ガイド](OSコマンド/linux-proxy-configuration-guide.md) - curl・wget・Docker・yum対応
 - [yumコマンドメモ](OSコマンド/yumコマンドメモ.md) - yumコマンドの実用例
 
 ### 🛠️ コマンド・ツール
