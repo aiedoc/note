@@ -17,9 +17,9 @@ window.live2d_settings = {
     "waifuDraggable": "axis-x", // ドラッグ可能設定
     "waifuDraggableRevert": true, // ドラッグ後の復帰
     
-    // モデル設定 - 商用利用安全なLive2D公式APIに変更
-    "modelAPI": "https://live2d.fghrsh.net/api/",
-    "modelList": [1, 2], // Tororo(1)とHijiki(2)の猫モデルのみ使用
+    // モデル設定 - CDN提供の猫モデルに変更
+    "waifuJsonPath": "https://unpkg.com/live2d-widget-model-tororo/assets/",
+    "waifuDefaultTool": false,
     "modelTexturesID": 0,  // テクスチャID
     "modelStorage": true,  // モデル記憶
     "modelRandMode": "switch", // ランダムモード
@@ -27,7 +27,7 @@ window.live2d_settings = {
     // メッセージ設定 - 猫キャラクター用にカスタマイズ
     "waifuWelcomeMessage": {
         "referrer": "にゃーん！他のサイトから来てくれたんですね！",
-        "homepage": "技術ノートサイトへようこそ！猫のTororoとHijikiです！",
+        "homepage": "技術ノートサイトへようこそ！白猫のTororoです！",
         "console": "にゃ？デベロッパーツールを覗いているんですね！",
         "copy": "何かをコピーしましたね？出典を忘れずに～にゃん！",
         "visibilitychange": "おかえりなさい！待ってましたにゃ～"
