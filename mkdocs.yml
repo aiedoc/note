@@ -46,7 +46,17 @@ nav:
       - Claude Code活用法: AI/claude-code-best-practices.md
       - Claude Code制御方法: AI/claude-code-control-best-practices.md
       - Claude Code Hooks完全ガイド: AI/claude-code-hooks-guide.md
+      - CLAUDE.md ベストプラクティス: AI/claude-md-best-practices.md
       - AI開発ツール比較: AI/ai-development-tools.md
+    - Claude Code 応用編:
+      - 🏠 応用編ホーム: AI/claude-code-advanced-guide.md
+      - 🔗 Hooks活用術: AI/claude-code-hooks-advanced.md
+      - 🔌 MCP統合戦略: AI/claude-code-mcp-integration.md
+      - 🚀 GitHub Actions自動化: AI/claude-code-github-actions.md
+      - ⚡ バッチ処理マスター: AI/claude-code-batch-processing.md
+      - 🎨 画像・コード連携: AI/claude-code-image-integration.md
+      - 🏢 エンタープライズ展開: AI/claude-code-enterprise-deployment.md
+      - 🛡️ 権限モード最適化: AI/claude-code-permission-optimization.md
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md
       - エージェント型AI開発: AI/agentic-ai-development.md
@@ -71,12 +81,13 @@ nav:
       - 高度な設定: Tips/Mkdocs/高度な設定.md
       - 多言語対応設定: Tips/Mkdocs/多言語対応設定.md
     - Live2D実装:
-      - Live2Dウィジェット完全ガイド: Tips/Live2D/live2d-widget-implementation-guide.md
+      - ウェブサイトに動くキャラクターを追加する方法: Tips/Live2D/live2d-widget-implementation-guide.md
     - 開発効率化:
       - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
       - 便利ツール: Tips/便利ツール.md
     - GitHub活用:
       - GitHub Pages複数ページ作成: Tips/GitHub/github-pages-multiple-pages.md
+      - プライベートリポジトリでGitHub Pages公開: Tips/GitHub/github-pages-private-repository.md
     - 参考資料:
       - リンク集: Tips/リンク集.md
   
@@ -225,7 +236,17 @@ plugins:
           Claude Code活用法: Claude Code Best Practices
           Claude Code制御方法: Claude Code Control Methods
           Claude Code Hooks完全ガイド: Claude Code Hooks Complete Guide
+          CLAUDE.md ベストプラクティス: CLAUDE.md Best Practices
           AI開発ツール比較: AI Development Tools Comparison
+          Claude Code 応用編: Claude Code Advanced Guide
+          応用編ホーム: Advanced Guide Home
+          Hooks活用術: Advanced Hooks Techniques
+          MCP統合戦略: MCP Integration Strategy
+          GitHub Actions自動化: GitHub Actions Automation
+          バッチ処理マスター: Batch Processing Master
+          画像・コード連携: Image Code Integration
+          エンタープライズ展開: Enterprise Deployment
+          権限モード最適化: Permission Mode Optimization
           実践ガイド: Practical Guide
           LLMプログラミング: LLM Programming
           エージェント型AI開発: Agentic AI Development
@@ -248,6 +269,7 @@ plugins:
           便利ツール: Useful Tools
           GitHub活用: GitHub Usage
           GitHub Pages複数ページ作成: Creating Multi-Page GitHub Pages
+          プライベートリポジトリでGitHub Pages公開: Publishing GitHub Pages from Private Repositories
           参考資料: References
           SEO実践ガイド: SEO Practical Guide
           基本戦略: Basic Strategy
