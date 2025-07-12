@@ -1,8 +1,32 @@
-# Claude Codeの効果的な使い方とベストプラクティス
+# Claude Code活用法 - 基本編
 
-## Claude Codeとは
+![Badge](https://img.shields.io/badge/AI-Claude_Code-blue.svg)
 
-Claude Codeは、Anthropic社が開発したAIコーディング支援ツールで、2025年に大幅な機能強化とSDKのリリースにより、単なるチャットインターフェースを超えた包括的な開発支援プラットフォームとして進化しました。Claude 4 (Opus/Sonnet)は「世界最高のコーディングモデル」として位置づけられ、SWE-benchで72-73%の成績を記録しています。
+## 実現できること
+
+<div class="grid cards" markdown>
+
+-   :material-code-tags: **効率的なコード生成**
+    
+    自然言語からの高品質なコード自動生成とリファクタリング
+
+-   :material-message-text: **最適なプロンプト技術**
+    
+    AIから最高の結果を引き出すプロンプトエンジニアリング
+
+-   :material-bug: **インテリジェントなデバッグ**
+    
+    エラー分析と解決策の自動提案
+
+-   :material-lightbulb: **開発効率の最大化**
+    
+    日常的な開発タスクの自動化と高速化
+
+</div>
+
+## 📖 Claude Codeとは
+
+Claude Codeは、Anthropic社が開発した最先端のAIコーディング支援ツールです。2025年の大幅アップデートにより、SWE-benchで72-73%という業界最高水準の成績を記録し、真の「AIペアプログラマー」として進化しました。
 
 ## Claude Codeの主要機能
 
@@ -266,11 +290,29 @@ def process_large_dataset(data):
 - 簡単なタスクには小さなモデル
 - 複雑なタスクには高性能モデル
 
-## 今後の展望
+## 🔗 関連記事
 
-Claude Codeは継続的に進化しており、今後さらに高度な機能が追加される予定です：
-- より長いコンテキストウィンドウ
-- 改善された推論能力
-- 新しいツール統合機能
+<div class="grid cards" markdown>
 
-開発者がClaude Codeを効果的に活用することで、より効率的で高品質なソフトウェア開発が可能になります。
+-   :material-book-multiple: **[Claude Code完全ガイド](./claude-code-complete-guide.md)**
+    
+    全体像を把握したい方はこちらから
+
+-   :material-shield-check: **[制御とベストプラクティス](./claude-code-control-best-practices.md)**
+    
+    AIの安全な運用方法を学ぶ
+
+-   :material-speedometer: **[自動実行権限ガイド](./claude-code-auto-permission-guide.md)**
+    
+    効率化のための権限設定
+
+</div>
+
+### 他の関連記事
+- [CLAUDE.md ベストプラクティス](./claude-md-best-practices.md)
+- [Hooks活用ガイド](./claude-code-hooks-guide.md)
+- [GitHub Actions連携](./claude-code-github-actions.md)
+
+---
+
+*最終更新: 2025-01-12*

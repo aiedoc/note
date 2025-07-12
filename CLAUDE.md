@@ -17,11 +17,13 @@ When creating new articles for this documentation site, follow this checklist:
 
 ### Writing Phase
 - [ ] **Japanese Article**: Write the main article in Japanese (.md file)
-- [ ] **English Translation**: Create English version (.en.md file)
+- [ ] **English Translation**: Create English version (.en.md file) immediately after Japanese completion
 - [ ] **Code Examples**: Include practical, working code examples
 - [ ] **Visual Elements**: Add emoji icons and Material cards for better readability
 - [ ] **Cross-References**: Link to related articles within the documentation
 - [ ] **External Links**: Include relevant external resources
+- [ ] **SEO Optimization**: Apply SEO best practices to both language versions
+- [ ] **Article Structure**: Follow optimal length and hierarchy guidelines
 
 ### Quality Assurance
 - [ ] **Grammar Check**: Review for grammatical errors and typos
@@ -85,12 +87,15 @@ When using Claude Code to create articles based on provided topics:
    - Create comprehensive outline based on research
 
 3. **Article Writing Phase**
-   - Write article following the standard template
+   - Write Japanese article following the standard template
+   - Immediately create English version (.en.md file)
    - Include practical examples and real-world scenarios
-   - Add both Japanese and English versions
+   - Apply SEO optimization to both versions
+   - Follow article length and structure guidelines
 
 4. **Automated Deployment Phase**
    - Stage files with `git add`
+   - Update mkdocs.yml navigation for both languages
    - Create descriptive commit message
    - Push to master branch
    - Deploy with `mkdocs gh-deploy`
@@ -255,3 +260,139 @@ Detailed instructions...
 - Python 3.11+
 - Git history required for revision date plugin (GitHub Actions uses `fetch-depth: 0`)
 - All dependencies installed automatically via GitHub Actions workflow
+
+## 📊 Article Design & SEO Optimization Guidelines
+
+### Optimal Article Length Strategy
+
+#### Article Type Classification
+- **Parent Articles (Overview/Guide)**: 2000-3000 characters
+  - Comprehensive topic overview
+  - Link to child articles for detailed coverage
+  - Include "実現できること" cards section
+  
+- **Child Articles (Specific Methods)**: 1500-2500 characters
+  - Focused on specific techniques or implementations
+  - Detailed step-by-step instructions
+  - Link back to parent and related articles
+  
+- **Tutorial/Example Articles**: 1000-2000 characters
+  - Practical examples and case studies
+  - Code-heavy content with explanations
+  - Quick reference guides
+  
+- **Tips/Quick Notes**: 500-1000 characters
+  - Short, actionable insights
+  - Single concept focus
+  - Easy to scan and implement
+
+### Article Branching Strategy
+
+#### Hierarchical Structure Example
+```
+Claude Code活用法 (Parent - 2800 chars)
+├── コマンド自動実行ガイド (Child - 2200 chars)
+├── Hooks完全ガイド (Child - 2400 chars)
+├── MCP統合戦略 (Child - 2100 chars)
+└── 実践例集 (Grandchild - 1800 chars)
+    ├── CI/CD自動化例 (Tutorial - 1200 chars)
+    ├── バッチ処理例 (Tutorial - 1000 chars)
+    └── エラー対応例 (Tutorial - 1100 chars)
+```
+
+#### Content Distribution Rules
+1. **Avoid Article Bloat**: Don't expand a single article beyond 3500 characters
+2. **Split Complex Topics**: Create child articles for detailed explanations
+3. **Cross-Reference**: Link related articles strategically
+4. **Update Parent Articles**: Add links to new child articles
+
+### SEO Optimization Rules
+
+#### Title Optimization
+- **Japanese**: 32文字以内、主要キーワード含有
+- **English**: 60 characters max, include primary keywords
+- Include action words: "ガイド", "方法", "実践", "Guide", "How to", "Best Practices"
+
+#### Meta Description Guidelines
+- **Japanese**: 120-160文字で魅力的な要約
+- **English**: 120-160 characters with compelling summary
+- Include primary keyword and value proposition
+
+#### Heading Structure (H1-H6)
+```markdown
+# Main Title (H1) - 1 per article
+## Major Sections (H2) - 3-6 per article
+### Subsections (H3) - As needed
+#### Details (H4) - Sparingly
+```
+
+#### Internal Linking Strategy
+- **3-7 internal links** per article
+- Link to parent articles from child articles
+- Link to child articles from parent articles
+- Include "Related Articles" section at the end
+- Use descriptive anchor text
+
+#### Keyword Optimization
+- **Keyword Density**: 1-3% of total content
+- **Natural Placement**: In title, headers, first paragraph, conclusion
+- **Semantic Keywords**: Use related terms and synonyms
+- **Japanese SEO**: Use both hiragana/katakana and kanji variations
+
+### Readability Optimization
+
+#### Content Structure
+- **Introduction**: 150-250 characters - Hook reader and set expectations
+- **Main Sections**: 300-500 characters each - One concept per section
+- **Conclusion**: 100-200 characters - Summarize key takeaways
+- **Code Blocks**: Keep within one screen view when possible
+
+#### Visual Enhancement
+- Use emoji icons consistently (🔧, 📖, 💡, 🚀, etc.)
+- Implement Material cards for feature highlights
+- Break long paragraphs (max 3-4 sentences)
+- Use bullet points and numbered lists effectively
+- Include code syntax highlighting
+
+### Multilingual Content Strategy
+
+#### English Version Requirements
+- Create `.en.md` file immediately after Japanese version
+- Adapt content for English-speaking audience (not direct translation)
+- Maintain consistent structure between language versions
+- Update mkdocs.yml nav_translations section
+- Ensure all internal links work in both languages
+
+#### Content Localization
+- **Japanese**: Use です/ます form, technical terms in katakana when appropriate
+- **English**: Use clear, professional tone, explain Japanese-specific contexts
+- **Code Examples**: Keep code universal, adapt comments to target language
+- **Cultural Context**: Adjust examples and references for target audience
+
+### Automation & Homepage Integration
+
+#### New Article Discovery
+- Articles automatically appear in navigation after mkdocs deployment
+- Latest articles show in search index immediately
+- RSS feed updates automatically include new content
+- Site analytics track new page performance
+
+#### Content Maintenance
+- Review and update parent articles when adding child articles
+- Check and fix broken internal links monthly
+- Update "Related Articles" sections when relevant content is added
+- Monitor article performance and split high-traffic long articles
+
+### Performance Monitoring
+
+#### Success Metrics
+- **Engagement**: Time on page, bounce rate, scroll depth
+- **SEO**: Search ranking, click-through rate, organic traffic
+- **Usability**: Mobile responsiveness, loading speed, navigation flow
+- **Conversion**: Task completion rate, internal link clicks
+
+#### Optimization Triggers
+- **Split Article**: If word count exceeds guidelines or bounce rate > 70%
+- **Create Child Article**: If specific section gets high engagement
+- **Update Parent**: If child articles receive more traffic than parent
+- **Merge Articles**: If multiple short articles cover same topic

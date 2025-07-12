@@ -42,25 +42,28 @@ nav:
   # AI・機械学習
   - 🤖 AI開発:
     - AI/index.md
-    - 基本知識・トレンド:
-      - Claude Code活用法: AI/claude-code-best-practices.md
-      - Claude Code制御方法: AI/claude-code-control-best-practices.md
-      - Claude Code Hooks完全ガイド: AI/claude-code-hooks-guide.md
+    - Claude Code完全ガイド:
+      - 📖 完全ガイド: AI/claude-code-complete-guide.md
+      - 基本編:
+        - 活用法・ベストプラクティス: AI/claude-code-best-practices.md
+        - 制御とベストプラクティス: AI/claude-code-control-best-practices.md
+        - コマンド自動実行ガイド: AI/claude-code-auto-permission-guide.md
+      - 応用編:
+        - 🔗 Hooks完全ガイド: AI/claude-code-hooks-guide.md
+        - 🔌 MCP統合戦略: AI/claude-code-mcp-integration.md
+        - 🚀 GitHub Actions自動化: AI/claude-code-github-actions.md
+      - エンタープライズ編:
+        - 🏢 大規模導入ガイド: AI/claude-code-enterprise-deployment.md
+        - 🛡️ 権限管理概要: AI/claude-code-permission-overview.md
+      - 実践例集:
+        - ⚡ バッチ処理マスター: AI/claude-code-batch-processing.md
+        - 🎨 画像・コード連携: AI/claude-code-image-integration.md
+    - AI開発基礎:
       - CLAUDE.md ベストプラクティス: AI/claude-md-best-practices.md
       - AI開発ツール比較: AI/ai-development-tools.md
-    - Claude Code 応用編:
-      - 🏠 応用編ホーム: AI/claude-code-advanced-guide.md
-      - 🔗 Hooks活用術: AI/claude-code-hooks-advanced.md
-      - 🔌 MCP統合戦略: AI/claude-code-mcp-integration.md
-      - 🚀 GitHub Actions自動化: AI/claude-code-github-actions.md
-      - ⚡ バッチ処理マスター: AI/claude-code-batch-processing.md
-      - 🎨 画像・コード連携: AI/claude-code-image-integration.md
-      - 🏢 エンタープライズ展開: AI/claude-code-enterprise-deployment.md
-      - 🛡️ 権限モード最適化: AI/claude-code-permission-optimization.md
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md
       - エージェント型AI開発: AI/agentic-ai-development.md
-      - コマンド自動実行ガイド: AI/claude-code-auto-permission-guide.md
   
   # プログラミング・開発
   - 💻 プログラミング:
@@ -233,25 +236,28 @@ plugins:
           コマンド・ツール: Commands & Tools
           sedコマンドメモ: Sed Command Notes
           AI開発: AI Development
-          基本知識・トレンド: Basics & Trends
-          Claude Code活用法: Claude Code Best Practices
-          Claude Code制御方法: Claude Code Control Methods
-          Claude Code Hooks完全ガイド: Claude Code Hooks Complete Guide
-          CLAUDE.md ベストプラクティス: CLAUDE.md Best Practices
-          AI開発ツール比較: AI Development Tools Comparison
-          Claude Code 応用編: Claude Code Advanced Guide
-          応用編ホーム: Advanced Guide Home
-          Hooks活用術: Advanced Hooks Techniques
+          Claude Code完全ガイド: Claude Code Complete Guide
+          完全ガイド: Complete Guide
+          基本編: Basics
+          活用法・ベストプラクティス: Best Practices & Usage
+          制御とベストプラクティス: Control & Best Practices
+          コマンド自動実行ガイド: Auto-Permission Guide
+          応用編: Advanced
+          Hooks完全ガイド: Hooks Complete Guide
           MCP統合戦略: MCP Integration Strategy
           GitHub Actions自動化: GitHub Actions Automation
+          エンタープライズ編: Enterprise
+          大規模導入ガイド: Large-scale Deployment Guide
+          権限管理概要: Permission Management Overview
+          実践例集: Practical Examples
           バッチ処理マスター: Batch Processing Master
           画像・コード連携: Image Code Integration
-          エンタープライズ展開: Enterprise Deployment
-          権限モード最適化: Permission Mode Optimization
+          AI開発基礎: AI Development Basics
+          CLAUDE.md ベストプラクティス: CLAUDE.md Best Practices
+          AI開発ツール比較: AI Development Tools Comparison
           実践ガイド: Practical Guide
           LLMプログラミング: LLM Programming
           エージェント型AI開発: Agentic AI Development
-          コマンド自動実行ガイド: Auto-Permission Guide
           AI Development Tools Comparison: AI Development Tools Comparison
           Agentic AI Development: Agentic AI Development
           プログラミング: Programming
