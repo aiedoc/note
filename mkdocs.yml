@@ -58,6 +58,7 @@ nav:
       - 実践例集:
         - ⚡ バッチ処理マスター: AI/claude-code-batch-processing.md
         - 🎨 画像・コード連携: AI/claude-code-image-integration.md
+        - 🤝 Claude & Gemini協働実験: AI/claude-gemini-collaboration-guide.md
     - AI開発基礎:
       - CLAUDE.md ベストプラクティス: AI/claude-md-best-practices.md
       - AI開発ツール比較: AI/ai-development-tools.md
@@ -252,6 +253,7 @@ plugins:
           実践例集: Practical Examples
           バッチ処理マスター: Batch Processing Master
           画像・コード連携: Image Code Integration
+          Claude & Gemini協働実験: Claude & Gemini Collaboration Experiment
           AI開発基礎: AI Development Basics
           CLAUDE.md ベストプラクティス: CLAUDE.md Best Practices
           AI開発ツール比較: AI Development Tools Comparison

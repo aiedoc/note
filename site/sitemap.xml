@@ -78,6 +78,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-best-practices/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/AI/claude-code-complete-guide/</loc>
+        <lastmod>2025-07-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-complete-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-complete-guide/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/AI/claude-code-control-best-practices/</loc>
         <lastmod>2025-07-12</lastmod>
         <changefreq>daily</changefreq>
@@ -132,6 +139,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-permission-optimization/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-permission-optimization/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/AI/claude-code-permission-overview/</loc>
+        <lastmod>2025-07-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-permission-overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-permission-overview/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/AI/claude-md-best-practices/</loc>
@@ -533,6 +547,13 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-best-practices/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/en/AI/claude-code-complete-guide/</loc>
+        <lastmod>2025-07-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-complete-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-complete-guide/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/en/AI/claude-code-control-best-practices/</loc>
         <lastmod>2025-07-12</lastmod>
         <changefreq>daily</changefreq>
@@ -587,6 +608,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-permission-optimization/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-permission-optimization/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/AI/claude-code-permission-overview/</loc>
+        <lastmod>2025-07-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-permission-overview/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-permission-overview/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/AI/claude-md-best-practices/</loc>

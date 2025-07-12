@@ -32,6 +32,11 @@ Claude Code GitHub Actions is an AI-driven development automation tool provided 
 
 Currently available as a beta version in 2025, it's gaining attention as a revolutionary tool that can significantly streamline traditional manual code reviews and task implementations.
 
+**Important Limitations**:
+- Cannot submit formal PR reviews
+- Cannot approve PRs  
+- Limited to one comment per interaction
+
 ### Key Features
 
 #### 1. PR・Issue Integration
@@ -80,6 +85,8 @@ If using Claude Code in terminal:
 
 This command automates GitHub App installation and necessary secret configuration.
 
+**Note**: This command is only available for direct Anthropic API users.
+
 ### 2. Manual Setup
 
 #### Step 1: GitHub App Installation
@@ -119,11 +126,13 @@ jobs:
     if: contains(github.event.comment.body, '@claude') || contains(github.event.issue.body, '@claude') || contains(github.event.pull_request.body, '@claude') || contains(github.event.review.body, '@claude')
     runs-on: ubuntu-latest
     steps:
-      - uses: anthropics/claude-code-action@v1
+      - uses: anthropics/claude-code-action@beta
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Or for OAuth usage
-          # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Optional settings
+          # trigger_phrase: "@claude"  # Default value
+          # additional_permissions: true  # Allow GitHub Actions access
 ```
 
 ### 3. Authentication Options
@@ -131,12 +140,25 @@ jobs:
 Claude Code GitHub Actions supports multiple authentication methods:
 
 - **Anthropic Direct API**: Direct API key usage
-- **Amazon Bedrock**: Via AWS infrastructure
-- **Google Vertex AI**: Via Google Cloud Platform
+- **Amazon Bedrock**: Via AWS OIDC authentication
+- **Google Vertex AI**: Via Workload Identity Federation
 
 In enterprise environments, you can use your own cloud infrastructure to control data management and billing.
 
-### 4. CLAUDE.md Configuration File
+### 4. Advanced Configuration Options
+
+```yaml
+- uses: anthropics/claude-code-action@beta
+  with:
+    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    trigger_phrase: "@claude"  # Customize trigger phrase
+    direct_prompt: "Fix all linting errors"  # For automated workflows
+    additional_permissions: true  # Allow GitHub Actions access
+    allowed_tools: "edit,create"  # Restrict available tools
+```
+
+### 5. CLAUDE.md Configuration File
 
 Create `CLAUDE.md` in project root to set project-specific guidelines:
 

@@ -32,6 +32,11 @@ Claude Code GitHub Actionsは、Anthropic社が提供するAI駆動の開発自�
 
 2025年現在ベータ版として提供されており、従来の手動コードレビューやタスク実装を大幅に効率化できる革新的なツールとして注目を集めています。
 
+**重要な制限事項**:
+- 正式なPRレビューの提出不可
+- PR承認機能なし
+- 1つのインタラクションにつき1コメントに限定
+
 ### 主要機能
 
 #### 1. PR・Issue統合
@@ -80,6 +85,8 @@ graph LR
 
 このコマンドにより、GitHub Appのインストールと必要なシークレット設定が自動化されます。
 
+**注意**: このコマンドはAnthropicの直接APIユーザーのみ利用可能です。
+
 ### 2. 手動セットアップ
 
 #### ステップ1: GitHub Appインストール
@@ -119,11 +126,13 @@ jobs:
     if: contains(github.event.comment.body, '@claude') || contains(github.event.issue.body, '@claude') || contains(github.event.pull_request.body, '@claude') || contains(github.event.review.body, '@claude')
     runs-on: ubuntu-latest
     steps:
-      - uses: anthropics/claude-code-action@v1
+      - uses: anthropics/claude-code-action@beta
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # または OAuth使用の場合
-          # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # オプション設定
+          # trigger_phrase: "@claude"  # デフォルト値
+          # additional_permissions: true  # GitHub Actions へのアクセスを許可
 ```
 
 ### 3. 認証オプション
@@ -131,12 +140,25 @@ jobs:
 Claude Code GitHub Actionsは複数の認証方法をサポート：
 
 - **Anthropic直接API**: 直接APIキーを使用
-- **Amazon Bedrock**: AWSインフラストラクチャ経由
-- **Google Vertex AI**: Google Cloudプラットフォーム経由
+- **Amazon Bedrock**: AWS OIDC認証経由
+- **Google Vertex AI**: Workload Identity Federation経由
 
 エンタープライズ環境では、独自のクラウドインフラを使用してデータ管理と請求を制御できます。
 
-### 4. CLAUDE.md設定ファイル
+### 4. 高度な設定オプション
+
+```yaml
+- uses: anthropics/claude-code-action@beta
+  with:
+    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    trigger_phrase: "@claude"  # トリガーフレーズのカスタマイズ
+    direct_prompt: "Fix all linting errors"  # 自動化ワークフロー用
+    additional_permissions: true  # GitHub Actionsアクセス許可
+    allowed_tools: "edit,create"  # 使用可能なツールの制限
+```
+
+### 5. CLAUDE.md設定ファイル
 
 プロジェクトルートに`CLAUDE.md`を作成し、プロジェクト固有のガイドラインを設定：
 
