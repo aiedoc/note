@@ -60,6 +60,7 @@ nav:
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md
       - エージェント型AI開発: AI/agentic-ai-development.md
+      - コマンド自動実行ガイド: AI/claude-code-auto-permission-guide.md
   
   # プログラミング・開発
   - 💻 プログラミング:
@@ -250,6 +251,9 @@ plugins:
           実践ガイド: Practical Guide
           LLMプログラミング: LLM Programming
           エージェント型AI開発: Agentic AI Development
+          コマンド自動実行ガイド: Auto-Permission Guide
+          AI Development Tools Comparison: AI Development Tools Comparison
+          Agentic AI Development: Agentic AI Development
           プログラミング: Programming
           シェルスクリプト: Shell Scripts
           Bashサンプル: Bash Samples

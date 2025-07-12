@@ -8,6 +8,9 @@ When creating new articles for this documentation site, follow this checklist:
 
 ### Pre-Writing Phase
 - [ ] **Topic Research**: Research the topic thoroughly using official documentation and best practices
+- [ ] **Internet Research**: Search for the latest blog articles and information about the topic
+- [ ] **Use Case Analysis**: Identify practical use cases and real-world applications
+- [ ] **Pros and Cons**: Document advantages and disadvantages comprehensively
 - [ ] **Existing Content Check**: Search for similar articles to avoid duplication
 - [ ] **Target Audience**: Define the target audience (beginner/intermediate/advanced)
 - [ ] **Outline Creation**: Create a clear outline with main sections
@@ -64,6 +67,43 @@ mkdocs gh-deploy
 
 # 6. Verify deployment
 # Visit https://smartscope.blog/Category/new-article/
+```
+
+### AI-Assisted Article Creation Workflow
+
+When using Claude Code to create articles based on provided topics:
+
+1. **Topic Input Phase**
+   - User provides basic topic information
+   - Claude Code conducts comprehensive internet research using WebSearch
+   - Searches for latest blog articles and documentation
+   - Analyzes current trends and best practices
+
+2. **Research & Analysis Phase**
+   - Compile information about use cases and applications
+   - Document pros and cons from multiple sources
+   - Create comprehensive outline based on research
+
+3. **Article Writing Phase**
+   - Write article following the standard template
+   - Include practical examples and real-world scenarios
+   - Add both Japanese and English versions
+
+4. **Automated Deployment Phase**
+   - Stage files with `git add`
+   - Create descriptive commit message
+   - Push to master branch
+   - Deploy with `mkdocs gh-deploy`
+   - Verify live publication
+
+Example workflow command:
+```bash
+# Claude Code will automatically:
+# 1. Research the topic online
+# 2. Create comprehensive article with use cases, pros/cons
+# 3. Generate both Japanese and English versions
+# 4. Update mkdocs.yml navigation
+# 5. Commit and deploy to GitHub Pages
 ```
 
 ## Repository Overview
