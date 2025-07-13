@@ -219,7 +219,6 @@ plugins:
       blog_toc: true
       authors_file: "{blog}/.authors.yml"
   - i18n:
-      default_language: ja
       languages:
         - locale: ja
           name: 日本語
