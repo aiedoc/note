@@ -53,6 +53,7 @@ nav:
         - 🔗 Hooks完全ガイド: AI/claude-code-hooks-guide.md
         - 🔌 MCP統合戦略: AI/claude-code-mcp-integration.md
         - 🚀 GitHub Actions自動化: AI/claude-code-github-actions.md
+        - 🌐 外出先活用ガイド: AI/claude-code-remote-access.md
       - エンタープライズ編:
         - 🏢 大規模導入ガイド: AI/claude-code-enterprise-deployment.md
         - 🛡️ 権限管理概要: AI/claude-code-permission-overview.md
@@ -265,6 +266,7 @@ plugins:
           Hooks完全ガイド: Hooks Complete Guide
           MCP統合戦略: MCP Integration Strategy
           GitHub Actions自動化: GitHub Actions Automation
+          外出先活用ガイド: Remote Access Guide
           エンタープライズ編: Enterprise
           大規模導入ガイド: Large-scale Deployment Guide
           権限管理概要: Permission Management Overview
