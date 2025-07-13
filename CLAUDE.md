@@ -39,6 +39,9 @@ When creating new articles for this documentation site, follow this checklist:
 - [ ] **MkDocs Deploy**: Run `mkdocs gh-deploy` to publish
 - [ ] **Site Verification**: Access the live site to confirm publication
 - [ ] **Search Test**: Use site search to verify article is indexed
+- [ ] **Feature Verification**: Test all implemented features work correctly via WebFetch
+- [ ] **Cross-browser Testing**: Verify functionality across different browsers
+- [ ] **Performance Check**: Ensure page load times and responsiveness are acceptable
 
 ### Post-Deployment
 - [ ] **Analytics Check**: Monitor page views and engagement (after 24h)
