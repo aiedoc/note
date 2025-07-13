@@ -148,6 +148,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-permission-overview/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/AI/claude-code-remote-access/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-remote-access/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-remote-access/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/AI/claude-gemini-collaboration-guide/</loc>
         <lastmod>2025-07-13</lastmod>
         <changefreq>daily</changefreq>
@@ -428,6 +435,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/live2d-character-integration/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/Tips/Mkdocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/</loc>
         <lastmod>2025-07-13</lastmod>
         <changefreq>daily</changefreq>
@@ -629,6 +643,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-permission-overview/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-permission-overview/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/AI/claude-code-remote-access/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-remote-access/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-remote-access/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/AI/claude-gemini-collaboration-guide/</loc>
@@ -909,6 +930,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/live2d-character-integration/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/live2d-character-integration/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/Tips/Mkdocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/</loc>
