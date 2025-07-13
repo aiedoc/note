@@ -365,6 +365,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/Tips/claude-code-tips/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/claude-code-tips/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/claude-code-tips/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/Tips/development-efficiency-tips/</loc>
         <lastmod>2025-07-13</lastmod>
         <changefreq>daily</changefreq>
@@ -489,6 +496,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/blog/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/blog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/blog/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/%E5%83%8D%E3%81%8D%E6%96%B9%E6%94%B9%E5%96%84/%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86/</loc>
@@ -862,6 +876,13 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/en/Tips/claude-code-tips/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/claude-code-tips/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/claude-code-tips/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/en/Tips/development-efficiency-tips/</loc>
         <lastmod>2025-07-13</lastmod>
         <changefreq>daily</changefreq>
@@ -986,6 +1007,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/blog/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/blog/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/blog/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/%E5%83%8D%E3%81%8D%E6%96%B9%E6%94%B9%E5%96%84/%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86/</loc>
