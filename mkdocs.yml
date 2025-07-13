@@ -85,6 +85,7 @@ nav:
       - アナリティクス設定: Tips/Mkdocs/アナリティクス設定.md
       - 高度な設定: Tips/Mkdocs/高度な設定.md
       - 多言語対応設定: Tips/Mkdocs/多言語対応設定.md
+      - MkDocs無償プラグイン完全ガイド: Tips/Mkdocs/mkdocs-plugins-comprehensive-guide.md
     - Live2D実装:
       - ウェブサイトに動くキャラクターを追加する方法: Tips/Live2D/live2d-widget-implementation-guide.md
     - 開発効率化:
@@ -277,6 +278,7 @@ plugins:
           アナリティクス設定: Analytics Setup
           高度な設定: Advanced Settings
           多言語対応設定: Multilingual Configuration
+          MkDocs無償プラグイン完全ガイド: Complete Guide to Free MkDocs Plugins
           開発効率化: Development Efficiency
           開発効率化Tips集: Development Efficiency Tips
           git ignoreで特定ディレクトリを管理対象外にする: Git Ignore Specific Directories
