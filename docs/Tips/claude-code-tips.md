@@ -336,9 +336,15 @@ claude "パッケージの依存関係を分析して、不要な依存関係の
 
 ## 🔗 関連記事
 
-- [Claude Code完全ガイド](../AI/claude-code-complete-guide.md) - 基本から応用まで
-- [Claude Code自動実行ガイド](../AI/claude-code-auto-permission-guide.md) - 権限設定の詳細
+### Claude Code関連
+- [Claude Code完全ガイド](../AI/claude-code-complete-guide.md) - 全体像とナビゲーション
+- [Claude Code自動実行ガイド](../AI/claude-code-auto-permission-guide.md) - 権限設定の詳細操作
+- [制御とベストプラクティス](../AI/claude-code-control-best-practices.md) - AI制御の包括的手法
+- [権限管理概要](../AI/claude-code-permission-overview.md) - 企業レベルの権限戦略
+
+### 開発効率化
 - [開発効率化Tips集](./development-efficiency-tips.md) - 一般的な開発効率化テクニック
+- [CLAUDE.mdベストプラクティス](../AI/claude-md-best-practices.md) - プロジェクト設定ファイル活用法
 
 ---
 

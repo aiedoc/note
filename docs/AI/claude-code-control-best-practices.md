@@ -2,6 +2,11 @@
 
 Claude Codeが自走しすぎてルールを守らない問題を解決する最新の制御方法と、効果的なCLAUDE.mdファイルの書き方を解説します。実際の開発現場で使える実践的なテクニックを網羅的に紹介します。
 
+!!! info "記事の位置づけ"
+    - **本記事**: CLAUDE.mdによる包括的なAI制御手法
+    - **[自動実行ガイド](./claude-code-auto-permission-guide.md)**: 権限設定の具体的な操作方法
+    - **[権限管理概要](./claude-code-permission-overview.md)**: 企業レベルの権限システム戦略
+
 ## 📋 目次
 
 1. [Claude Codeの自走問題とは](#claude-codeの自走問題とは)
