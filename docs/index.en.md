@@ -99,6 +99,14 @@
 !!! tip "About This Site"
     A systematically organized knowledge base of technical notes and documentation. Covers a wide range of technical fields including infrastructure operations, programming, and development tools.
 
+## 📝 Latest Articles
+
+{{ blog_recent_posts(limit=5, lang="en") }}
+
+<div style="text-align: center; margin: 1rem 0;">
+  <a href="./blog/" class="md-button md-button--primary">View All Articles</a>
+</div>
+
 ## Quick Access
 
 <div class="homepage-grid">

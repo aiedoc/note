@@ -99,6 +99,14 @@
 !!! tip "このサイトについて"
     技術的なメモやドキュメントを体系的に整理したナレッジベースです。インフラ運用、プログラミング、開発ツールなど幅広い技術分野をカバーしています。
 
+## 📝 最新記事
+
+{{ blog_recent_posts(limit=5, lang="ja") }}
+
+<div style="text-align: center; margin: 1rem 0;">
+  <a href="./blog/" class="md-button md-button--primary">すべての記事を見る</a>
+</div>
+
 ## クイックアクセス
 
 <div class="homepage-grid">

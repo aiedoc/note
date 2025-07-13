@@ -99,9 +99,11 @@ nav:
       - 便利ツール: Tips/便利ツール.md
     - GitHub活用:
       - GitHub Pages複数ページ作成: Tips/GitHub/github-pages-multiple-pages.md
+      - GitHub Pages SEO最適化: Tips/GitHub/github-pages-multiple-pages-seo.md
       - プライベートリポジトリでGitHub Pages公開: Tips/GitHub/github-pages-private-repository.md
     - 参考資料:
       - リンク集: Tips/リンク集.md
+      - 働き方改善リンク集: Tips/働き方改善リンク集.md
   
   # SEO・マーケティング
   - 🚀 SEO実践ガイド:
@@ -295,8 +297,10 @@ plugins:
           便利ツール: Useful Tools
           GitHub活用: GitHub Usage
           GitHub Pages複数ページ作成: Creating Multi-Page GitHub Pages
+          GitHub Pages SEO最適化: GitHub Pages SEO Optimization
           プライベートリポジトリでGitHub Pages公開: Publishing GitHub Pages from Private Repositories
           参考資料: References
+          働き方改善リンク集: Work Style Improvement Links
           SEO実践ガイド: SEO Practical Guide
           基本戦略: Basic Strategy
           内部リンク戦略: Internal Link Strategy
