@@ -59,6 +59,10 @@ Claude Codeは、Anthropic社が開発した最先端のAIコーディング支�
     
     プロジェクト設定ファイルによる品質管理と効率化
 
+-   :material-github: **[GitHub Copilotカスタムインストラクション](./github-copilot-custom-instructions-guide.md)**
+    
+    チーム開発を最適化するCopilot活用法
+
 </div>
 
 ### 🚀 応用編 - さらなる効率化

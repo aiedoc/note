@@ -64,6 +64,7 @@ nav:
     - AI開発基礎:
       - CLAUDE.md ベストプラクティス: AI/claude-md-best-practices.md
       - AI開発ツール比較: AI/ai-development-tools.md
+      - GitHub Copilotカスタムインストラクション: AI/github-copilot-custom-instructions-guide.md
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md
       - エージェント型AI開発: AI/agentic-ai-development.md
@@ -93,7 +94,6 @@ nav:
     - 開発効率化:
       - 開発効率化Tips集: Tips/development-efficiency-tips.md
       - Claude Code Tips集: Tips/claude-code-tips.md
-      - GitHub Copilotカスタムインストラクション: Tips/github-copilot-custom-instructions-guide.md
       - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
       - 便利ツール: Tips/便利ツール.md
     - GitHub活用:
@@ -277,6 +277,7 @@ plugins:
           AI開発基礎: AI Development Basics
           CLAUDE.md ベストプラクティス: CLAUDE.md Best Practices
           AI開発ツール比較: AI Development Tools Comparison
+          GitHub Copilotカスタムインストラクション: GitHub Copilot Custom Instructions
           実践ガイド: Practical Guide
           LLMプログラミング: LLM Programming
           エージェント型AI開発: Agentic AI Development
@@ -300,7 +301,6 @@ plugins:
           開発効率化: Development Efficiency
           開発効率化Tips集: Development Efficiency Tips
           Claude Code Tips集: Claude Code Tips Collection
-          GitHub Copilotカスタムインストラクション: GitHub Copilot Custom Instructions
           git ignoreで特定ディレクトリを管理対象外にする: Git Ignore Specific Directories
           便利ツール: Useful Tools
           GitHub活用: GitHub Usage

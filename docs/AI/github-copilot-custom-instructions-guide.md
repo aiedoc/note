@@ -317,9 +317,9 @@ GitHub Copilotカスタムインストラクションは、単なる設定ファ
 
 ## 🔗 関連記事
 
-- [Claude Code Tips集](./claude-code-tips.md) - AI支援開発の実践テクニック
-- [開発効率化Tips集](./development-efficiency-tips.md) - 一般的な開発効率化手法
-- [CLAUDE.mdベストプラクティス](../AI/claude-md-best-practices.md) - プロジェクト設定ファイル活用法
+- [Claude Code Tips集](../Tips/claude-code-tips.md) - AI支援開発の実践テクニック
+- [開発効率化Tips集](../Tips/development-efficiency-tips.md) - 一般的な開発効率化手法
+- [CLAUDE.mdベストプラクティス](./claude-md-best-practices.md) - プロジェクト設定ファイル活用法
 
 ---
 

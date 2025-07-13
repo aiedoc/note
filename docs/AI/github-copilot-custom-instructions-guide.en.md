@@ -317,9 +317,9 @@ GitHub Copilot Custom Instructions is not just a configuration file, but **an im
 
 ## 🔗 Related Articles
 
-- [Claude Code Tips Collection](./claude-code-tips.md) - Practical AI-assisted development techniques
-- [Development Efficiency Tips](./development-efficiency-tips.md) - General development efficiency methods
-- [CLAUDE.md Best Practices](../AI/claude-md-best-practices.md) - Project configuration file utilization
+- [Claude Code Tips Collection](../Tips/claude-code-tips.md) - Practical AI-assisted development techniques
+- [Development Efficiency Tips](../Tips/development-efficiency-tips.md) - General development efficiency methods
+- [CLAUDE.md Best Practices](./claude-md-best-practices.md) - Project configuration file utilization
 
 ---
 
