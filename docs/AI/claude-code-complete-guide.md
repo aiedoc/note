@@ -105,7 +105,7 @@ Claude Codeは、Anthropic社が開発した最先端のAIコーディング支�
     
     スクリーンショットからのコード生成など
 
--   :material-lightbulb: **[Claude Code Tips集](../../Tips/claude-code-tips.md)**
+-   :material-lightbulb: **[Claude Code Tips集](../Tips/claude-code-tips.md)**
     
     生産性を爆上げする21の実践テクニック
 
