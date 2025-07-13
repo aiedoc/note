@@ -1,0 +1,13 @@
+authors:
+  aiedoc:
+    name: aiedoc
+    description: AI・インフラ・開発技術の情報発信
+    avatar: https://github.com/aiedoc.png
+    url: https://github.com/aiedoc
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/aiedoc
+        name: GitHub
+      - icon: fontawesome/brands/twitter  
+        link: https://twitter.com/aiedoc
+        name: Twitter

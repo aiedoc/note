@@ -59,6 +59,7 @@
 日常的な開発作業を効率化するコツとツール
 
 - [開発効率化Tips集](development-efficiency-tips.md) - 日々の作業を10倍速にする21のテクニック
+- [Claude Code Tips集](claude-code-tips.md) - AI支援開発を極める実践テクニック
 - [git ignoreで特定ディレクトリを管理対象外にする](git%20ignoreで特定ディレクトリを管理対象外にする.md) - Git管理の最適化
 - [便利ツール](便利ツール.md) - 生産性向上のためのツール集
 
@@ -73,8 +74,9 @@
 
 ### 初心者向け
 1. [開発効率化Tips集](development-efficiency-tips.md) - 実践的な開発テクニックを習得
-2. [MkDocsメモ](Mkdocs/mkdocsメモ.md) - 基本概念の理解
-3. [GitHub Pages作成方法](Mkdocs/mkdocsを使ったGitHubPages.md) - 実際にサイトを作成
+2. [Claude Code Tips集](claude-code-tips.md) - AI支援開発の基礎から応用まで
+3. [MkDocsメモ](Mkdocs/mkdocsメモ.md) - 基本概念の理解
+4. [GitHub Pages作成方法](Mkdocs/mkdocsを使ったGitHubPages.md) - 実際にサイトを作成
 
 ### 中級者向け
 1. [デザイン改善ガイド](Mkdocs/デザイン改善ガイド.md) - サイトの質向上
