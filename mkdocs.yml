@@ -88,6 +88,7 @@ nav:
     - Live2D実装:
       - ウェブサイトに動くキャラクターを追加する方法: Tips/Live2D/live2d-widget-implementation-guide.md
     - 開発効率化:
+      - 開発効率化Tips集: Tips/development-efficiency-tips.md
       - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
       - 便利ツール: Tips/便利ツール.md
     - GitHub活用:
@@ -277,6 +278,7 @@ plugins:
           高度な設定: Advanced Settings
           多言語対応設定: Multilingual Configuration
           開発効率化: Development Efficiency
+          開発効率化Tips集: Development Efficiency Tips
           git ignoreで特定ディレクトリを管理対象外にする: Git Ignore Specific Directories
           便利ツール: Useful Tools
           GitHub活用: GitHub Usage

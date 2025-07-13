@@ -148,6 +148,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-permission-overview/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/AI/claude-gemini-collaboration-guide/</loc>
+        <lastmod>2025-07-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-gemini-collaboration-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-gemini-collaboration-guide/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/AI/claude-md-best-practices/</loc>
         <lastmod>2025-07-12</lastmod>
         <changefreq>daily</changefreq>
@@ -615,6 +622,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-permission-overview/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-permission-overview/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/AI/claude-gemini-collaboration-guide/</loc>
+        <lastmod>2025-07-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-gemini-collaboration-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-gemini-collaboration-guide/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/AI/claude-md-best-practices/</loc>

@@ -24,13 +24,13 @@
 
     [:octicons-arrow-right-24: デザイン改善ガイド](Mkdocs/デザイン改善ガイド.md)
 
--   :material-tools: **便利ツール**
+-   :material-speedometer: **開発効率化**
 
     ---
 
-    開発効率を上げるツール集
+    日々の作業を10倍速にする実践テクニック
 
-    [:octicons-arrow-right-24: 便利ツール](便利ツール.md)
+    [:octicons-arrow-right-24: 開発効率化Tips集](development-efficiency-tips.md)
 
 -   :material-git: **Git活用**
 
@@ -58,6 +58,7 @@
 ### ⚡ 開発効率化
 日常的な開発作業を効率化するコツとツール
 
+- [開発効率化Tips集](development-efficiency-tips.md) - 日々の作業を10倍速にする21のテクニック
 - [git ignoreで特定ディレクトリを管理対象外にする](git%20ignoreで特定ディレクトリを管理対象外にする.md) - Git管理の最適化
 - [便利ツール](便利ツール.md) - 生産性向上のためのツール集
 
@@ -71,9 +72,9 @@
 ## 🎯 学習パス
 
 ### 初心者向け
-1. [MkDocsメモ](Mkdocs/mkdocsメモ.md) - 基本概念の理解
-2. [GitHub Pages作成方法](Mkdocs/mkdocsを使ったGitHubPages.md) - 実際にサイトを作成
-3. [便利ツール](便利ツール.md) - 開発環境の充実
+1. [開発効率化Tips集](development-efficiency-tips.md) - 実践的な開発テクニックを習得
+2. [MkDocsメモ](Mkdocs/mkdocsメモ.md) - 基本概念の理解
+3. [GitHub Pages作成方法](Mkdocs/mkdocsを使ったGitHubPages.md) - 実際にサイトを作成
 
 ### 中級者向け
 1. [デザイン改善ガイド](Mkdocs/デザイン改善ガイド.md) - サイトの質向上
