@@ -92,6 +92,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-control-best-practices/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/AI/claude-code-docker-guide/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-docker-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-docker-guide/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/AI/claude-code-enterprise-deployment/</loc>
         <lastmod>2025-07-13</lastmod>
         <changefreq>daily</changefreq>
@@ -629,6 +636,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-control-best-practices/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-control-best-practices/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/AI/claude-code-docker-guide/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-code-docker-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-code-docker-guide/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/AI/claude-code-enterprise-deployment/</loc>
