@@ -402,7 +402,7 @@ tail -10 ~/.claude/logs/error.log
 
 - [Claude Code インストールガイド](./claude-code-installation-guide.md)
 - [Claude Code完全ガイド](./claude-code-complete-guide.md)
-- [Claude Code パフォーマンス最適化](./claude-code-performance-optimization.md)
+- [Claude Code 2025年新機能](./claude-code-2025-features.md)
 - [Claude Code Tips集](../Tips/claude-code-tips.md)
 
 ---
