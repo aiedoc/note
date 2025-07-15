@@ -50,7 +50,6 @@ nav:
         - 🚀 インストール完全ガイド: AI/claude-code-installation-guide.md
         - 🆘 トラブルシューティング: AI/claude-code-troubleshooting-guide.md
         - 🆕 2025年新機能ガイド: AI/claude-code-2025-features.md
-    - 🤖 Grok 4完全ガイド: AI/grok-4-comprehensive-guide.md
       - 基本編:
         - 活用法・ベストプラクティス: AI/claude-code-best-practices.md
         - 制御とベストプラクティス: AI/claude-code-control-best-practices.md
@@ -71,6 +70,7 @@ nav:
     - AI開発基礎:
       - CLAUDE.md ベストプラクティス: AI/claude-md-best-practices.md
       - AI開発ツール比較: AI/ai-development-tools.md
+      - 🤖 Grok 4完全ガイド: AI/grok-4-comprehensive-guide.md
       - GitHub Copilotカスタムインストラクション: AI/github-copilot-custom-instructions-guide.md
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md

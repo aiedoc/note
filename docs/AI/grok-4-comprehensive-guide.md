@@ -246,7 +246,7 @@ Grok 4は確実に**学術・研究分野で最高性能**を示しています�
 ## 🔗 関連記事
 
 - [Claude Code完全ガイド](./claude-code-complete-guide.md)
-- [AI開発ツール比較2025](./ai-development-tools-comparison-2025.md)
+- [AI開発ツール比較](./ai-development-tools.md)
 - [LLMプログラミングガイド](./llm-programming-guide.md)
 
 ---
