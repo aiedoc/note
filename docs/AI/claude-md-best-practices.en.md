@@ -285,7 +285,6 @@ Implementation details...
 - [Related Article](./related.md)
 
 ---
-*Last updated: YYYY-MM-DD*
 ```
 
 ## Common Commands
@@ -551,4 +550,3 @@ Make sure everything is good before submitting.
 
 ---
 
-*Last updated: 2025-01-06*

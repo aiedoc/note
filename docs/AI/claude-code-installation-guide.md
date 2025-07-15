@@ -326,4 +326,3 @@ claude config set timeout 30
 
 ---
 
-*最終更新: 2025-01-14*

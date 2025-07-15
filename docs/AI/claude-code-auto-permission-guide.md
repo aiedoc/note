@@ -268,4 +268,3 @@ claude --dangerously-skip-permissions "Generate JSDoc comments for all exported 
 
 ---
 
-*最終更新: 2025-01-12*

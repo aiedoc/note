@@ -289,4 +289,3 @@ Need account lockout after 5 failed attempts.
 
 ---
 
-*Last updated: 2025-07-12*

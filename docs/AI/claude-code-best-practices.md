@@ -315,4 +315,3 @@ def process_large_dataset(data):
 
 ---
 
-*最終更新: 2025-01-12*

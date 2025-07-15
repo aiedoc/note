@@ -1,6 +1,6 @@
 # Claude Code Hooks完全ガイド
 
-!!! info "最終更新: 2025年1月"
+!!! info "更新情報"
     Claude Code Hooksの基本から応用まで、CLAUDE.mdとの違いや実践的な使い方を詳しく解説します。
 
 ## 実現できること

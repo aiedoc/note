@@ -439,4 +439,3 @@ claude migrate from-cursor \
 
 ---
 
-*最終更新: 2025-01-14*

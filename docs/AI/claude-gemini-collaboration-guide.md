@@ -349,4 +349,3 @@ TypeScript strict mode
 
 ---
 
-*最終更新: 2025-01-12*

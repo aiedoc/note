@@ -716,4 +716,3 @@ captureScreenshots('http://localhost:3000').then(() => {
 
 ---
 
-*最終更新: 2025-07-05*

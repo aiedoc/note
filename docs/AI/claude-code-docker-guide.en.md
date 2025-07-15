@@ -348,4 +348,3 @@ docker run --rm -it \
 
 ---
 
-*Last updated: 2025-01-13*

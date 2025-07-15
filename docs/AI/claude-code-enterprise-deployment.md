@@ -799,4 +799,3 @@ class CostOptimizer:
 
 ---
 
-*最終更新: 2025-07-05*

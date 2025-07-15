@@ -289,7 +289,6 @@ Implementation details...
 - [Related Article](./related.md)
 
 ---
-*最終更新: YYYY-MM-DD*
 ```
 
 ## Common Commands
@@ -555,4 +554,3 @@ Make sure everything is good before submitting.
 
 ---
 
-*最終更新: 2025-01-06*

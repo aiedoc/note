@@ -323,4 +323,3 @@ GitHub Copilot Custom Instructions is not just a configuration file, but **an im
 
 ---
 
-*Last updated: 2025-01-13*

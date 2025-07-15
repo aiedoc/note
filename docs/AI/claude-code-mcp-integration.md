@@ -512,4 +512,3 @@ tail -f ~/.claude/mcp/github.log
 
 ---
 
-*最終更新: 2025-07-05*

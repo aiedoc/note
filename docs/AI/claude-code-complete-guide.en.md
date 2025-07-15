@@ -128,4 +128,3 @@ This guide systematically covers Claude Code features with the following structu
 
 ---
 
-*Last updated: 2025-01-12*

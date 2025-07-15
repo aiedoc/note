@@ -407,4 +407,3 @@ tail -10 ~/.claude/logs/error.log
 
 ---
 
-*最終更新: 2025-01-14*

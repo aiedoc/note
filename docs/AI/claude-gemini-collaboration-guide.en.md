@@ -349,4 +349,3 @@ Test coverage 80%+" > quality-standards.md
 
 ---
 
-*Last updated: 2025-01-12*
