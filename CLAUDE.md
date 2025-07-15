@@ -19,6 +19,7 @@ When creating new articles for this documentation site, follow this checklist:
 - [ ] **Japanese Article**: Write the main article in Japanese (.md file)
 - [ ] **English Translation**: Create English version (.en.md file) immediately after Japanese completion
 - [ ] **Code Examples**: Include practical, working code examples
+- [ ] **YAML Escaping**: Use `{% raw %}{{ }}{% endraw %}` for all GitHub Actions variables to prevent MkDocs conflicts
 - [ ] **Visual Elements**: Add emoji icons and Material cards for better readability
 - [ ] **Cross-References**: Link to related articles within the documentation
 - [ ] **External Links**: Include relevant external resources
