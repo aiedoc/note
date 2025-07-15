@@ -218,7 +218,7 @@ jobs:
       - name: Setup Claude Code
         uses: anthropic/claude-code-action@v1
         with:
-          api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          api-key: ${% raw %}{{ secrets.ANTHROPIC_API_KEY }}{% endraw %}
           
       - name: Code Review
         run: |

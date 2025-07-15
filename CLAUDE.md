@@ -41,6 +41,7 @@ When creating new articles for this documentation site, follow this checklist:
 - [ ] **Site Verification**: Access the live site to confirm publication
 - [ ] **Search Test**: Use site search to verify article is indexed
 - [ ] **Feature Verification**: Test all implemented features work correctly via WebFetch
+- [ ] **Live Site Check**: Verify actual article URLs are accessible and render without errors
 - [ ] **Cross-browser Testing**: Verify functionality across different browsers
 - [ ] **Performance Check**: Ensure page load times and responsiveness are acceptable
 
