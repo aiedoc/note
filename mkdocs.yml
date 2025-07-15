@@ -72,6 +72,7 @@ nav:
       - AI開発ツール比較: AI/ai-development-tools.md
       - 🤖 Grok 4完全ガイド: AI/grok-4-comprehensive-guide.md
       - GitHub Copilotカスタムインストラクション: AI/github-copilot-custom-instructions-guide.md
+      - GitHub Copilot applyToパターンガイド: AI/github-copilot-applyto-pattern-guide.md
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md
       - エージェント型AI開発: AI/agentic-ai-development.md
