@@ -12,6 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 2. **YAML Escaping** - GitHub Actions変数は `{% raw %}{{ }}{% endraw %}` で必ずエスケープ
 3. **Live Site Check** - WebFetchで記事URLの実際の表示を必ず確認
 4. **TodoWrite必須** - 全作業をTodoWriteでタスク化して進捗管理
+5. **main.py実行必須** - 記事作成・更新後は必ずmain.pyを実行して最新記事の並び替えを反映
 
 ## 🏗️ Repository Architecture
 
