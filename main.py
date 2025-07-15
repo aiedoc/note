@@ -261,6 +261,7 @@ def define_env(env):
                     'title': title,
                     'url': url,
                     'date': update_date,
+                    'mtime': mtime,
                     'category': category,
                     'type': 'blog' if 'blog/posts' in str(md_file) else 'docs'
                 })
@@ -268,8 +269,8 @@ def define_env(env):
             except Exception:
                 continue
         
-        # 更新日時でソート
-        all_files.sort(key=lambda x: x['date'], reverse=True)
+        # 更新日時でソート（mtimeを使用）
+        all_files.sort(key=lambda x: x['mtime'], reverse=True)
         all_files = all_files[:limit]
         
         # HTMLを生成
