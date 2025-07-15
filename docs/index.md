@@ -84,6 +84,65 @@
   border: 1px solid var(--md-default-fg-color--lightest) !important;
 }
 
+/* 最新更新記事スタイル */
+.recent-updates {
+  display: grid !important;
+  gap: 0.8rem !important;
+  margin: 1.5rem 0 !important;
+}
+
+.update-item {
+  background: var(--md-default-bg-color) !important;
+  border: 1px solid var(--md-default-fg-color--lightest) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.update-item:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+.update-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.update-header h4 {
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.4 !important;
+}
+
+.update-header h4 a {
+  color: var(--md-primary-fg-color) !important;
+  text-decoration: none !important;
+}
+
+.update-header h4 a:hover {
+  text-decoration: underline !important;
+}
+
+.update-badge {
+  background: var(--md-primary-fg-color--light) !important;
+  color: white !important;
+  padding: 0.2rem 0.6rem !important;
+  border-radius: 12px !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.update-meta {
+  font-size: 0.85rem !important;
+  color: var(--md-default-fg-color--light) !important;
+}
+
 /* レスポンシブ */
 @media (max-width: 768px) {
   .homepage-grid {
@@ -99,24 +158,26 @@
 !!! tip "このサイトについて"
     技術的なメモやドキュメントを体系的に整理したナレッジベースです。インフラ運用、プログラミング、開発ツールなど幅広い技術分野をカバーしています。
 
-## 📝 最新記事
+## 📝 最新の更新
 
-{{ blog_recent_posts(limit=5, lang="ja") }}
+{{ recent_updates(limit=8, lang="ja") }}
 
 <div style="text-align: center; margin: 1rem 0;">
-  <a href="./blog/" class="md-button md-button--primary">すべての記事を見る</a>
+  <a href="./recent-updates/" class="md-button md-button--primary">すべての最新更新を見る</a>
+  <a href="./blog/" class="md-button">ブログ記事一覧</a>
 </div>
 
 ## クイックアクセス
 
 <div class="homepage-grid">
   <div class="homepage-card quick-access">
-    <h3>🔥 人気コンテンツ</h3>
+    <h3>🔥 人気・注目コンテンツ</h3>
     <ul>
+      <li><a href="./AI/claude-code-installation-guide/">🚀 Claude Code インストール完全ガイド</a></li>
       <li><a href="./AI/claude-code-best-practices/">Claude Code活用法</a></li>
+      <li><a href="./AI/claude-code-troubleshooting-guide/">🆘 Claude Code トラブルシューティング</a></li>
       <li><a href="./Tips/Mkdocs/mkdocsを使ったGitHubPages/">GitHub Pages作成方法</a></li>
-      <li><a href="./AI/ai-development-tools/">2025年AI開発ツール比較</a></li>
-      <li><a href="./Tips/Mkdocs/デザイン改善ガイド/">サイトデザイン改善ガイド</a></li>
+      <li><a href="./AI/claude-code-2025-features/">🆕 Claude Code 2025年新機能</a></li>
     </ul>
   </div>
 
@@ -142,10 +203,11 @@
   <div class="homepage-card">
     <h3>🤖 AI開発</h3>
     <ul>
-      <li><a href="./AI/claude-code-best-practices/">Claude Code活用法</a></li>
+      <li><a href="./AI/claude-code-complete-guide/">📖 Claude Code完全ガイド</a></li>
+      <li><a href="./AI/claude-code-installation-guide/">🚀 インストール方法</a></li>
+      <li><a href="./AI/claude-code-troubleshooting-guide/">🛠️ トラブルシューティング</a></li>
       <li><a href="./AI/ai-development-tools/">2025年AI開発ツール比較</a></li>
       <li><a href="./AI/llm-programming-guide/">LLMプログラミング実践</a></li>
-      <li><a href="./AI/agentic-ai-development/">エージェント型AI開発</a></li>
     </ul>
   </div>
 

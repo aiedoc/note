@@ -204,6 +204,97 @@ def define_env(env):
         html += '</div>'
         
         return html
+    
+    @env.macro 
+    def recent_updates(limit=10, lang='ja', include_categories=None):
+        """最新更新記事を生成（ブログ記事 + 通常記事）"""
+        all_files = []
+        docs_dir = Path('docs')
+        
+        # 除外するディレクトリとファイル
+        exclude_dirs = {'assets', 'javascripts', 'stylesheets', '.git'}
+        exclude_files = {'index.md', '404.md', 'redirects.md', 'tags.md', 'robots.txt', 'CNAME'}
+        
+        # 全ての.mdファイルを収集
+        for md_file in docs_dir.rglob('*.md'):
+            # 除外条件をチェック
+            if any(part in exclude_dirs for part in md_file.parts):
+                continue
+            if md_file.name in exclude_files:
+                continue
+            if lang == 'en' and not md_file.name.endswith('.en.md'):
+                continue
+            if lang == 'ja' and md_file.name.endswith('.en.md'):
+                continue
+                
+            try:
+                # ファイルの更新日時を取得
+                mtime = md_file.stat().st_mtime
+                update_date = datetime.fromtimestamp(mtime).strftime('%Y-%m-%d')
+                
+                with open(md_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # タイトルを抽出
+                title = extract_title_from_content(content)
+                if not title:
+                    continue
+                
+                # カテゴリを判定（パスから）
+                category = determine_category_from_path(md_file, lang)
+                if include_categories and category not in include_categories:
+                    continue
+                
+                # URLを生成
+                relative_path = md_file.relative_to(docs_dir)
+                if lang == 'en':
+                    if md_file.name.endswith('.en.md'):
+                        url_path = str(relative_path).replace('.en.md', '/').replace('\\', '/')
+                        url = f"/en/{url_path}"
+                    else:
+                        continue
+                else:
+                    url_path = str(relative_path).replace('.md', '/').replace('\\', '/')
+                    url = f"/{url_path}"
+                
+                all_files.append({
+                    'title': title,
+                    'url': url,
+                    'date': update_date,
+                    'category': category,
+                    'type': 'blog' if 'blog/posts' in str(md_file) else 'docs'
+                })
+                
+            except Exception:
+                continue
+        
+        # 更新日時でソート
+        all_files.sort(key=lambda x: x['date'], reverse=True)
+        all_files = all_files[:limit]
+        
+        # HTMLを生成
+        html = '<div class="recent-updates">'
+        for item in all_files:
+            # ブログ・通常記事の区別をせず、カテゴリのみ表示
+            html += f'''
+            <div class="update-item">
+                <div class="update-header">
+                    <h4><a href="{item['url']}">{item['title']}</a></h4>
+                    <span class="update-badge">{item['category']}</span>
+                </div>
+                <div class="update-meta">
+                    <time>{format_date(item['date'], lang)}</time>
+                </div>
+            </div>
+            '''
+        
+        html += '</div>'
+        return html
+    
+    @env.macro
+    def category_recent_updates(category, limit=5, lang='ja'):
+        """カテゴリ別の最新更新を生成"""
+        return recent_updates(limit=limit, lang=lang, include_categories=[category])
 
 
 def extract_title_from_body(body):
@@ -286,3 +377,48 @@ def format_tags(tags):
         tag_links.append(f'<span class="tag">{tag}</span>')
     
     return f'<div class="blog-tags">{"".join(tag_links)}</div>'
+
+
+def extract_title_from_content(content):
+    """ファイル内容からタイトルを抽出"""
+    lines = content.strip().split('\n')
+    for line in lines:
+        line = line.strip()
+        if line.startswith('# '):
+            return line[2:].strip()
+    return None
+
+
+def determine_category_from_path(file_path, lang='ja'):
+    """ファイルパスからカテゴリを判定"""
+    path_str = str(file_path)
+    
+    # 日本語カテゴリマッピング
+    category_map_ja = {
+        'AI': 'AI開発',
+        'Infrastructure': 'インフラ',
+        'Programming': 'プログラミング',
+        'Tips': 'Tips',
+        'SEO': 'SEO',
+        'Info': '情報',
+        'blog/posts': 'ブログ'
+    }
+    
+    # 英語カテゴリマッピング
+    category_map_en = {
+        'AI': 'AI Development',
+        'Infrastructure': 'Infrastructure',
+        'Programming': 'Programming',
+        'Tips': 'Tips',
+        'SEO': 'SEO',
+        'Info': 'Information',
+        'blog/posts': 'Blog'
+    }
+    
+    category_map = category_map_ja if lang == 'ja' else category_map_en
+    
+    for key, category in category_map.items():
+        if f'/{key}/' in path_str or f'docs/{key}/' in path_str or f'docs\\{key}\\' in path_str:
+            return category
+    
+    return 'その他' if lang == 'ja' else 'Others'

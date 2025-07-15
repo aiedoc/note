@@ -8,6 +8,7 @@ copyright: "&copy; 2024-2025 aiedoc. All rights reserved."
 # Navigation
 nav:
   - ホーム: index.md
+  - 📝 最新更新: recent-updates.md
   - 📝 ブログ: blog/index.md
   
   # 基本情報・学習リソース
@@ -227,6 +228,7 @@ plugins:
       nav_translations:
         en:
           ホーム: Home
+          最新更新: Recent Updates
           ブログ: Blog
           学習・情報: Learning & Information
           ニュース・トレンド: News & Trends
