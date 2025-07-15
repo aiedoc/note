@@ -172,7 +172,7 @@ jobs:
       - name: Build and deploy
         run: mkdocs gh-deploy --force --clean --verbose
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${% raw %}{{ secrets.{% endraw %}GITHUB_TOKEN }}
 ```
 
 ##### 方法2: 手動デプロイ

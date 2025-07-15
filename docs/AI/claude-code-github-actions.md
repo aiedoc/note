@@ -128,8 +128,8 @@ jobs:
     steps:
       - uses: anthropics/claude-code-action@beta
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
+          github_token: ${% raw %}{{ secrets.{% endraw %}GITHUB_TOKEN }}
           # オプション設定
           # trigger_phrase: "@claude"  # デフォルト値
           # additional_permissions: true  # GitHub Actions へのアクセスを許可
@@ -150,8 +150,8 @@ Claude Code GitHub Actionsは複数の認証方法をサポート：
 ```yaml
 - uses: anthropics/claude-code-action@beta
   with:
-    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-    github_token: ${{ secrets.GITHUB_TOKEN }}
+    anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
+    github_token: ${% raw %}{{ secrets.{% endraw %}GITHUB_TOKEN }}
     trigger_phrase: "@claude"  # トリガーフレーズのカスタマイズ
     direct_prompt: "Fix all linting errors"  # 自動化ワークフロー用
     additional_permissions: true  # GitHub Actionsアクセス許可
@@ -290,7 +290,7 @@ jobs:
       - name: Claude Code Review
         uses: anthropics/claude-code-action@beta
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
           review_mode: true
           focus_areas: |
             - Security vulnerabilities
@@ -337,7 +337,7 @@ jobs:
       - name: Generate Tests
         uses: anthropics/claude-code-action@beta
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
           prompt: |
             Generate comprehensive tests for the changes in this PR:
             - Unit tests for all new functions
@@ -383,7 +383,7 @@ jobs:
       - name: Claude Security Review
         uses: anthropics/claude-code-action@beta
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
           prompt: |
             Perform a comprehensive security audit:
             - Check for common vulnerabilities (XSS, SQL injection, etc.)
@@ -413,7 +413,7 @@ jobs:
       - name: Generate Documentation
         uses: anthropics/claude-code-action@beta
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
           prompt: |
             Update the documentation based on code changes:
             - Generate API documentation
@@ -500,13 +500,13 @@ jobs:
         uses: anthropics/claude-code-action@beta
         continue-on-error: true
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
       
       - name: Fallback Action
         if: steps.claude-primary.outcome == 'failure'
         run: |
           echo "Claude action failed, falling back to manual review"
-          gh pr comment ${{ github.event.pull_request.number }} \
+          gh pr comment ${% raw %}{{ github.{% endraw %}event.pull_request.number }} \
             --body "🤖 Claude Code action failed. Manual review required."
 ```
 
@@ -537,10 +537,10 @@ jobs:
     steps:
       - name: Check Performance
         run: |
-          if [[ "${{ github.event.workflow_run.conclusion }}" == "failure" ]]; then
-            curl -X POST ${{ secrets.SLACK_WEBHOOK }} \
+          if [[ "${% raw %}{{ github.{% endraw %}event.workflow_run.conclusion }}" == "failure" ]]; then
+            curl -X POST ${% raw %}{{ secrets.{% endraw %}SLACK_WEBHOOK }} \
               -H 'Content-type: application/json' \
-              --data '{"text":"🚨 Claude Code action failed in ${{ github.repository }}"}'
+              --data '{"text":"🚨 Claude Code action failed in ${% raw %}{{ github.{% endraw %}repository }}"}'
           fi
 ```
 

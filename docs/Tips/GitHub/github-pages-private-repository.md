@@ -237,7 +237,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${% raw %}{{ steps.{% endraw %}deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -258,7 +258,7 @@ jobs:
 
 # GitHub Actions での環境変数設定
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${% raw %}{{ secrets.{% endraw %}GITHUB_TOKEN }}
 ```
 
 ## 🔧 トラブルシューティング

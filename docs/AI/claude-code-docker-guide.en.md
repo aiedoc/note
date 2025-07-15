@@ -160,8 +160,8 @@ jobs:
       - name: Run Claude Code Analysis
         run: |
           docker run --rm \
-            -v ${{ github.workspace }}:/workspace \
-            -e ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }} \
+            -v ${% raw %}{{ github.{% endraw %}workspace }}:/workspace \
+            -e ANTHROPIC_API_KEY=${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }} \
             ghcr.io/zeeno-atl/claude-code:latest \
             claude -p "Perform code review and report improvements"
 ```

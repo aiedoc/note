@@ -117,7 +117,7 @@ jobs:
       - name: Cache MkDocs
         uses: actions/cache@v4
         with:
-          key: mkdocs-material-${{ env.cache_id }}
+          key: mkdocs-material-${% raw %}{{ env.{% endraw %}cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
@@ -133,7 +133,7 @@ jobs:
       - name: Build and deploy to GitHub Pages
         run: mkdocs gh-deploy --force --clean --verbose
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${% raw %}{{ secrets.{% endraw %}GITHUB_TOKEN }}
 ```
 
 ### 3. .gitignoreファイルの設定
@@ -229,7 +229,7 @@ permissions:
 - name: Cache MkDocs
   uses: actions/cache@v4
   with:
-    key: mkdocs-material-${{ env.cache_id }}
+    key: mkdocs-material-${% raw %}{{ env.{% endraw %}cache_id }}
     path: .cache
     restore-keys: |
       mkdocs-material-
@@ -274,7 +274,7 @@ permissions:
   uses: 8398a7/action-slack@v3
   with:
     status: failure
-    webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+    webhook_url: ${% raw %}{{ secrets.{% endraw %}SLACK_WEBHOOK }}
 ```
 
 ## トラブルシューティング
@@ -343,7 +343,7 @@ permissions:
 
 ```yaml
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 自動生成トークン使用
+  GITHUB_TOKEN: ${% raw %}{{ secrets.{% endraw %}GITHUB_TOKEN }}  # 自動生成トークン使用
 ```
 
 **避けるべき:**
@@ -420,7 +420,7 @@ on:
 
 - name: Deploy versioned docs
   run: |
-    mike deploy --push --update-aliases ${{ github.ref_name }} latest
+    mike deploy --push --update-aliases ${% raw %}{{ github.{% endraw %}ref_name }} latest
     mike set-default --push latest
 ```
 

@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: anthropics/claude-code-action@beta
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
 ```
 
 ### 2. セキュリティを考慮した設定

@@ -128,8 +128,8 @@ jobs:
     steps:
       - uses: anthropics/claude-code-action@beta
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
+          github_token: ${% raw %}{{ secrets.{% endraw %}GITHUB_TOKEN }}
           # Optional settings
           # trigger_phrase: "@claude"  # Default value
           # additional_permissions: true  # Allow GitHub Actions access
@@ -150,8 +150,8 @@ In enterprise environments, you can use your own cloud infrastructure to control
 ```yaml
 - uses: anthropics/claude-code-action@beta
   with:
-    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-    github_token: ${{ secrets.GITHUB_TOKEN }}
+    anthropic_api_key: ${% raw %}{{ secrets.{% endraw %}ANTHROPIC_API_KEY }}
+    github_token: ${% raw %}{{ secrets.{% endraw %}GITHUB_TOKEN }}
     trigger_phrase: "@claude"  # Customize trigger phrase
     direct_prompt: "Fix all linting errors"  # For automated workflows
     additional_permissions: true  # Allow GitHub Actions access
