@@ -24,6 +24,7 @@ When creating new articles for this documentation site, follow this checklist:
 - [ ] **External Links**: Include relevant external resources
 - [ ] **SEO Optimization**: Apply SEO best practices to both language versions
 - [ ] **Article Structure**: Follow optimal length and hierarchy guidelines
+- [ ] **NO Manual Dates**: NEVER include manual update dates (automated by git plugin)
 
 ### Quality Assurance
 - [ ] **Grammar Check**: Review for grammatical errors and typos
@@ -198,6 +199,7 @@ Follow the existing emoji-based categorization:
 - Include "実現できること" (What you can achieve) sections using Material cards syntax
 - Cross-reference related articles in each document
 - Maintain consistent Japanese technical writing style with です/ます form
+- **NEVER include manual update dates** - All update dates are automatically managed by `mkdocs-git-revision-date-localized-plugin`
 
 #### Standard Article Template
 
@@ -241,8 +243,6 @@ Detailed instructions...
 - [Related Article 2](./related-2.md)
 
 ---
-
-*最終更新: YYYY-MM-DD*
 ```
 
 ### Git Workflow
