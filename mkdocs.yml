@@ -76,6 +76,8 @@ nav:
     - 実践ガイド:
       - LLMプログラミング: AI/llm-programming-guide.md
       - エージェント型AI開発: AI/agentic-ai-development.md
+      - 🔗 Claude MCP統合完全ガイド: AI/claude-mcp-integration-2025.md
+      - 🌟 Claude Directory完全ガイド: AI/claude-connectors-directory-2025.md
   
   # プログラミング・開発
   - 💻 プログラミング:
