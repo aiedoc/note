@@ -21,6 +21,9 @@ jobs:
         with:
           fetch-depth: 0  # Full history for git revision date plugin
       
+      - name: Restore file timestamps
+        uses: chetan/git-restore-mtime-action@v2
+      
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
