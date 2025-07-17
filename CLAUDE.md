@@ -12,7 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 2. **YAML Escaping** - GitHub Actions変数は `{% raw %}{{ }}{% endraw %}` で必ずエスケープ
 3. **Live Site Check** - WebFetchで記事URLの実際の表示を必ず確認
 4. **TodoWrite必須** - 全作業をTodoWriteでタスク化して進捗管理
-5. **main.py実行必須** - 記事作成・更新後は必ずmain.pyを実行して最新記事の並び替えを反映
+5. **GitHub Actions自動化** - git pushで自動ビルド・デプロイ、main.pyも自動実行される
 
 ## 🏗️ Repository Architecture
 
@@ -23,13 +23,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `mkdocs.yml` - Navigation structure with emoji-based categorization
 
 ### Deployment Flow
-- **Source**: `master` branch → **Build**: GitHub Actions → **Live**: https://smartscope.blog/
+- **Source**: `master` branch → **GitHub Actions Auto-Deploy** → **Live**: https://smartscope.blog/
+- **Triggers**: Push to master, docs/**, mkdocs.yml, custom_theme/** changes
 
 ### Key Features
-- Automatic article discovery in recent updates
-- Git-based revision dates
-- Multi-language support (Japanese/English)
-- Integrated search with Japanese language support
+- **Full Automation**: GitHub Actions handles build, main.py execution, and deployment
+- **Git-based timestamps**: Automatic revision dates via plugin
+- **Multi-language support**: Japanese/English with i18n plugin
+- **Advanced Live2D**: Time-based messages and learning support
+- **SEO Optimized**: Automatic sitemap, search indexing
 
 ## 📁 Detailed Guidelines
 
@@ -48,10 +50,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Follow the emoji-based categorization:
 - 📚 学習・情報 (Learning & Information)
 - 🖥️ インフラ・運用 (Infrastructure & Operations) 
-- 🤖 AI開発 (AI Development)
-- 💻 プログラミング (Programming)
-- 🛠️ ツール・Tips (Tools & Tips)
-- 🚀 SEO実践ガイド (SEO Practical Guide)
+- 🤖 AI開発・自動化 (AI Development & Automation)
+- 📘 MkDocs・サイト構築 (MkDocs & Site Building)
+- 🛠️ ツール・開発効率化 (Tools & Development Efficiency)
 
 ## ⚡ Dependencies
 

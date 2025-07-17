@@ -66,16 +66,10 @@
 
 ```json
 {
-  "content": "mkdocs.yml ナビゲーション更新",
+  "content": "mkdocs.yml ナビゲーション更新（新記事追加時のみ）",
   "status": "pending",
   "priority": "high",
   "id": "update-navigation"
-},
-{
-  "content": "main.py実行で最新記事並び替え反映",
-  "status": "pending",
-  "priority": "high",
-  "id": "run-main-py-update"
 },
 {
   "content": "意味のあるコミットメッセージでGit commit",
@@ -84,10 +78,10 @@
   "id": "git-commit"
 },
 {
-  "content": "mkdocs gh-deploy でサイトデプロイ",
+  "content": "git push origin master で自動デプロイ起動",
   "status": "pending",
   "priority": "high",
-  "id": "deploy-site"
+  "id": "git-push-auto-deploy"
 }
 ```
 
@@ -138,7 +132,7 @@
 4. **TodoWrite更新忘れ** - 作業状況の未反映
 
 ### ✅ 必須チェック項目
-1. **main.py実行**: 記事作成後にmain.pyを実行して最新記事リストを更新
+1. **自動デプロイ**: GitHub Actionsで自動ビルド・デプロイ確認
 2. **エラーフリー**: MkDocsビルド時にマクロエラーなし
 3. **リンク有効性**: 全内部・外部リンクが正常動作
 4. **レスポンシブ**: モバイル・タブレット表示確認
@@ -150,11 +144,11 @@
 # ローカル確認
 mkdocs serve
 
-# デプロイ
-mkdocs gh-deploy
+# 自動デプロイ（GitHub Actions経由）
+git add . && git commit -m "記事タイトル" && git push origin master
 
-# リンクチェック（利用可能な場合）
-pytest --check-links docs/
+# GitHub Actions実行状況確認
+gh run list --limit 5
 
 # エラーログ確認
 tail -f ~/.claude/logs/error.log
