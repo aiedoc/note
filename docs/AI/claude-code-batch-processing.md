@@ -1,4 +1,9 @@
-# Claude Code バッチ処理マスター - 大規模自動化の実現
+---
+title: "Claude Code Batch API完全ガイド：大量処理とCI/CD自動化の実装方法"
+description: "Claude Code Batch APIで大量データ処理を自動化。コマンドライン実行、CI/CD統合、料金最適化まで実装例で解説。"
+---
+
+# Claude Code Batch API完全ガイド：大量処理とCI/CD自動化の実装方法
 
 ![Batch Processing](https://img.shields.io/badge/Batch%20Processing-Automation-orange.svg)
 

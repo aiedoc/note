@@ -1,4 +1,9 @@
-# Claude Code GitHub Actions：AI駆動のコード自動化を実現する革新的ツール
+---
+title: "Claude Code GitHub Actions自動化完全ガイド：Hooks連携とCI/CD設定方法"
+description: "Claude Code GitHub ActionsでCI/CD自動化を実現。Hooks設定、PR自動レビュー、コード生成の完全ガイド。2025年最新の実装例付き。"
+---
+
+# Claude Code GitHub Actions自動化完全ガイド：Hooks連携とCI/CD設定方法
 
 ![Badge](https://img.shields.io/badge/AI-Claude_Code-blue.svg)
 ![Badge](https://img.shields.io/badge/Platform-GitHub_Actions-green.svg)

@@ -1,4 +1,9 @@
-# プライベートリポジトリでGitHub Pagesを公開する方法
+---
+title: "GitHub Pages プライベートリポジトリ公開方法：無料・有料プラン徹底比較2025"
+description: "プライベートリポジトリでGitHub Pages公開の完全ガイド。無料プランの制限、Pro/Team比較、独自ドメイン設定まで2025年最新情報。"
+---
+
+# GitHub Pages プライベートリポジトリ公開方法：無料・有料プラン徹底比較2025
 
 ![GitHub Pages Private](https://img.shields.io/badge/GitHub%20Pages-Private%20Repository-blue.svg)
 
