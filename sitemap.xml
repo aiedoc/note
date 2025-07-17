@@ -232,6 +232,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-md-best-practices/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/AI/generative-ai-news-july-2025/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/generative-ai-news-july-2025/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/generative-ai-news-july-2025/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/AI/github-copilot-applyto-pattern-guide/</loc>
         <lastmod>2025-07-17</lastmod>
         <changefreq>daily</changefreq>
@@ -839,6 +846,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/claude-md-best-practices/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/claude-md-best-practices/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/AI/generative-ai-news-july-2025/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI/generative-ai-news-july-2025/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI/generative-ai-news-july-2025/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/AI/github-copilot-applyto-pattern-guide/</loc>
