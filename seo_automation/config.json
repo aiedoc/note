@@ -1,0 +1,40 @@
+{
+  "site_config": {
+    "primary_site": "https://smartscope.blog/",
+    "backup_sites": [
+      "https://aiedoc.github.io/note/"
+    ]
+  },
+  "report_settings": {
+    "analysis_period_days": 7,
+    "comparison_period_days": 14,
+    "top_queries_limit": 20,
+    "top_pages_limit": 15,
+    "trend_analysis_limit": 10
+  },
+  "alert_thresholds": {
+    "ctr_warning": 5.0,
+    "ctr_critical": 2.0,
+    "click_drop_warning": 20,
+    "click_drop_critical": 50,
+    "impression_drop_warning": 30,
+    "impression_drop_critical": 60
+  },
+  "report_format": {
+    "include_charts": true,
+    "include_recommendations": true,
+    "include_trend_analysis": true,
+    "include_device_breakdown": true,
+    "include_query_analysis": true
+  },
+  "notification_settings": {
+    "email_enabled": false,
+    "slack_enabled": false,
+    "file_output_only": true
+  },
+  "file_management": {
+    "reports_directory": "/home/akiyoshi-yusuke/note/seo_reports",
+    "archive_after_days": 30,
+    "max_reports_to_keep": 12
+  }
+}

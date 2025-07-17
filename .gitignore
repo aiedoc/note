@@ -44,3 +44,13 @@ site/
 *Analytics*.zip
 *Analytics*.csv
 *:Zone.Identifier
+
+# SEO Automation (機密情報・個人データ含む)
+seo_reports/
+seo_automation/*.log
+*.json
+!config.json
+mcp-gsc/
+client_secret_*.json
+.claude.json
+token.json
