@@ -67,5 +67,5 @@ windows-startup.bat
 
 # SEO自動化・システム管理スクリプト (記事と関係ないファイル)
 seo_automation/
-main.py
+# main.py - MkDocsマクロプラグインで使用するため除外対象から削除
 templates/todo-template.json
