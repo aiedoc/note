@@ -54,3 +54,13 @@ mcp-gsc/
 client_secret_*.json
 .claude.json
 token.json
+
+# Cron自動化スクリプト関連 (記事と関係ないファイル)
+scripts/
+logs/
+crontab_backup_*.txt
+new_crontab.txt
+windows-startup.bat
+*system-state*.log
+*power-state*.log
+*auto-claude-news*.log
