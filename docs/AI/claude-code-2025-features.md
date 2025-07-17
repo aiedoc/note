@@ -1,6 +1,10 @@
 # Claude Code 2025年新機能完全ガイド
 
 ![Badge](https://img.shields.io/badge/Claude_Code-2025_Features-green.svg)
+![Update](https://img.shields.io/badge/Updated-2025.01.17-blue.svg)
+
+!!! info "最新情報 (2025年1月17日更新)"
+    Claude CodeがGA（一般提供）開始！Claude Opus 4とClaude Sonnet 4がリリースされ、コーディング性能が大幅に向上しました。
 
 ## 実現できること
 
@@ -27,6 +31,38 @@
 ## 📖 概要
 
 2025年、Claude Codeは単なるコーディング支援ツールから、包括的な開発プラットフォームへと進化しました。Claude Opus 4の搭載、IDE統合、拡張思考モードなど、革新的な機能により開発効率が飛躍的に向上します。
+
+## 🎯 2025年1月最新アップデート
+
+### Claude Code GA（一般提供）開始
+
+2025年1月、Claude Codeが正式にGA（一般提供）を開始しました。主な変更点：
+
+- **プラン体系**: ProプランとMaxプランの両方でClaude Codeが利用可能に
+- **バックグラウンドタスク**: GitHub Actions経由でのタスク実行が可能
+- **IDE統合**: VS CodeとJetBrainsでのネイティブ統合が実現
+
+### Claude 4モデルの性能向上
+
+最新のベンチマーク結果：
+
+| モデル | SWE-bench | Terminal-bench | 特徴 |
+|--------|-----------|----------------|------|
+| Claude Opus 4 | 72.5% | 43.2% | 世界最高のコーディングモデル |
+| Claude Sonnet 4 | 72.7% | - | 高速レスポンスと高精度を両立 |
+
+### 新APIキャパビリティ
+
+- **コード実行ツール**: APIから直接コード実行が可能
+- **MCPコネクター**: OAuth 2.0対応でリモートサーバー接続
+- **Files API**: 大容量ファイルの効率的な処理
+- **プロンプトキャッシング**: 最大1時間のキャッシュ保持
+
+### 業界パートナーシップ
+
+- **GitHub**: Claude Sonnet 4がGitHub Copilotの新コーディングエージェントに採用
+- **Cursor**: 「コーディングの最先端」と評価
+- **Replit**: 複数ファイルにまたがる複雑な変更での精度向上を報告
 
 ## 🧠 拡張思考モード (Extended Thinking)
 
@@ -333,6 +369,33 @@ claude mcp install postgresql
 claude --mcp postgresql "データベーススキーマの最適化提案"
 ```
 
+## 📱 Claude 3.7 Sonnet ハイブリッド推論機能
+
+### 機能概要
+
+Claude 3.7 Sonnetは市場初のハイブリッド推論モデルとして、即座のレスポンスと段階的な思考プロセスの可視化を両立します。
+
+```bash
+# ハイブリッド推論モードの使用
+claude --model claude-3.7-sonnet --reasoning hybrid "複雑な問題を段階的に解決"
+
+# 推論プロセスの可視化
+claude --model claude-3.7-sonnet --show-reasoning "アルゴリズムの最適化案"
+```
+
+### 使用例
+
+```python
+# Claude 3.7 Sonnetの段階的推論
+# "このコードのパフォーマンスを改善してください"
+def process_data(data):
+    # ステップ1: データ構造の分析
+    # ステップ2: ボトルネックの特定
+    # ステップ3: 最適化提案の生成
+    # ステップ4: 実装と検証
+    pass
+```
+
 ## 🔐 セキュリティ強化機能
 
 ### 権限管理システム
@@ -416,6 +479,37 @@ claude migrate from-cursor \
   --custom-prompts \
   --keyboard-shortcuts
 ```
+
+## 💼 Claude Maxプラン新機能
+
+### プラン概要
+
+Claude Maxは月額$100〜$200の新サブスクリプションプランで、以下の特典を提供：
+
+- **無制限のClaude Code使用**
+- **優先アクセス**: 最新モデルへの早期アクセス
+- **拡張コンテキストウィンドウ**: 最大200Kトークン
+- **専用サポート**: エンタープライズレベルのサポート
+
+```bash
+# Maxプランの有効化
+claude subscription upgrade --plan max
+
+# 利用状況確認
+claude subscription status
+```
+
+## 🚀 実装事例と成功事例
+
+### Cloudflareでの活用事例
+
+開発者がClaude Codeを使用してCloudflareのコードを書いた事例が話題に。プロンプトエンジニアリングにより、複雑なエッジコンピューティングロジックの実装に成功。
+
+### Thoughtworksの効率化事例
+
+- **97%の作業削減**: 定型的なコーディングタスクの自動化
+- **コードレビュー時間の80%削減**: 自動レビュー機能の活用
+- **バグ修正時間の65%短縮**: 拡張思考モードによる根本原因分析
 
 ## 🔗 関連記事
 
