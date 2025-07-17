@@ -74,14 +74,21 @@ function initializeTororoCat() {
 function setupCatMessages() {
     console.log('📝 Setting up cat messages...');
     
-    const messages = [
+    // 時間帯別メッセージ
+    const timeBasedMessages = getTimeBasedMessages();
+    // 季節別メッセージ  
+    const seasonalMessages = getSeasonalMessages();
+    // 基本メッセージ
+    const basicMessages = [
         "にゃーん！このサイトへようこそ！",
-        "技術ドキュメントを見に来てくれてありがとう！",
+        "技術ドキュメントを見に来てくれてありがとう！", 
         "何か質問があったら遠慮なく聞いてね〜",
         "ホームページだにゃ〜",
         "ここから色々な記事を見れるよ！",
         "どこから見始めようかな？"
     ];
+    
+    const messages = [...timeBasedMessages, ...seasonalMessages, ...basicMessages];
     
     // メッセージ表示用のCSSを確実に追加
     ensureMessageStyles();
@@ -124,10 +131,17 @@ function setupCatMessages() {
     }, 1000);
     console.log('✅ Developer tools detection added');
     
-    // 初回挨拶メッセージ
+    // サイト案内とナビゲーション支援を設定
+    setupSiteNavigation();
+    
+    // 学習支援機能を設定
+    setupLearningSupport();
+    
+    // 初回挨拶メッセージ（時間帯に応じて）
     setTimeout(() => {
-        showCatMessage("にゃーん！このサイトへようこそ！");
-        console.log('👋 Welcome message displayed');
+        const welcomeMessage = getWelcomeMessage();
+        showCatMessage(welcomeMessage);
+        console.log('👋 Welcome message displayed:', welcomeMessage);
     }, 1000); // 1秒に短縮
 }
 
@@ -389,7 +403,229 @@ if (document.readyState === 'loading') {
     }
 }
 
+// 時間帯別メッセージ取得
+function getTimeBasedMessages() {
+    const hour = new Date().getHours();
+    
+    if (hour >= 5 && hour < 12) {
+        // 朝 (5-12時)
+        return [
+            "おはようございます！今日も勉強頑張るにゃ〜",
+            "朝の時間は集中できるにゃ〜",
+            "コーヒーでも飲みながら学習しましょ♪",
+            "今日はどの技術について学ぼうかな？"
+        ];
+    } else if (hour >= 12 && hour < 17) {
+        // 昼 (12-17時)
+        return [
+            "お昼休憩中ですか？軽く記事を読むのもいいにゃ〜",
+            "午後の学習タイムだにゃ〜",
+            "ランチ後の勉強は眠気に注意にゃ〜",
+            "午後も頑張って学習しましょ！"
+        ];
+    } else if (hour >= 17 && hour < 22) {
+        // 夕方〜夜 (17-22時)
+        return [
+            "お疲れ様でした〜一日の締めくくりに勉強にゃ〜",
+            "夕方の時間を有効活用だにゃ〜",
+            "今日学んだことを復習してみて♪",
+            "夜の学習時間、始まりだにゃ〜"
+        ];
+    } else {
+        // 深夜〜早朝 (22-5時)
+        return [
+            "夜更かしは体に良くないにゃ〜",
+            "深夜の学習は適度にしてね",
+            "たまには早く寝ることも大切だにゃ〜",
+            "夜の静けさで集中できるけど、無理は禁物にゃ〜"
+        ];
+    }
+}
+
+// 季節別メッセージ取得
+function getSeasonalMessages() {
+    const month = new Date().getMonth() + 1; // 1-12月
+    
+    if (month >= 3 && month <= 5) {
+        // 春 (3-5月)
+        return [
+            "桜の季節だにゃ〜新しい技術を学ぼう！",
+            "春は新しいことを始める季節にゃ〜",
+            "暖かくなってきたにゃ〜勉強も快適♪",
+            "新年度、スキルアップの季節だにゃ〜"
+        ];
+    } else if (month >= 6 && month <= 8) {
+        // 夏 (6-8月)
+        return [
+            "暑い日は涼しい部屋で勉強だにゃ〜",
+            "夏休みは集中して学習できるチャンスにゃ〜",
+            "冷房の効いた部屋で快適に学習♪",
+            "夏の間にスキルを伸ばそうにゃ〜"
+        ];
+    } else if (month >= 9 && month <= 11) {
+        // 秋 (9-11月)
+        return [
+            "秋は読書の季節だにゃ〜",
+            "涼しくなって集中しやすいにゃ〜",
+            "秋の夜長は学習にぴったり♪",
+            "紅葉を見ながらの勉強もいいにゃ〜"
+        ];
+    } else {
+        // 冬 (12-2月)
+        return [
+            "寒い日は暖かい部屋でコーディング♪",
+            "年末年始、新しいスキルを身につけよう！",
+            "冬の間に基礎をしっかり固めるにゃ〜",
+            "温かい飲み物と一緒に学習タイムにゃ〜"
+        ];
+    }
+}
+
+// 時間帯に応じた歓迎メッセージ
+function getWelcomeMessage() {
+    const hour = new Date().getHours();
+    const timeMessages = getTimeBasedMessages();
+    const seasonalMessages = getSeasonalMessages();
+    
+    // 時間帯と季節のメッセージを組み合わせ
+    const allMessages = [...timeMessages, ...seasonalMessages];
+    return allMessages[Math.floor(Math.random() * allMessages.length)];
+}
+
+// サイト案内・ナビゲーション支援機能
+function setupSiteNavigation() {
+    console.log('🧭 Setting up site navigation features...');
+    
+    // 現在のページに応じたガイドメッセージ
+    const currentPath = window.location.pathname;
+    let categoryMessage = "";
+    
+    if (currentPath.includes('/AI/')) {
+        categoryMessage = "AI開発の記事を見てるにゃ〜最新技術が満載だよ♪";
+    } else if (currentPath.includes('/Tips/')) {
+        categoryMessage = "開発効率化のTipsを確認中にゃ〜便利な情報がいっぱい！";
+    } else if (currentPath.includes('/MkDocs/')) {
+        categoryMessage = "MkDocsでサイト構築中にゃ〜素敵なサイトを作ろう♪";
+    } else if (currentPath.includes('/Infrastructure/')) {
+        categoryMessage = "インフラ関連の記事だにゃ〜運用のコツを学ぼう♪";
+    } else if (currentPath.includes('/Info/')) {
+        categoryMessage = "学習リソースを見てるにゃ〜情報収集は大切だよ♪";
+    } else if (currentPath === '/' || currentPath === '/index.html') {
+        categoryMessage = "ホームページにゃ〜どのカテゴリから見始めようかな？";
+    }
+    
+    // カテゴリメッセージがある場合は少し遅れて表示
+    if (categoryMessage) {
+        setTimeout(() => {
+            showCatMessage(categoryMessage);
+        }, 8000); // 8秒後に表示
+    }
+    
+    // 検索ボックスへのガイド
+    const searchButton = document.querySelector('[data-md-toggle="search"]');
+    if (searchButton) {
+        searchButton.addEventListener('click', () => {
+            setTimeout(() => {
+                showCatMessage("何をお探しですか？キーワードを入力してにゃ〜");
+            }, 500);
+        });
+        console.log('✅ Search guidance added');
+    }
+    
+    // 外部リンクへの警告
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (link && link.href && link.hostname !== window.location.hostname) {
+            if (!link.hasAttribute('data-external-warned')) {
+                e.preventDefault();
+                showCatMessage("外部サイトに移動しますにゃ〜");
+                link.setAttribute('data-external-warned', 'true');
+                setTimeout(() => {
+                    window.open(link.href, link.target || '_blank');
+                }, 1500);
+                console.log('🔗 External link warning shown for:', link.href);
+            }
+        }
+    });
+    
+    console.log('✅ Site navigation features added');
+}
+
+// 学習支援機能
+function setupLearningSupport() {
+    console.log('📚 Setting up learning support features...');
+    
+    let startTime = Date.now();
+    let scrollProgress = 0;
+    let hasScrolled = false;
+    
+    // ページ滞在時間の追跡
+    function trackReadingTime() {
+        const currentTime = Date.now();
+        const timeSpent = Math.floor((currentTime - startTime) / 1000); // 秒単位
+        
+        // 3分経過
+        if (timeSpent === 180 && !hasScrolled) {
+            showCatMessage("じっくり読んでくれてありがとう♪理解できてる？");
+        }
+        // 5分経過
+        else if (timeSpent === 300) {
+            showCatMessage("5分も読んでくれてるにゃ〜勉強熱心だね！");
+        }
+        // 10分経過
+        else if (timeSpent === 600) {
+            showCatMessage("もう10分！集中してるにゃ〜素晴らしい♪");
+        }
+    }
+    
+    // スクロール進捗の追跡
+    function trackScrollProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const newProgress = Math.round((scrollTop / scrollHeight) * 100);
+        
+        if (newProgress > scrollProgress + 20) { // 20%ずつ
+            scrollProgress = newProgress;
+            hasScrolled = true;
+            
+            if (scrollProgress >= 50 && scrollProgress < 70) {
+                showCatMessage("記事の半分まで読んだにゃ〜頑張って！");
+            } else if (scrollProgress >= 90) {
+                showCatMessage("最後まで読んでくれてありがとう♪他の記事もどうぞ〜");
+            }
+        }
+    }
+    
+    // おすすめ記事の提案（15分後）
+    setTimeout(() => {
+        const recommendedMessages = [
+            "他にも面白い記事があるよ〜チェックしてみて♪",
+            "関連記事も読んでみる？きっと役に立つにゃ〜",
+            "新しい記事も追加されてるよ〜見てみて！",
+            "もっと詳しく学びたい？関連記事をおすすめするにゃ〜"
+        ];
+        const message = recommendedMessages[Math.floor(Math.random() * recommendedMessages.length)];
+        showCatMessage(message);
+    }, 900000); // 15分
+    
+    // イベントリスナーの設定
+    setInterval(trackReadingTime, 1000); // 1秒ごと
+    window.addEventListener('scroll', trackScrollProgress);
+    
+    // ページを離れる時の挨拶
+    window.addEventListener('beforeunload', () => {
+        const timeSpent = Math.floor((Date.now() - startTime) / 1000);
+        if (timeSpent > 60) { // 1分以上滞在
+            showCatMessage("お疲れ様でした〜また来てねにゃ〜");
+        }
+    });
+    
+    console.log('✅ Learning support features added');
+}
+
 // グローバルアクセス用（拡張）
 window.testCatMessage = testCatMessage;
 window.debugInfo = debugInfo;
 window.showCatMessage = showCatMessage;
+window.getTimeBasedMessages = getTimeBasedMessages;
+window.getSeasonalMessages = getSeasonalMessages;

@@ -393,6 +393,76 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/%E9%9D%99%E7%9A%84%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E8%A8%AD%E5%AE%9A%28ubuntu16.04%29%E3%83%A1%E3%83%A2/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/MkDocs/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/live2d-character-integration/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/live2d-character-integration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/live2d-character-integration/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/mkdocs-plugins-comprehensive-guide/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/mkdocs-plugins-comprehensive-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/mkdocs-plugins-comprehensive-guide/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/MkDocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/Programming/</loc>
         <lastmod>2025-07-17</lastmod>
         <changefreq>daily</changefreq>
@@ -510,76 +580,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Live2D/live2d-widget-implementation-guide/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Live2D/live2d-widget-implementation-guide/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/live2d-character-integration/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/live2d-character-integration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/live2d-character-integration/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/mkdocs%E3%83%A1%E3%83%A2/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/mkdocs%E3%83%A1%E3%83%A2/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/mkdocs%E3%83%A1%E3%83%A2/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/blog/</loc>
@@ -1002,6 +1002,76 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/%E9%9D%99%E7%9A%84%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E8%A8%AD%E5%AE%9A%28ubuntu16.04%29%E3%83%A1%E3%83%A2/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/en/MkDocs/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/live2d-character-integration/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/live2d-character-integration/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/live2d-character-integration/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/mkdocs-plugins-comprehensive-guide/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/mkdocs-plugins-comprehensive-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/mkdocs-plugins-comprehensive-guide/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/MkDocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/</loc>
+        <lastmod>2025-07-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/MkDocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/MkDocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/en/Programming/</loc>
         <lastmod>2025-07-17</lastmod>
         <changefreq>daily</changefreq>
@@ -1119,76 +1189,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Live2D/live2d-widget-implementation-guide/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Live2D/live2d-widget-implementation-guide/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/GitHub%20Actions%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E8%A8%AD%E5%AE%9A/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/live2d-character-integration/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/live2d-character-integration/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/live2d-character-integration/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9FGitHubPages/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/mkdocs%E3%83%A1%E3%83%A2/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/mkdocs%E3%83%A1%E3%83%A2/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/mkdocs%E3%83%A1%E3%83%A2/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E8%A8%AD%E5%AE%9A/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E3%82%B5%E3%82%A4%E3%83%88%E9%81%8B%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%94%B9%E5%96%84%E3%82%AC%E3%82%A4%E3%83%89/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C%E8%A8%AD%E5%AE%9A/"/>
-    </url>
-    <url>
-        <loc>https://smartscope.blog/en/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/Mkdocs/%E9%AB%98%E5%BA%A6%E3%81%AA%E8%A8%AD%E5%AE%9A/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/blog/</loc>
