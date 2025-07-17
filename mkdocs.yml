@@ -86,20 +86,26 @@ nav:
         - Bashサンプル: Programming/Bash/sample.sh
   
   
+  # MkDocs・サイト構築
+  - 📘 MkDocs・サイト構築:
+    - MkDocs/index.md
+    - 基本ガイド:
+      - GitHub Pages作成方法: MkDocs/mkdocsを使ったGitHubPages.md
+      - サイト運用ガイド: MkDocs/サイト運用ガイド.md
+    - 高度な設定・カスタマイズ:
+      - 高度な設定: MkDocs/高度な設定.md
+      - デザイン改善ガイド: MkDocs/デザイン改善ガイド.md
+      - 多言語対応設定: MkDocs/多言語対応設定.md
+    - 自動化・運用:
+      - GitHub Actions自動デプロイ: MkDocs/GitHub Actions自動デプロイ設定.md
+      - アナリティクス設定: MkDocs/アナリティクス設定.md
+    - プラグイン・拡張:
+      - MkDocs無償プラグイン完全ガイド: MkDocs/mkdocs-plugins-comprehensive-guide.md
+      - Live2Dキャラクター実装: MkDocs/live2d-character-integration.md
+  
   # ツール・効率化・SEO
   - 🛠️ ツール・開発効率化:
     - Tips/index.md
-    - サイト構築・運用:
-      - MkDocsメモ: Tips/Mkdocs/mkdocsメモ.md
-      - GitHub Pages作成方法: Tips/Mkdocs/mkdocsを使ったGitHubPages.md
-      - サイト運用ガイド: Tips/Mkdocs/サイト運用ガイド.md
-      - GitHub Actions自動デプロイ: Tips/Mkdocs/GitHub Actions自動デプロイ設定.md
-      - デザイン改善ガイド: Tips/Mkdocs/デザイン改善ガイド.md
-      - Live2Dキャラクター実装: Tips/Mkdocs/live2d-character-integration.md
-      - アナリティクス設定: Tips/Mkdocs/アナリティクス設定.md
-      - 高度な設定: Tips/Mkdocs/高度な設定.md
-      - 多言語対応設定: Tips/Mkdocs/多言語対応設定.md
-      - MkDocs無償プラグイン完全ガイド: Tips/Mkdocs/mkdocs-plugins-comprehensive-guide.md
     - Live2D実装:
       - ウェブサイトに動くキャラクターを追加する方法: Tips/Live2D/live2d-widget-implementation-guide.md
     - 開発効率化:
@@ -227,6 +233,17 @@ plugins:
         'SEO/ナビゲーション改善.md': 'Tips/index.md'
         'SEO/コンテンツ最適化.md': 'Tips/index.md'
         'SEO/実践例.md': 'Tips/index.md'
+        # MkDocs関連記事のリダイレクト設定
+        'Tips/Mkdocs/mkdocsメモ.md': 'MkDocs/index.md'
+        'Tips/Mkdocs/mkdocsを使ったGitHubPages.md': 'MkDocs/mkdocsを使ったGitHubPages.md'
+        'Tips/Mkdocs/サイト運用ガイド.md': 'MkDocs/サイト運用ガイド.md'
+        'Tips/Mkdocs/GitHub Actions自動デプロイ設定.md': 'MkDocs/GitHub Actions自動デプロイ設定.md'
+        'Tips/Mkdocs/デザイン改善ガイド.md': 'MkDocs/デザイン改善ガイド.md'
+        'Tips/Mkdocs/live2d-character-integration.md': 'MkDocs/live2d-character-integration.md'
+        'Tips/Mkdocs/アナリティクス設定.md': 'MkDocs/アナリティクス設定.md'
+        'Tips/Mkdocs/高度な設定.md': 'MkDocs/高度な設定.md'
+        'Tips/Mkdocs/多言語対応設定.md': 'MkDocs/多言語対応設定.md'
+        'Tips/Mkdocs/mkdocs-plugins-comprehensive-guide.md': 'MkDocs/mkdocs-plugins-comprehensive-guide.md'
         # 404.mdから移行したリダイレクト設定
         'Infrastructure/OSコマンド/redhatでyumを使うときの設定.md': 'Infrastructure/OSコマンド/linux-proxy-configuration-guide.md'
   - macros:
@@ -305,16 +322,20 @@ plugins:
           Bashサンプル: Bash Samples
           ツール・開発効率化: Tools & Development Efficiency
           サイト構築・運用: Site Building & Operations
-          MkDocsメモ: MkDocs Notes
+          MkDocs・サイト構築: MkDocs & Site Building
+          基本ガイド: Basic Guide
           GitHub Pages作成方法: Creating GitHub Pages
           サイト運用ガイド: Site Operations Guide
-          GitHub Actions自動デプロイ: GitHub Actions Automated Deployment
-          デザイン改善ガイド: Design Improvement Guide
-          Live2Dキャラクター実装: Live2D Character Integration
-          アナリティクス設定: Analytics Setup
+          高度な設定・カスタマイズ: Advanced Settings & Customization
           高度な設定: Advanced Settings
+          デザイン改善ガイド: Design Improvement Guide
           多言語対応設定: Multilingual Configuration
+          自動化・運用: Automation & Operations
+          GitHub Actions自動デプロイ: GitHub Actions Automated Deployment
+          アナリティクス設定: Analytics Setup
+          プラグイン・拡張: Plugins & Extensions
           MkDocs無償プラグイン完全ガイド: Complete Guide to Free MkDocs Plugins
+          Live2Dキャラクター実装: Live2D Character Integration
           開発効率化: Development Efficiency
           開発効率化Tips集: Development Efficiency Tips
           Claude Code Tips集: Claude Code Tips Collection

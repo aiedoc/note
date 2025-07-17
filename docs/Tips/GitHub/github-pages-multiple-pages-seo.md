@@ -56,8 +56,8 @@
 ## 内部リンク最適化
 
 ### 追加推奨の内部リンク
-- [GitHub Actions自動デプロイ設定](../Mkdocs/GitHub Actions自動デプロイ設定.md) → アンカーテキスト改善
-- [MkDocsメモ](../Mkdocs/mkdocsメモ.md) → 関連性強化
+- [GitHub Actions自動デプロイ設定](../../MkDocs/GitHub Actions自動デプロイ設定.md) → アンカーテキスト改善
+- [MkDocsメモ](../../MkDocs/index.md) → 関連性強化
 - [git ignoreで特定ディレクトリを管理対象外にする](../git ignoreで特定ディレクトリを管理対象外にする.md) → 追加推奨
 
 ## コンテンツの改善点

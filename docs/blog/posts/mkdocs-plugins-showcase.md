@@ -86,7 +86,7 @@ graph TD
 
 ## 🔗 詳細ガイド
 
-各プラグインの詳細な設定方法と活用テクニックについては、[MkDocs無償プラグイン完全ガイド](/Tips/Mkdocs/mkdocs-plugins-comprehensive-guide/)をご参照ください。
+各プラグインの詳細な設定方法と活用テクニックについては、[MkDocs無償プラグイン完全ガイド](/MkDocs/mkdocs-plugins-comprehensive-guide/)をご参照ください。
 
 ---
 

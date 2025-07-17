@@ -14,7 +14,7 @@
 
     GitHub Pagesで無料でサイトを公開
 
-    [:octicons-arrow-right-24: GitHub Pages作成方法](Mkdocs/mkdocsを使ったGitHubPages.md)
+    [:octicons-arrow-right-24: GitHub Pages作成方法](../MkDocs/mkdocsを使ったGitHubPages.md)
 
 -   :material-palette: **デザイン改善**
 
@@ -22,7 +22,7 @@
 
     より見やすく使いやすいサイトに
 
-    [:octicons-arrow-right-24: デザイン改善ガイド](Mkdocs/デザイン改善ガイド.md)
+    [:octicons-arrow-right-24: デザイン改善ガイド](../MkDocs/デザイン改善ガイド.md)
 
 -   :material-speedometer: **開発効率化**
 
@@ -49,11 +49,11 @@
 ### 🌐 サイト構築・運用
 静的サイトジェネレータMkDocsを使った効率的なドキュメント作成
 
-- [MkDocsメモ](Mkdocs/mkdocsメモ.md) - 基本設定と使い方
-- [GitHub Pages作成方法](Mkdocs/mkdocsを使ったGitHubPages.md) - 無料ホスティングでの公開
-- [デザイン改善ガイド](Mkdocs/デザイン改善ガイド.md) - UI/UXの向上テクニック
-- [アナリティクス設定](Mkdocs/アナリティクス設定.md) - サイト分析の導入
-- [高度な設定](Mkdocs/高度な設定.md) - プラグインや拡張機能の活用
+- [MkDocsメモ](../MkDocs/index.md) - 基本設定と使い方
+- [GitHub Pages作成方法](../MkDocs/mkdocsを使ったGitHubPages.md) - 無料ホスティングでの公開
+- [デザイン改善ガイド](../MkDocs/デザイン改善ガイド.md) - UI/UXの向上テクニック
+- [アナリティクス設定](../MkDocs/アナリティクス設定.md) - サイト分析の導入
+- [高度な設定](../MkDocs/高度な設定.md) - プラグインや拡張機能の活用
 
 ### ⚡ 開発効率化
 日常的な開発作業を効率化するコツとツール
@@ -75,13 +75,13 @@
 ### 初心者向け
 1. [開発効率化Tips集](development-efficiency-tips.md) - 実践的な開発テクニックを習得
 2. [Claude Code Tips集](claude-code-tips.md) - AI支援開発の基礎から応用まで
-3. [MkDocsメモ](Mkdocs/mkdocsメモ.md) - 基本概念の理解
-4. [GitHub Pages作成方法](Mkdocs/mkdocsを使ったGitHubPages.md) - 実際にサイトを作成
+3. [MkDocsメモ](../MkDocs/index.md) - 基本概念の理解
+4. [GitHub Pages作成方法](../MkDocs/mkdocsを使ったGitHubPages.md) - 実際にサイトを作成
 
 ### 中級者向け
-1. [デザイン改善ガイド](Mkdocs/デザイン改善ガイド.md) - サイトの質向上
-2. [高度な設定](Mkdocs/高度な設定.md) - 機能拡張の実装
-3. [アナリティクス設定](Mkdocs/アナリティクス設定.md) - データ活用
+1. [デザイン改善ガイド](../MkDocs/デザイン改善ガイド.md) - サイトの質向上
+2. [高度な設定](../MkDocs/高度な設定.md) - 機能拡張の実装
+3. [アナリティクス設定](../MkDocs/アナリティクス設定.md) - データ活用
 
 ---
 

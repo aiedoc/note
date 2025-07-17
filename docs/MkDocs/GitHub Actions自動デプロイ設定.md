@@ -444,7 +444,7 @@ GitHub Actions CI/CDによるMkDocsの自動デプロイは、以下の価値を
 
 ## 関連記事
 
-- [MkDocsメモ](./mkdocsメモ.md)
+- [MkDocsメモ](./index.md)
 - [GitHub Pages作成方法](./mkdocsを使ったGitHubPages.md)
 - [多言語対応設定](./多言語対応設定.md)
 - [高度な設定](./高度な設定.md)

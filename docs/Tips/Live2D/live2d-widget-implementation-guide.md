@@ -786,7 +786,7 @@ console.log('Canvas elements:', document.querySelectorAll('canvas').length);
 - [Tororo Model Package](https://www.npmjs.com/package/live2d-widget-model-tororo) - 商用安全モデル
 
 ### 関連記事
-- [ウェブサイト制作の基本](../Mkdocs/mkdocsメモ.md) - サイト構築の基礎
+- [ウェブサイト制作の基本](../../MkDocs/index.md) - サイト構築の基礎
 - [JavaScript基礎](../../Programming/index.md) - プログラミング入門
 - [SEO最適化](../../SEO/index.md) - アクセス向上のコツ
 

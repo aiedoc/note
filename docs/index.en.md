@@ -114,9 +114,9 @@
     <h3>🔥 Popular Content</h3>
     <ul>
       <li><a href="./AI/claude-code-best-practices.en.md">Claude Code Best Practices</a></li>
-      <li><a href="./Tips/Mkdocs/mkdocsを使ったGitHubPages.en.md">Creating GitHub Pages</a></li>
+      <li><a href="./MkDocs/mkdocsを使ったGitHubPages.en.md">Creating GitHub Pages</a></li>
       <li><a href="./AI/ai-development-tools.en.md">2025 AI Development Tools Comparison</a></li>
-      <li><a href="./Tips/Mkdocs/デザイン改善ガイド.en.md">Site Design Improvement Guide</a></li>
+      <li><a href="./MkDocs/デザイン改善ガイド.en.md">Site Design Improvement Guide</a></li>
     </ul>
   </div>
 
@@ -161,9 +161,9 @@
   <div class="homepage-card">
     <h3>🛠️ Development Tools & Tips</h3>
     <ul>
-      <li><a href="./Tips/Mkdocs/mkdocsメモ.en.md">MkDocs Basic Configuration</a></li>
-      <li><a href="./Tips/Mkdocs/高度な設定.en.md">Advanced Site Features</a></li>
-      <li><a href="./Tips/Mkdocs/アナリティクス設定.en.md">Analytics Configuration</a></li>
+      <li><a href="./MkDocs/index.en.md">MkDocs Basic Configuration</a></li>
+      <li><a href="./MkDocs/高度な設定.en.md">Advanced Site Features</a></li>
+      <li><a href="./MkDocs/アナリティクス設定.en.md">Analytics Configuration</a></li>
     </ul>
   </div>
 

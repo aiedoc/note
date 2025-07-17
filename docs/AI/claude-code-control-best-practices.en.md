@@ -494,7 +494,7 @@ With appropriate control settings, Claude Code becomes a powerful and safe devel
 
 - [Claude Code Best Practices](claude-code-best-practices.md)
 - [AI Development Tools Comparison](ai-development-tools.md)
-- [MkDocs Site Operations Guide](../Tips/Mkdocs/サイト運用ガイド.md)
+- [MkDocs Site Operations Guide](../MkDocs/サイト運用ガイド.md)
 
 ## Reference Links
 

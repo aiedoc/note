@@ -176,7 +176,7 @@
       <li><a href="./AI/claude-code-installation-guide/">🚀 Claude Code インストール完全ガイド</a></li>
       <li><a href="./AI/claude-code-best-practices/">Claude Code活用法</a></li>
       <li><a href="./AI/claude-code-troubleshooting-guide/">🆘 Claude Code トラブルシューティング</a></li>
-      <li><a href="./Tips/Mkdocs/mkdocsを使ったGitHubPages/">GitHub Pages作成方法</a></li>
+      <li><a href="./MkDocs/mkdocsを使ったGitHubPages/">GitHub Pages作成方法</a></li>
       <li><a href="./AI/claude-code-2025-features/">🆕 Claude Code 2025年新機能</a></li>
     </ul>
   </div>
@@ -223,9 +223,9 @@
   <div class="homepage-card">
     <h3>🛠️ 開発ツール・Tips</h3>
     <ul>
-      <li><a href="./Tips/Mkdocs/mkdocsメモ/">MkDocsの基本設定</a></li>
-      <li><a href="./Tips/Mkdocs/高度な設定/">サイト高度機能設定</a></li>
-      <li><a href="./Tips/Mkdocs/アナリティクス設定/">アクセス解析設定</a></li>
+      <li><a href="./MkDocs/">MkDocsの基本設定</a></li>
+      <li><a href="./MkDocs/高度な設定/">サイト高度機能設定</a></li>
+      <li><a href="./MkDocs/アナリティクス設定/">アクセス解析設定</a></li>
     </ul>
   </div>
 

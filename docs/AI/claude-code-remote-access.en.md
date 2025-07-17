@@ -311,7 +311,7 @@ echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ## 🔗 Related Articles
 
 - [Claude Code Best Practices Guide](./claude-code-best-practices.en.md)
-- [GitHub Actions Auto-Deploy Setup](../Tips/Mkdocs/GitHub-Actions自動デプロイ設定.en.md)
+- [GitHub Actions Auto-Deploy Setup](../MkDocs/GitHub Actions自動デプロイ設定.en.md)
 - [AI Development Tools Comparison](./ai-development-tools.en.md)
 
 ---

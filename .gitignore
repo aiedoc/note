@@ -35,3 +35,12 @@ Thumbs.db
 
 # MkDocs
 site/
+
+# Analytics & Performance Data (機密情報)
+*Performance*.zip
+*Performance*.csv
+*Search-Console*.zip
+*Search-Console*.csv
+*Analytics*.zip
+*Analytics*.csv
+*:Zone.Identifier

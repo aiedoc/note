@@ -609,7 +609,7 @@ Claude Codeの自走制御は以下のポイントが重要です：
 
 - [Claude Code活用法](claude-code-best-practices.md)
 - [AI開発ツール比較](ai-development-tools.md)
-- [MkDocsサイト運用ガイド](../Tips/Mkdocs/サイト運用ガイド.md)
+- [MkDocsサイト運用ガイド](../MkDocs/サイト運用ガイド.md)
 
 ## 参考リンク
 
