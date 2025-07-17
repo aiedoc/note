@@ -64,3 +64,8 @@ windows-startup.bat
 *system-state*.log
 *power-state*.log
 *auto-claude-news*.log
+
+# SEO自動化・システム管理スクリプト (記事と関係ないファイル)
+seo_automation/
+main.py
+templates/todo-template.json
