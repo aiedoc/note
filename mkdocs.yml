@@ -41,8 +41,8 @@ nav:
     - コマンド・ツール:
       - sedコマンドメモ: Infrastructure/OSコマンド/sedコマンドメモ.md
   
-  # AI・機械学習
-  - 🤖 AI開発:
+  # AI・機械学習・プログラミング
+  - 🤖 AI開発・自動化:
     - AI/index.md
     - Claude Code完全ガイド:
       - 📖 完全ガイド: AI/claude-code-complete-guide.md
@@ -80,15 +80,14 @@ nav:
       - 🔗 Claude MCP統合完全ガイド: AI/claude-mcp-integration-2025.md
       - 🌟 Claude Directory完全ガイド: AI/claude-connectors-directory-2025.md
       - 🚀 Amazon Kiro完全ガイド: AI/amazon-kiro-agentic-ide-2025.md
+    - プログラミング・開発:
+      - Programming/index.md
+      - シェルスクリプト:
+        - Bashサンプル: Programming/Bash/sample.sh
   
-  # プログラミング・開発
-  - 💻 プログラミング:
-    - Programming/index.md
-    - シェルスクリプト:
-      - Bashサンプル: Programming/Bash/sample.sh
   
-  # ツール・効率化
-  - 🛠️ ツール・Tips:
+  # ツール・効率化・SEO
+  - 🛠️ ツール・開発効率化:
     - Tips/index.md
     - サイト構築・運用:
       - MkDocsメモ: Tips/Mkdocs/mkdocsメモ.md
@@ -115,17 +114,15 @@ nav:
     - 参考資料:
       - リンク集: Tips/リンク集.md
       - 働き方改善リンク集: Tips/働き方改善リンク集.md
-  
-  # SEO・マーケティング
-  - 🚀 SEO実践ガイド:
-    - SEO/index.md
-    - 基本戦略:
-      - 内部リンク戦略: SEO/内部リンク戦略.md
-      - ナビゲーション改善: SEO/ナビゲーション改善.md
-    - コンテンツ最適化:
-      - コンテンツ最適化: SEO/コンテンツ最適化.md
-    - 実装・測定:
-      - 実践例: SEO/実践例.md
+    - SEO・マーケティング:
+      - SEO/index.md
+      - 基本戦略:
+        - 内部リンク戦略: SEO/内部リンク戦略.md
+        - ナビゲーション改善: SEO/ナビゲーション改善.md
+      - コンテンツ最適化:
+        - コンテンツ最適化: SEO/コンテンツ最適化.md
+      - 実装・測定:
+        - 実践例: SEO/実践例.md
 
 # Repository
 repo_name: note
@@ -220,6 +217,18 @@ extra_javascript:
 plugins:
   - search
   - tags
+  - redirects:
+      redirect_maps:
+        # カテゴリ統合によるリダイレクト設定
+        'Programming/index.md': 'AI/index.md'
+        'SEO/index.md': 'Tips/index.md'
+        # SEOカテゴリ内の記事リダイレクト
+        'SEO/内部リンク戦略.md': 'Tips/index.md'
+        'SEO/ナビゲーション改善.md': 'Tips/index.md'
+        'SEO/コンテンツ最適化.md': 'Tips/index.md'
+        'SEO/実践例.md': 'Tips/index.md'
+        # 404.mdから移行したリダイレクト設定
+        'Infrastructure/OSコマンド/redhatでyumを使うときの設定.md': 'Infrastructure/OSコマンド/linux-proxy-configuration-guide.md'
   - macros:
       module_name: main
   - i18n:
@@ -259,7 +268,7 @@ plugins:
           yumコマンドメモ: Yum Command Notes
           コマンド・ツール: Commands & Tools
           sedコマンドメモ: Sed Command Notes
-          AI開発: AI Development
+          AI開発・自動化: AI Development & Automation
           Claude Code完全ガイド: Claude Code Complete Guide
           完全ガイド: Complete Guide
           セットアップ・基本: Setup & Basics
@@ -294,7 +303,7 @@ plugins:
           プログラミング: Programming
           シェルスクリプト: Shell Scripts
           Bashサンプル: Bash Samples
-          ツール・Tips: Tools & Tips
+          ツール・開発効率化: Tools & Development Efficiency
           サイト構築・運用: Site Building & Operations
           MkDocsメモ: MkDocs Notes
           GitHub Pages作成方法: Creating GitHub Pages
