@@ -94,6 +94,7 @@ claude
 
 ### 1. Landing Page Implementation
 
+{% raw %}
 ```tsx
 // Generated component example
 import React from 'react';
@@ -183,9 +184,11 @@ const LandingPage: React.FC = () => {
 
 export default LandingPage;
 ```
+{% endraw %}
 
 ### 2. Form Component Implementation
 
+{% raw %}
 ```tsx
 // Form generated from image
 import React, { useState } from 'react';
@@ -368,6 +371,7 @@ const ContactForm: React.FC = () => {
 
 export default ContactForm;
 ```
+{% endraw %}
 
 ## 📱 Responsive Design
 
@@ -391,6 +395,7 @@ Adjustments needed:
 
 ### 2. Image Optimization
 
+{% raw %}
 ```tsx
 // Auto-generated responsive image component
 import React from 'react';
@@ -434,6 +439,7 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({ src, alt, priority = 
 
 export default ResponsiveImage;
 ```
+{% endraw %}
 
 ## 🔍 Automatic UI/UX Issue Detection
 
@@ -469,6 +475,7 @@ Evaluation criteria:
 
 ### 1. Automatic Chart Generation
 
+{% raw %}
 ```tsx
 // Chart component generated from image
 import React from 'react';
@@ -594,6 +601,7 @@ const DashboardCharts: React.FC = () => {
 
 export default DashboardCharts;
 ```
+{% endraw %}
 
 ## 🎯 Advanced Use Cases
 
