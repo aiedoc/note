@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$CLAUDE_FILE_PATHS\" =~ docs/.*\\.md$ ]] && [[ ! \"$CLAUDE_FILE_PATHS\" =~ draft ]]; then wc -c \"$CLAUDE_FILE_PATHS\" | awk '{if ($1 > 1000) exit 0; else exit 1}' && git add \"$CLAUDE_FILE_PATHS\" && git commit -m \"[AUTO-POST-$(date +%Y%m%d)] Auto-generated article $(date +%H:%M)\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\" && git push origin master; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

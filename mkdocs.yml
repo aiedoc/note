@@ -118,6 +118,7 @@ nav:
       - Claude Code Tips集: Tips/claude-code-tips.md
       - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
       - 便利ツール: Tips/便利ツール.md
+      - 🔗 Claude Code Hooks高度な条件付き実行: tools/claude-code-hooks-advanced.md
     - GitHub活用:
       - GitHub Pages複数ページ作成: Tips/GitHub/github-pages-multiple-pages.md
       - GitHub Pages SEO最適化: Tips/GitHub/github-pages-multiple-pages-seo.md
