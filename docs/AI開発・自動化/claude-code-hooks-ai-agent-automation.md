@@ -35,41 +35,70 @@ Claude Code Hooksは、AIツール実行の特定のライフサイクルポイ�
 
 ### 1. 設定ファイルの作成
 
+Claude Code Hooksは以下の設定ファイルで構成します（**重要**：環境変数は不要）：
+
+- `~/.claude/settings.json` (ユーザー設定)
+- `.claude/settings.json` (プロジェクト設定)
+- `.claude/settings.local.json` (ローカルプロジェクト設定)
+
 ```json
-// ~/.config/claude-code/hooks.json
+// ~/.claude/settings.json
 {
   "hooks": {
-    "preToolUse": {
-      "bash": {
-        "command": "echo 'Command execution started: {{tool_name}}' >> ~/.claude-code/audit.log"
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git add -A && git commit -m 'Auto-save: Claude Code session' && git push origin main"
+          }
+        ]
       }
-    },
-    "postToolUse": {
-      "edit": {
-        "command": "npm run lint-staged"
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'File written: $(date)' >> ~/.claude/hooks.log"
+          }
+        ]
       },
-      "write": {
-        "command": "prettier --write {{file_path}} && npm test"
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm run lint-staged"
+          }
+        ]
       }
-    },
-    "notification": {
-      "error": {
-        "command": "notify-send 'Claude Code Error' '{{error_message}}'"
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Command execution started' >> ~/.claude/audit.log"
+          }
+        ]
       }
-    },
-    "stop": {
-      "command": "git add -A && git commit -m 'Auto-save: Claude Code session' --no-verify"
-    }
+    ]
   }
 }
 ```
 
-### 2. 環境変数の設定
+### 2. 設定の検証
 
 ```bash
-# ~/.bashrc または ~/.zshrc
-export CLAUDE_CODE_HOOKS_ENABLED=true
-export CLAUDE_CODE_HOOKS_CONFIG=~/.config/claude-code/hooks.json
+# 設定ファイルの確認
+cat ~/.claude/settings.json
+
+# Hooksが有効かテスト
+claude --dangerously-skip-permissions "テストファイルを作成してください"
+cat ~/.claude/hooks.log  # PostToolUse Hookのログを確認
 ```
 
 ## 実践的な使用例
@@ -79,11 +108,17 @@ export CLAUDE_CODE_HOOKS_CONFIG=~/.config/claude-code/hooks.json
 ```json
 {
   "hooks": {
-    "postToolUse": {
-      "write": {
-        "command": "#!/bin/bash\nfile={{file_path}}\nif [[ $file == *.py ]]; then\n  ruff check $file\n  mypy $file\nelif [[ $file == *.js ]] || [[ $file == *.ts ]]; then\n  eslint $file --fix\n  prettier --write $file\nfi"
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file_path=$(echo '$1' | jq -r '.file_path'); if [[ $file_path == *.py ]]; then ruff check $file_path && mypy $file_path; elif [[ $file_path == *.js ]] || [[ $file_path == *.ts ]]; then eslint $file_path --fix && prettier --write $file_path; fi"
+          }
+        ]
       }
-    }
+    ]
   }
 }
 ```
@@ -93,16 +128,28 @@ export CLAUDE_CODE_HOOKS_CONFIG=~/.config/claude-code/hooks.json
 ```json
 {
   "hooks": {
-    "preToolUse": {
-      "bash": {
-        "command": "#!/bin/bash\ncmd='{{command}}'\nif echo \"$cmd\" | grep -E '(rm -rf|sudo|chmod 777)'; then\n  echo 'BLOCKED: Dangerous command detected' >&2\n  exit 1\nfi"
+    "PreToolUse": [
+      {
+        "matcher": "bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd=$(echo '$1' | jq -r '.command'); if echo \"$cmd\" | grep -E '(rm -rf|sudo|chmod 777)'; then echo 'BLOCKED: Dangerous command detected' >&2; exit 1; fi"
+          }
+        ]
       }
-    },
-    "postToolUse": {
-      "write": {
-        "command": "gitleaks detect --source={{file_path}} --no-git"
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file_path=$(echo '$1' | jq -r '.file_path'); gitleaks detect --source=$file_path --no-git"
+          }
+        ]
       }
-    }
+    ]
   }
 }
 ```
