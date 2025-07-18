@@ -631,6 +631,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/ai-development/chatgpt-agent-2025-overview/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/ai-development/chatgpt-agent-practical-examples/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/ai-development/chatgpt-agent-practical-examples/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/ai-development/chatgpt-agent-practical-examples/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/blog/</loc>
         <lastmod>2025-07-18</lastmod>
         <changefreq>daily</changefreq>
@@ -1287,6 +1294,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/ai-development/chatgpt-agent-2025-overview/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/ai-development/chatgpt-agent-2025-overview/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/ai-development/chatgpt-agent-practical-examples/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/ai-development/chatgpt-agent-practical-examples/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/ai-development/chatgpt-agent-practical-examples/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/blog/</loc>
