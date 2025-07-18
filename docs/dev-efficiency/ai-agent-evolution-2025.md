@@ -132,14 +132,14 @@ on:
 
 jobs:
   auto-fix:
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    if: {% raw %}${{ github.event.workflow_run.conclusion == 'failure' }}{% endraw %}
     runs-on: ubuntu-latest
     steps:
       - uses: anthropic/claude-code-action@v1
         with:
           mode: 'auto-fix-ci-errors'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          claude-api-key: ${{ secrets.CLAUDE_API_KEY }}
+          github-token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+          claude-api-key: {% raw %}${{ secrets.CLAUDE_API_KEY }}{% endraw %}
 ```
 
 ## Cursor IDE：$2.5B評価額での進化
