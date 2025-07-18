@@ -109,6 +109,7 @@ ChatGPTエージェントは2025年7月17日より段階的に展開され、ま
 
 ## 🔗 関連情報
 
+- [ChatGPT エージェント実用事例集](./chatgpt-agent-practical-examples.md)
 - [OpenAI API 2025年1月アップデート](./openai-api-2025-updates.md)
 - [AIエージェント開発ガイド](./ai-agent-development-guide.md)
 - [ChatGPT活用術](./chatgpt-advanced-usage.md)
