@@ -15,6 +15,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/404/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/complete-guides/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/complete-guides/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/complete-guides/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/recent-updates/</loc>
         <lastmod>2025-07-18</lastmod>
         <changefreq>daily</changefreq>
@@ -678,6 +685,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/404/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/404/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/complete-guides/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/complete-guides/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/complete-guides/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/recent-updates/</loc>
