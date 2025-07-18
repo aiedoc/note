@@ -118,6 +118,7 @@ nav:
     - 開発効率化:
       - 開発効率化Tips集: Tips/development-efficiency-tips.md
       - Claude Code Tips集: Tips/claude-code-tips.md
+      - 🚀 AIエージェント開発の最新動向2025: dev-efficiency/ai-agent-evolution-2025.md
       - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
       - 便利ツール: Tips/便利ツール.md
     - GitHub活用:
@@ -346,6 +347,7 @@ plugins:
           開発効率化: Development Efficiency
           開発効率化Tips集: Development Efficiency Tips
           Claude Code Tips集: Claude Code Tips Collection
+          🚀 AIエージェント開発の最新動向2025: AI Agent Development Trends 2025
           git ignoreで特定ディレクトリを管理対象外にする: Git Ignore Specific Directories
           便利ツール: Useful Tools
           GitHub活用: GitHub Usage
