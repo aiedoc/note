@@ -1,0 +1,31 @@
+# Claude Code自動ニュース記事作成のcron設定例
+# 
+# 注意事項:
+# 1. 既存のcrontab設定を保持したまま追加してください
+# 2. 設定前にバックアップを取ってください: crontab -l > crontab_backup.txt
+# 3. WSLの場合、cron serviceの起動が必要: sudo service cron start
+#
+# 現在の設定（保持する）:
+0 * * * * source /mnt/c/git/claude-filesystem/ai-content-monetization/venv/bin/activate && cd /mnt/c/git/claude-filesystem/ai-content-monetization && python scripts/schedule_posts.py >> /mnt/c/git/claude-filesystem/ai-content-monetization/logs/cron.log 2>&1
+
+# 新規追加: Claude Code自動ニュース記事作成
+# 毎日 午前6時と午後18時に実行（1日2回）
+0 6,18 * * * /home/akiyoshi-yusuke/note/scripts/auto-claude-news.sh
+
+# その他のオプション例:
+# 毎時0分に実行（1時間ごと） - ただしAPI制限に注意
+# 0 * * * * /home/akiyoshi-yusuke/note/scripts/auto-claude-news.sh
+
+# 平日のみ朝9時に実行
+# 0 9 * * 1-5 /home/akiyoshi-yusuke/note/scripts/auto-claude-news.sh
+
+# 土曜日の午前10時のみ実行（週1回）
+# 0 10 * * 6 /home/akiyoshi-yusuke/note/scripts/auto-claude-news.sh
+
+# 設定方法:
+# 1. crontab -e でエディタを開く
+# 2. 上記の適切な行をコピー・ペースト
+# 3. 保存して終了
+# 
+# 確認方法:
+# crontab -l でスケジュール確認
