@@ -18,7 +18,7 @@ author: "Yusuke Akiyoshi"
 
 ## はじめに
 
-[前回の記事](/AI開発・自動化/claude-code-hooks-ai-agent-automation/)でClaude Code Hooksの基本概念と設定方法を解説しました。本記事では、実際のプロダクション環境で安定して動作させるための実装テクニックと、チーム開発での活用方法を詳しく解説します。
+[Claude Code Hooks完全ガイド](/AI/claude-code-hooks-guide/)で基本概念を、[AIエージェント自動化編](./claude-code-hooks-ai-agent-automation.md)で実践的な活用方法を解説しました。本記事では、実際のプロダクション環境で安定して動作させるための実装テクニックと、チーム開発での活用方法を詳しく解説します。
 
 ## プロダクション対応Hook実装
 

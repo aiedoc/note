@@ -18,7 +18,7 @@ author: "Yusuke Akiyoshi"
 
 ## はじめに
 
-2025年7月にリリースされたClaude Code Hooksは、AIコード生成と決定論的な自動化を融合させる画期的な機能です。本記事では、実際のプロジェクトで即座に活用できるHooks実装パターンと、AIエージェント開発の最新テクニックを詳しく解説します。
+[Claude Code Hooks完全ガイド](/AI/claude-code-hooks-guide/)で基本概念を学んだ方向けに、本記事では実際のプロジェクトで即座に活用できるHooks実装パターンと、AIエージェント開発の最新テクニックを詳しく解説します。
 
 ## Claude Code Hooksとは
 
