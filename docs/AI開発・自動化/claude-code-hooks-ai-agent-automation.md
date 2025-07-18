@@ -1,6 +1,6 @@
 ---
-title: "Claude Code Hooks完全ガイド：AIエージェント自動化の新時代"
-description: "Claude Code Hooksを使った高度な自動化実装方法を解説。PreToolUse、PostToolUse、Notificationフックの活用法と実践的なAIエージェント開発テクニックを紹介します。"
+title: "Claude Code Hooks実践：AIエージェント自動化編"
+description: "Claude Code Hooksを使った自動記事投稿システムの構築方法を解説。GSC連携、自動化パターン、AIエージェント開発の実践的テクニックを紹介します。"
 tags:
   - Claude Code
   - AI Agent
@@ -14,7 +14,7 @@ categories:
 author: "Yusuke Akiyoshi"
 ---
 
-# Claude Code Hooks完全ガイド：AIエージェント自動化の新時代
+# Claude Code Hooks実践：AIエージェント自動化編
 
 ## はじめに
 

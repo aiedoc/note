@@ -1,6 +1,6 @@
 ---
-title: "Claude Code Hooks実践編：プロダクション環境での実装とベストプラクティス"
-description: "Claude Code Hooksの実践的な実装例を詳しく解説。エラーハンドリング、パフォーマンス最適化、セキュリティ対策、チーム開発での活用方法まで、プロダクション環境で使える実装テクニックを紹介します。"
+title: "Claude Code Hooks応用：プロダクション実装編"
+description: "Claude Code Hooksのプロダクション環境での実装方法を解説。エラーハンドリング、チーム開発、本格運用のベストプラクティス、セキュリティ対策を紹介します。"
 tags:
   - Claude Code
   - Hooks Implementation
@@ -14,7 +14,7 @@ categories:
 author: "Yusuke Akiyoshi"
 ---
 
-# Claude Code Hooks実践編：プロダクション環境での実装とベストプラクティス
+# Claude Code Hooks応用：プロダクション実装編
 
 ## はじめに
 
