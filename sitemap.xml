@@ -673,6 +673,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/blog/posts/mkdocs-plugins-showcase/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/dev-efficiency/ai-agent-evolution-2025/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/dev-efficiency/ai-agent-evolution-2025/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/dev-efficiency/ai-agent-evolution-2025/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/en/</loc>
         <lastmod>2025-07-18</lastmod>
         <changefreq>daily</changefreq>
@@ -1343,5 +1350,12 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/blog/posts/mkdocs-plugins-showcase/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/blog/posts/mkdocs-plugins-showcase/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/dev-efficiency/ai-agent-evolution-2025/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/dev-efficiency/ai-agent-evolution-2025/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/dev-efficiency/ai-agent-evolution-2025/"/>
     </url>
 </urlset>
