@@ -281,6 +281,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI%E9%96%8B%E7%99%BA%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96/claude-code-hooks-ai-agent-automation/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/AI%E9%96%8B%E7%99%BA%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96/claude-code-hooks-practical-implementation/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI%E9%96%8B%E7%99%BA%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96/claude-code-hooks-practical-implementation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI%E9%96%8B%E7%99%BA%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96/claude-code-hooks-practical-implementation/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/Info/</loc>
         <lastmod>2025-07-18</lastmod>
         <changefreq>daily</changefreq>
@@ -335,6 +342,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/SELinux/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/SELinux/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/claude-code-cron-automation/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/claude-code-cron-automation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/claude-code-cron-automation/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/crontab%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9/</loc>
@@ -911,6 +925,13 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI%E9%96%8B%E7%99%BA%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96/claude-code-hooks-ai-agent-automation/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/en/AI%E9%96%8B%E7%99%BA%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96/claude-code-hooks-practical-implementation/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/AI%E9%96%8B%E7%99%BA%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96/claude-code-hooks-practical-implementation/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/AI%E9%96%8B%E7%99%BA%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96/claude-code-hooks-practical-implementation/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/en/Info/</loc>
         <lastmod>2025-07-18</lastmod>
         <changefreq>daily</changefreq>
@@ -965,6 +986,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/SELinux/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/SELinux/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/claude-code-cron-automation/</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/claude-code-cron-automation/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/claude-code-cron-automation/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/Infrastructure/OS%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/crontab%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9/</loc>
