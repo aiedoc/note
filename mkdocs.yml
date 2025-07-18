@@ -58,6 +58,7 @@ nav:
         - 🔗 Hooks完全ガイド: AI/claude-code-hooks-guide.md
         - 🎯 Hooks実践 - AIエージェント自動化: AI開発・自動化/claude-code-hooks-ai-agent-automation.md
         - 🛠️ Hooks応用 - プロダクション実装: AI開発・自動化/claude-code-hooks-practical-implementation.md
+        - 🔧 Hooks応用 - 高度な条件付き実行: AI/claude-code-hooks-advanced.md
         - 🔌 MCP統合戦略: AI/claude-code-mcp-integration.md
         - 🚀 GitHub Actions自動化: AI/claude-code-github-actions.md
         - 🌐 外出先活用ガイド: AI/claude-code-remote-access.md
@@ -118,7 +119,6 @@ nav:
       - Claude Code Tips集: Tips/claude-code-tips.md
       - git ignoreで特定ディレクトリを管理対象外にする: Tips/git ignoreで特定ディレクトリを管理対象外にする.md
       - 便利ツール: Tips/便利ツール.md
-      - 🔗 Claude Code Hooks高度な条件付き実行: tools/claude-code-hooks-advanced.md
     - GitHub活用:
       - GitHub Pages複数ページ作成: Tips/GitHub/github-pages-multiple-pages.md
       - GitHub Pages SEO最適化: Tips/GitHub/github-pages-multiple-pages-seo.md
