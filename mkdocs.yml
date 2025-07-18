@@ -8,6 +8,7 @@ copyright: "&copy; 2024-2025 aiedoc. All rights reserved."
 # Navigation
 nav:
   - ホーム: index.md
+  - 📚 完全ガイド集: complete-guides.md
   - 📝 最新更新: recent-updates.md
   - 📝 ブログ: blog/index.md
   
