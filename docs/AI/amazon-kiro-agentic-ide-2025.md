@@ -159,7 +159,8 @@ React コンポーネント保存
 ## 💰 料金プラン
 
 ### プレビュー期間（現在）
-- **完全無料**: 制限なし利用可能
+- **完全無料**: ウェイトリスト承認後、制限なし利用可能
+- **アクセス**: Join Waitlistによる承認制
 
 ### 本格提供開始後
 | プラン | 月額料金 | 月間インタラクション数 |
@@ -275,16 +276,34 @@ Amazonが開発したことで、将来的にAWSサービスとのネイティ�
 
 ### インストール手順
 
-#### 1. ダウンロード
+#### 1. ウェイトリスト登録（必須）
 
-[kiro.dev](https://kiro.dev)にアクセスして、お使いのOSに対応したインストーラーをダウンロード：
+**現在のアクセス方法**：
+Kiroはプレビュー段階のため、**ウェイトリスト登録**が必要です。
+
+```bash
+1. kiro.dev にアクセス
+2. 「Join Waitlist」ボタンをクリック
+3. 以下のいずれかでサインイン：
+   - GitHub
+   - Google
+   - AWS Builder ID
+   - AWS IAM Identity Center
+4. 承認メールを待つ（通常数日〜1週間）
+```
+
+> **注意**: 「Get started for free」と表示されていても、実際にはウェイトリスト登録が必要です。AWSアカウントは不要ですが、承認プロセスがあります。
+
+#### 2. ダウンロード
+
+ウェイトリスト承認後、[kiro.dev](https://kiro.dev)からお使いのOSに対応したインストーラーをダウンロード：
 
 - **Windows**: `KiroSetup-x.x.x.exe`
 - **macOS Intel**: `Kiro-x.x.x-mac-x64.dmg`
 - **macOS Apple Silicon**: `Kiro-x.x.x-mac-arm64.dmg`
 - **Linux**: `kiro-x.x.x-linux-x64.AppImage` または `.deb`/`.rpm`
 
-#### 2. インストール
+#### 3. インストール
 
 **Windows**:
 ```bash
@@ -312,7 +331,7 @@ chmod +x kiro-x.x.x-linux-x64.AppImage
 sudo dpkg -i kiro_x.x.x_amd64.deb
 ```
 
-#### 3. 初期設定
+#### 4. 初期設定
 
 1. **ログイン**:
    - GitHub、Google、またはメールアドレスでサインイン
@@ -328,7 +347,7 @@ sudo dpkg -i kiro_x.x.x_amd64.deb
    - 初回起動時に表示される対話型チュートリアルを完了（約10分）
    - スペック駆動開発の基本を学習
 
-#### 4. 基本的な使い方
+#### 5. 基本的な使い方
 
 **新規プロジェクトの開始**:
 ```
