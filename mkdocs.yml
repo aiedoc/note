@@ -129,6 +129,7 @@ nav:
       - GitHub Pages複数ページ作成: Tips/GitHub/github-pages-multiple-pages.md
       - GitHub Pages SEO最適化: Tips/GitHub/github-pages-multiple-pages-seo.md
       - プライベートリポジトリでGitHub Pages公開: Tips/GitHub/github-pages-private-repository.md
+      - 🚨 機密情報漏洩時の緊急対処ガイド: Tips/GitHub/github-secrets-exposure-recovery.md
     - 参考資料:
       - リンク集: Tips/リンク集.md
       - 働き方改善リンク集: Tips/働き方改善リンク集.md
@@ -358,6 +359,7 @@ plugins:
           GitHub Pages複数ページ作成: Creating Multi-Page GitHub Pages
           GitHub Pages SEO最適化: GitHub Pages SEO Optimization
           プライベートリポジトリでGitHub Pages公開: Publishing GitHub Pages from Private Repositories
+          🚨 機密情報漏洩時の緊急対処ガイド: Emergency Response Guide for Secrets Exposure
           参考資料: References
           働き方改善リンク集: Work Style Improvement Links
           SEO実践ガイド: SEO Practical Guide
