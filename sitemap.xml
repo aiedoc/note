@@ -638,6 +638,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/ai-automation/voice-input-programming-2025/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/ai-automation/whisper-local-cpu-implementation/</loc>
+        <lastmod>2025-07-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/ai-automation/whisper-local-cpu-implementation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/ai-automation/whisper-local-cpu-implementation/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/ai-development/ai-weekly-updates-july18-2025/</loc>
         <lastmod>2025-07-19</lastmod>
         <changefreq>daily</changefreq>
@@ -1336,6 +1343,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/ai-automation/voice-input-programming-2025/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/ai-automation/voice-input-programming-2025/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/ai-automation/whisper-local-cpu-implementation/</loc>
+        <lastmod>2025-07-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/ai-automation/whisper-local-cpu-implementation/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/ai-automation/whisper-local-cpu-implementation/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/ai-development/ai-weekly-updates-july18-2025/</loc>
