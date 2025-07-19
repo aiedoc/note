@@ -634,8 +634,8 @@ jobs:
       - name: Setup MCP Connection
         run: |
           npm install @anthropic/claude-code-sdk
-          export MCP_ENDPOINT=${{ secrets.MCP_ENDPOINT }}
-          export MCP_API_KEY=${{ secrets.MCP_API_KEY }}
+          export MCP_ENDPOINT={% raw %}${{ secrets.MCP_ENDPOINT }}{% endraw %}
+          export MCP_API_KEY={% raw %}${{ secrets.MCP_API_KEY }}{% endraw %}
       
       - name: Code Analysis with External Context
         run: |
