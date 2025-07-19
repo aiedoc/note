@@ -617,6 +617,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/GitHub/github-pages-private-repository/"/>
     </url>
     <url>
+        <loc>https://smartscope.blog/Tips/GitHub/github-secrets-exposure-recovery/</loc>
+        <lastmod>2025-07-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/GitHub/github-secrets-exposure-recovery/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/GitHub/github-secrets-exposure-recovery/"/>
+    </url>
+    <url>
         <loc>https://smartscope.blog/Tips/Live2D/live2d-widget-implementation-guide/</loc>
         <lastmod>2025-07-19</lastmod>
         <changefreq>daily</changefreq>
@@ -1322,6 +1329,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/GitHub/github-pages-private-repository/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/GitHub/github-pages-private-repository/"/>
+    </url>
+    <url>
+        <loc>https://smartscope.blog/en/Tips/GitHub/github-secrets-exposure-recovery/</loc>
+        <lastmod>2025-07-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smartscope.blog/en/Tips/GitHub/github-secrets-exposure-recovery/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://smartscope.blog/Tips/GitHub/github-secrets-exposure-recovery/"/>
     </url>
     <url>
         <loc>https://smartscope.blog/en/Tips/Live2D/live2d-widget-implementation-guide/</loc>
