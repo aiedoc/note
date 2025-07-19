@@ -89,6 +89,7 @@ nav:
       - 🔥 AI週報2025年7月18日: ai-development/ai-weekly-updates-july18-2025.md
       - 🎯 Claude Codeプロジェクト管理: ai-automation/claude-code-project-management.md
       - 🎤 音声入力プログラミング革命2025: ai-automation/voice-input-programming-2025.md
+      - 🎙️ Whisperローカル実装完全ガイド: ai-automation/whisper-local-cpu-implementation.md
     - プログラミング・開発:
       - Programming/index.md
       - シェルスクリプト:

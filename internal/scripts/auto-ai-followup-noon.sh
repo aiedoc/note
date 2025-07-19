@@ -99,7 +99,14 @@ timeout 900 claude --dangerously-skip-permissions "【AI技術フォローアッ
 2. 各フェーズ完了時にチェックボックスを ✅ に更新
 3. 進捗状況を随時ログファイルに記録
 4. /home/akiyoshi-yusuke/note/templates/hybrid-article-template.md のフォーマット準拠
-5. 朝の記事との連携を重視した実践的内容で記事作成・公開" >> /home/akiyoshi-yusuke/note/internal/logs/auto-ai-followup-noon.log 2>&1
+5. 朝の記事との連携を重視した実践的内容で記事作成・公開
+
+**⚠️ 重要注意事項 - マクロエラー防止**：
+- GitHub Actions変数は必ず {% raw %}{% raw %}${{ }}{% endraw %}{% endraw %} でエスケープすること
+- 例：secrets.API_KEY → {% raw %}${{ secrets.API_KEY }}{% endraw %}
+- 例：github.event → {% raw %}${{ github.event }}{% endraw %}
+- エスケープし忘れるとMkDocsビルド時にマクロエラーが発生し記事が表示されません
+- コード例でGitHub Actions YAMLを含む場合は必ずエスケープチェックしてください" >> /home/akiyoshi-yusuke/note/internal/logs/auto-ai-followup-noon.log 2>&1
 
 # Claude Codeの終了コードを確認
 CLAUDE_EXIT_CODE=$?
