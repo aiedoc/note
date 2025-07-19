@@ -427,6 +427,7 @@ fi
 
 ## 関連記事
 
+- [Claude Code MCP実装完全ガイド：外部データ連携からリアルタイム処理まで](../ai-development/claude-code-mcp-practical-guide.md) 🆕
 - [Claude Code Hooks実践ガイド：条件付き自動実行で開発効率を最大化](../dev-efficiency/claude-code-hooks-conditional.md)
 - [AIエージェント開発のセキュリティベストプラクティス](../security/ai-agent-security-guide.md)
 - [マルチエージェントシステムの設計パターン](../ai-development/multi-agent-patterns.md)
