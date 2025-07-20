@@ -1,0 +1,72 @@
+name: Claude Code Test
+on:
+  workflow_dispatch:  # 手動トリガー
+    inputs:
+      test_prompt:
+        description: 'Test prompt for Claude Code'
+        required: false
+        default: 'Hello from GitHub Actions! Please create a simple test file with current date and time.'
+  schedule:
+    - cron: '*/30 * * * *'  # 30分毎（テスト用）
+
+jobs:
+  claude-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install Claude Code
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          
+      - name: Test Claude Code Authentication
+        run: |
+          echo "Testing Claude Code authentication..."
+          claude --version || echo "Claude Code installation check"
+          
+      - name: Run Simple Claude Code Test
+        run: |
+          # シンプルなテストプロンプト
+          PROMPT="${{ github.event.inputs.test_prompt || 'Create a simple test file with current timestamp in /tmp/claude-test.txt' }}"
+          echo "Running Claude Code with prompt: $PROMPT"
+          
+          # Claude Codeを非対話モードで実行
+          claude -p "$PROMPT" --output-format stream-json || echo "Claude Code execution completed"
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          
+      - name: Check test results
+        run: |
+          echo "=== Test Results ==="
+          echo "Current directory contents:"
+          ls -la
+          
+          echo "=== /tmp directory contents ==="
+          ls -la /tmp/ | grep claude || echo "No claude test files found"
+          
+          echo "=== Git status ==="
+          git status
+          
+      - name: Commit test results (if any)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if [[ -n $(git status --porcelain) ]]; then
+            git add .
+            git commit -m "[AUTO-TEST-$(date +%Y%m%d-%H%M)] Claude Code test execution
+
+🤖 Generated with Claude Code via GitHub Actions
+
+Test timestamp: $(date)
+Workflow run: ${{ github.run_number }}"
+            git push
+          else
+            echo "No changes to commit"
+          fi
